@@ -1,0 +1,121 @@
+
+
+.body {
+  background-color: lightsalmon;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h2{
+  font-size: 1.3em;
+}
+
+p{
+  font-size: 0.8em;
+}
+
+.section-news{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border:  2px solid blue; /* border debug */
+}
+
+/*  Top section news  */
+.top-news{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border:  2px solid blue; /* border debug */
+}
+
+/* section{
+  display: flex;
+} */
+
+
+.main-news{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side-news{
+  width: 100%;
+}
+
+/*  Middle Section news  */
+.news-random-container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border:  2px solid blue; /* border debug */
+}
+
+.news-random{
+  width: 25%;
+}
+
+.more-news-container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border:  2px solid blue; /* border debug */
+}
+
+.more-news{
+  width: 100%;
+}
+
+.side-more-news{
+  width: 100%;
+}
+
+.category-news-section{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border:  2px solid blue; /* border debug */
+}
+
+.news-category{
+  width: 20%;
+}
+
+.game{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border:  2px solid blue; /* border debug */
+}
+
+@media only screen and (min-width: 900px){
+
+  body{
+    margin: 0 5%;
+  } 
+  .section{
+    width: 50%;
+  }
+  .img-article{
+    width: 50%;
+  }
+  .main-news{
+    width: 70%;
+  }
+  
+  .side-news{
+    width: 30%;
+  }
+
+  .more-news{
+    width: 70%;
+  }
+  
+  .side-more-news{
+    width: 30%;
+  }
+
+
+  
+}
