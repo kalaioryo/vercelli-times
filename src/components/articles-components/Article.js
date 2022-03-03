@@ -11,7 +11,7 @@ const Article = ({slot}) =>{
     const img = article.multimedia[2].url;
     // console.log(article);
     return (
-    <>
+    
       <article key={title}>
         <a href={`${url}`}>
           <div>
@@ -20,7 +20,7 @@ const Article = ({slot}) =>{
          </div>
         </a>    
       </article>
-    </>
+    
       
     )
   })

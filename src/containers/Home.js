@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import ImgArticle from '../components/ImgArticle';
 import SideArticle from '../components/SideArticle';
 import useFecthArticle from '../service/fetchApi';
+import Abstract from '../components/articles-components/Abstract';
 const API_KEY = process.env.REACT_APP_API_KEY
 const url = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${API_KEY}`;
 
@@ -19,6 +20,7 @@ function Body() {
 
   // useFecthArticle(url);
   const articles = useSelector((state) => state.allArticles);
+  // const renderArticles = articles.map((article) => article); da testare
 
   let slot = 0;
   let sizeImg = 0;
@@ -40,11 +42,12 @@ function Body() {
 
   return (
     <div className='body'>
-      <div className='top-news' >
+      <div className='top-news' >-
         <div className='main-news'>
           <section className='section'>
             <Article slot={slot = 0}/>
             <Article slot={slot = 1}/>
+            <Abstract slot={slot = 0}/>
           </section>
           <div className='img-article' >
             <ImgArticle slot={0} sizeImg={sizeImg=1}/>
