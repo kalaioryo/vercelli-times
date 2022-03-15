@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import '../style/Header.css';
-import '../containers/HeaderUp';
-import HeaderUp from '../containers/HeaderUp';
+import '../../style/Header.css';
+// import '../../HeaderUp';
+import HeaderUp from './HeaderUp';
 import HeaderMid from './HeaderMid';
 import HeaderDown from './HeaderDown';
 import HeaderMobile from './HeaderMobile';

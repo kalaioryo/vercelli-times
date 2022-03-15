@@ -6,13 +6,14 @@ import {Switch, Route, Routes } from 'react-router-dom';
 
 
 import './style/App.css';
-import Header from './containers/HeaderContainer';
+import Header from './containers/header/HeaderContainer';
 import Home from './containers/Home';
 import Footer from './containers/Footer';
 // import ArticleListing from './components/ArticleListing';
 import Article from './components/articles-components/Article';
-import ArticleDetail from './components/ArticleDetail';
+// import ArticleDetail from './components/SectionPage';
 import useFetchArticle from './service/fetchApi';
+import SectionPage from './components/SectionPage';
 
 const API_VERSION = process.env.REACT_APP_VERSION
 const API_KEY = process.env.REACT_APP_API_KEY
@@ -35,10 +36,10 @@ function App() {
         <Header/>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='article' element={<Article/>}/>
-          <Route path='article-detail' element={<ArticleDetail/>}/>
+          {/* <Route path='article' element={<Article/>}/> */}
+          <Route path='section' element={<SectionPage/>}/>
         </Routes>
-        {/* <Body/> */}
+        {/* <Home/> */}
         <Footer/>
     </div>
   );

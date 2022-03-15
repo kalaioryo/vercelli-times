@@ -1,9 +1,11 @@
 *{
   border: red 1px solid;
-  padding: 2px;
+  /* padding: 2px; */
   margin: 0px;
   box-sizing: border-box;
 }
+
+
 
 
 body{

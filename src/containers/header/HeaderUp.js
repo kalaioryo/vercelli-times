@@ -1,7 +1,7 @@
 import React from 'react';
-import SearchForm from '../components/SearchForm';
-import ListRegion from '../components/ListRegion';
-import NightButton from '../components/NightButton';
+import SearchForm from '../../components/SearchForm';
+import ListRegion from '../../components/ListRegion';
+import NightButton from '../../components/NightButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 

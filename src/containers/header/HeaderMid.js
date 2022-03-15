@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import DailyNewspaper from '../components/DailyNewspaper';
-import DataComponent from '../components/DataComponent';
+import DailyNewspaper from '../../components/DailyNewspaper';
+import DataComponent from '../../components/DataComponent';
 
 function HeaderMid() {
   return (

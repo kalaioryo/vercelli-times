@@ -2,28 +2,31 @@ import React, { useEffect } from 'react';
 import '../style/Body.css';
 import Article from '../components/articles-components/Article';
 import { useDispatch, useSelector } from 'react-redux';
+import useFecthArticle from '../service/fetchApi';
+
 // import axios from 'axios';
 // import { setArticles } from '../redux/actions/articleAction';
-import ImgArticle from '../components/ImgArticle';
-import SideArticle from '../components/SideArticle';
-import useFecthArticle from '../service/fetchApi';
+import Figure from '../components/articles-components/Figcaption';
+// import ImgArticle from '../components/articles-components/ImgArticle';
+import SectionArticle from '../components/SectionArticle';
 import Abstract from '../components/articles-components/Abstract';
+import RenderArticles from './RenderArticles';
 const API_KEY = process.env.REACT_APP_API_KEY
 const url = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${API_KEY}`;
 
-
-function Body() {
+function Home() {
   // const articles = useSelector((state) => state.allArticles);
   // const dispatch = useDispatch()
   // const API_KEY = process.env.REACT_APP_API_KEY;
 
+  //Const for select size of image
+  // const large = 'large';
+  // const middle = 'middle';    
+  // const small = 'small';
 
-  // useFecthArticle(url);
-  const articles = useSelector((state) => state.allArticles);
-  // const renderArticles = articles.map((article) => article); da testare
 
   let slot = 0;
-  let sizeImg = 0;
+  let image = null;
   let sectionName = '';
 
   // const fecthArticle = async () =>{
@@ -41,36 +44,80 @@ function Body() {
   // },[])
 
   return (
-    <div className='body'>
-      <div className='top-news' >-
-        <div className='main-news'>
-          <section className='section'>
-            <Article slot={slot = 0}/>
-            <Article slot={slot = 1}/>
-            <Abstract slot={slot = 0}/>
-          </section>
-          <div className='img-article' >
-            <ImgArticle slot={0} sizeImg={sizeImg=1}/>
-          </div>
 
-          <section className='section'>
-          <Article slot={slot = 2}/>
+    <div className='body'>
+      <div className='top-news' >
+        <div className='main-news'>
+          <section className='container'>
+            <RenderArticles slot={0} typeArticle={'article'}/>
+            {/* <Article slot={slot = 0}/> */}
+            {/* <Figure slot={0} sizeImg={sizeImg=0}/> */}
+            <RenderArticles slot={1} typeArticle={'abstract'}/>
+            <RenderArticles slot={2} typeArticle={'abstract'}/>
+            <RenderArticles slot={3} typeArticle={'abstract'}/>
+
+
           </section>
-          <div className='img-article'>
-          <ImgArticle slot={slot = 2} sizeImg={sizeImg=1}/>
-          </div>
+          <section className='container'>
+          <RenderArticles slot={0} typeArticle={'figcaption'}/>
+
+          </section>
+          
+          <section className='container'>
+            <RenderArticles slot={4} typeArticle={'abstract'}/>
+            <RenderArticles slot={5} typeArticle={'abstract'}/>
+            <RenderArticles slot={6} typeArticle={'abstract'}/>
+            <RenderArticles slot={7} typeArticle={'abstract'}/>
+
+          </section>
+
+          <section className='container'>
+          <RenderArticles slot={4} typeArticle={'figcaption'}/>
+
+          </section>
+
+          <section className='container'>
+          <RenderArticles slot={8} typeArticle={'article'}/>
+          </section>
+
+          <section className='container'>
+          <RenderArticles slot={8} typeArticle={'figcaption'}/>
+          </section>
+
+          <section className='container'>
+          <RenderArticles slot={9} typeArticle={'article'}/>
+          </section>
+
+          <section className='container'>
+          <RenderArticles slot={9} typeArticle={'figcaption'}/>
+          </section>
           
 
-          <section>
+          <section className='covid-section'>
             <div>Covid Section</div>
           </section>
                 
-        <div>News</div>
-        <div>News</div>
+          <section className='container'>
+          <RenderArticles slot={10} typeArticle={'article'}/>
+          </section>
+
+          <section className='container'>
+          <RenderArticles slot={10} typeArticle={'figcaption'}/>
+          </section>
+
+          <section className='container'>
+          <RenderArticles slot={11} typeArticle={'article'}/>
+          </section>
+
+          <section className='container'>
+          <RenderArticles slot={11} typeArticle={'figcaption'}/>
+          </section>
       </div>
       <div className='side-news'>
-        <SideArticle sectionName={'arts'}/>   
-        <SideArticle sectionName={'opinion'}/>
+        <SectionArticle sectionName={'us'}/>   
+        {/* <Figure slot={18} sizeImg={2}/> */}
+        <SectionArticle sectionName={'opinion'}/>
+        {/* <SideArticle sectionName={'arts'}/> */}
       </div>
       </div>
 
@@ -89,11 +136,12 @@ function Body() {
 
     
     <div className='category-news-section'>
+      <SectionArticle sectionName={'well'} />
+      {/* <div className='news-category'>news category</div>
       <div className='news-category'>news category</div>
       <div className='news-category'>news category</div>
       <div className='news-category'>news category</div>
-      <div className='news-category'>news category</div>
-      <div className='news-category'>news category</div>
+      <div className='news-category'>news category</div> */}
     </div>
 
     <div className='category-news-section'>
@@ -156,4 +204,4 @@ function Body() {
   );
 }
 
-export default Body;
+export default Home;

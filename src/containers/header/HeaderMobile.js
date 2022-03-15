@@ -1,9 +1,9 @@
 import React from 'react';
-import NightButton from '../components/NightButton';
+import NightButton from '../../components/NightButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faUser } from '@fortawesome/free-solid-svg-icons'
 
-import DataComponent from '../components/DataComponent';
+import DataComponent from '../../components/DataComponent';
 import { Link } from 'react-router-dom';
 
 function HeaderMobile() {

@@ -6,16 +6,23 @@
   flex-wrap: wrap;
 }
 
+/* p,h2,h3,div,a{
+  display: block;
+  align-items: baseline;
+} */
+
 h2{
   font-size: 1.3em;
 }
 
 p{
   font-size: 0.8em;
+  
 }
 
 .section-news{
   display: flex;
+  align-items: stretch;
   flex-wrap: wrap;
   width: 100%;
   border:  2px solid blue; /* border debug */
@@ -29,7 +36,7 @@ p{
   border:  2px solid blue; /* border debug */
 }
 
-/* section{
+/* .section{
   display: flex;
 } */
 
@@ -38,6 +45,10 @@ p{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+}
+
+.covid-section{
+  width: 100%;
 }
 
 .side-news{
@@ -94,11 +105,40 @@ p{
   body{
     margin: 0 5%;
   } 
-  .section{
+  /* div{
+    vertical-align: baseline;
+
+  } */
+  .container{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-flow: column;
     width: 50%;
+    /* justify-items: start; */
+    /* grid-column: span 9; */
   }
-  .img-article{
+  /* .img-article{
     width: 50%;
+  } */
+  .item{
+    position: relative;
+    width: 100%;
+    /* justify-items:self-start; */
+    /* grid-column: span 5; */
+  }
+
+  /* .figcaption{
+    justify-content: right;
+  } */
+
+  figure{
+    /* display:inline-block; */
+
+    width: 100%;
+    /* align-self: flex-end; */
+    /* justify-self: unset; */
+    /* justify-items: right; */
   }
   .main-news{
     width: 70%;

@@ -2,35 +2,34 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 
-const SideArticle = ({sectionName}) =>{
+const Article = ({slot}) =>{
   const articles = useSelector((state) => state.allArticles.articles);
-  console.log(articles);
-  const renderArticles = articles.filter(article => article.section === sectionName).map((article)=>{
+  // console.log(articles);
+  const renderArticles = articles.map((article)=>{
     // console.log(articles);
     const {title, abstract, url} = article;
     const img = article.multimedia[2].url;
     // console.log(article);
-    // const mydate = new Date().toISOString();
     return (
- 
-      <article key={title}>
+    
+      <section key={title}>
         <a href={`${url}`}>
           <div>
             <h2>{title}</h2>
-            <p>{abstract}</p>
          </div>
-         <img src={`${img}`}></img>
         </a>    
-      </article>
+      </section>
+    
+      
     )
   })
   //console.log(articles[0].title);
   return (
-    <>{renderArticles}</>
+    <>{slot === undefined ? renderArticles : renderArticles[slot]}</>
 
     // {renderArticles}
   )
 }
 
-export default SideArticle;
+export default Article;
 

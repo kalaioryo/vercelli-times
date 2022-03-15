@@ -1,24 +1,36 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 
-
-function Abstract({slot}) {
-  const articles = useSelector((state) => state.allArticles.articles);
-  const renderAbstarct = articles.map((article)=>{
-    const {title,abstract, url} = article;
+const Abstract = ({title, abstract, url}) =>{
 
   return (
-    <section key={title}>
+    <section className='item'>
       <a href={`${url}`}>
         <p>{abstract}</p>
       </a>
     </section>
-    
+        
   )
-})
+  
+}
 
-return(
-  <>{renderAbstarct[slot]}</>
-)}
+// function Abstract({slot}) {
+//   const articles = useSelector((state) => state.allArticles.articles);
+//   const renderAbstract = articles.map((article)=>{
+//     const {title,abstract, url} = article;
+
+//   return (
+//     <section className='item' key={title}>
+//       <a href={`${url}`}>
+//         <p>{abstract}</p>
+//       </a>
+//     </section>
+    
+//   )
+// })
+
+// return(
+//   <>{slot === undefined ? renderAbstract : renderAbstract[slot]}</>
+//   )}
 
 export default Abstract;
