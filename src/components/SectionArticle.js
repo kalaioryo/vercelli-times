@@ -20,7 +20,7 @@ const SectionArticle = ({sectionName, slot}) =>{
             <h3>{title}</h3>
             {/* <p>{abstract}</p> */}
          </div>
-         <img src={`${img}`}></img>
+         {/* <img src={`${img}`}></img> */}
         </a>    
       </article>
     )

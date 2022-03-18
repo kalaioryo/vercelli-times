@@ -1,9 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import PropTypes from 'prop-types';
+
 import Abstract from "../components/articles-components/Abstract";
 import Article from "../components/articles-components/Article"
 import Figcaption from "../components/articles-components/Figcaption";
-import PropTypes from 'prop-types';
+import Title from "../components/articles-components/Title";
 
 const test ={
   multimedia: [{
@@ -23,7 +25,7 @@ const RenderArticles = ({slot, typeArticle}) =>{
 
   
   const RenderArticle = articles.map((article)=>{
-
+    
     const {title, abstract, url, kicker, multimedia} = article;
     // const useTest = test.multimedia[0].url;
     // const img = article.multimedia[1].url;
@@ -43,10 +45,13 @@ const RenderArticles = ({slot, typeArticle}) =>{
       )
     }
     else if(typeArticle === 'figcaption'){
-      // console.log(article.multimedia[0].url);
-      // const img = test.multimedia[3].url;
-      
+            
       return (<Figcaption key={`figcaption:${title}`} title={title} multimedia={multimedia} url={url} kicker={kicker}/>
+      )
+    }
+    else if(typeArticle === 'title'){
+      return(
+        <Title key={`title:${title}`} title={title} multimedia={multimedia} url={url}/>
       )
     }
   })
@@ -57,84 +62,31 @@ const RenderArticles = ({slot, typeArticle}) =>{
 }
 
 RenderArticles.propTypes = {
-  img: PropTypes.string,
-  articles: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string,
-      abstarct: PropTypes.string,
-      url: PropTypes.string,
-      kicker: PropTypes.string,
-      multimedia: PropTypes.array 
-    })
-  )
+  articles: PropTypes.func,
+  RenderArticle: PropTypes.func,
+  // article: PropTypes.string.isRequired
+  // title: PropTypes.string.isRequired,
+  // abstarct: PropTypes.string.isRequired,
+  // url: PropTypes.string.isRequired,
+  // kicker: PropTypes.string.isRequired,
+  // multimedia: PropTypes.array.isRequired
 }
-RenderArticles.defaultProps = {
-  img: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png",
-}
+// RenderArticles.defaultProps = {
+//   RenderArticle: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       title: "title not found",
+//       abstarct: "abstract not found",
+//       url: "url not found",
+//       kicker: "kicker not found",
+//       multimedia: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png" 
+//     })
+//   )
+// }
 
 
 export default RenderArticles;
 
  //url: sostitutivo url for img: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png";
-
-  //Render component Article
-  // if(typeArticle === 'article'){
-
-  // const RenderArticle = articles.map((article)=>{
-
-  //   const {title, abstract, url} = article;
-  //   const img = image != null || undefined ? article.multimedia[image].url : null ;
-  //   // const img = article.multimedia[2].url;
-
-  //   return(
-  //     <Article title={title}
-  //              abstract={abstract}
-  //              url={url}
-  //              img={img}/>
-  //   )
-  // })
-
-  // return (
-  //   <>{slot === undefined ? RenderArticle : RenderArticle[slot]}</>
-  //   )}
-
-  // //Render componemt Abstract
-  // if(typeArticle === 'abstract'){
-
-  // const RenderAbstract = articles.map((article)=>{
-
-  //   const {title, abstract, url} = article;
-  //   // const img = article.multimedia[2].url;
-
-  //   return(
-  //     <Abstract title={title} abstract={abstract} url={url}/>
-  //   )
-  // })
-
-  // return (
-  //   <>{slot === undefined ? RenderAbstract : RenderAbstract[slot]}</>
-  //   )}
-  
-  // //Render component Figure
-  // if(typeArticle === 'figcaption'){
-
-  // const RenderFigcaption = articles.map((article)=>{
-
-  //   const {title, url, kicker} = article;
-  //   const img = article.multimedia[2].url;
-
-  //   return(
-  //     <Figcaption title={title} img={img} url={url} kicker={kicker}/>
-  //   )
-  // })
-
-  // return (
-  //   <>{slot === undefined ? RenderFigcaption : RenderFigcaption[slot]}</>
-  //   )}
-
-
-
-
 
    // const imgLarge = article.multimedia[0].url;
     // const imgMiddle = article.multimedia[1].url;

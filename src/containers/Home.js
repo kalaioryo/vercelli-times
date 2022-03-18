@@ -11,6 +11,7 @@ import Figure from '../components/articles-components/Figcaption';
 import SectionArticle from '../components/SectionArticle';
 import Abstract from '../components/articles-components/Abstract';
 import RenderArticles from './RenderArticles';
+import Figcaption from '../components/articles-components/Figcaption';
 const API_KEY = process.env.REACT_APP_API_KEY
 const url = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${API_KEY}`;
 
@@ -114,7 +115,8 @@ function Home() {
           </section>
       </div>
       <div className='side-news'>
-        <SectionArticle sectionName={'us'}/>   
+        {/* <SectionArticle sectionName={'us'}/>    */}
+        <RenderArticles slot={18} typeArticle={'figcaption'}/>
         {/* <Figure slot={18} sizeImg={2}/> */}
         <SectionArticle sectionName={'opinion'}/>
         {/* <SideArticle sectionName={'arts'}/> */}

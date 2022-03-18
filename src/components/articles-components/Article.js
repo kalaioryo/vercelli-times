@@ -1,10 +1,9 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { useSelector } from "react-redux";
 import ImgArticle from "./ImgArticle";
 
 const Article = ({title, abstract, url}) => {
-  // let img 
-
   return(
     <section className="item">
          <a href={`${url}`}>
@@ -15,6 +14,22 @@ const Article = ({title, abstract, url}) => {
          </a>    
        </section>
   )
+}
+
+Article.propTypes = {
+  title: PropTypes.string.isRequired,
+  abstract: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  // kicker: PropTypes.string.isRequired,
+  // multimedia: PropTypes.array.isRequired
+}
+
+Article.defaultProps = {
+  title: "title not found",
+  abstract: "abstract not found",
+  url: "url not found",
+  //kicker: "kicker not found",
+  //multimedia: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png" 
 }
 
 

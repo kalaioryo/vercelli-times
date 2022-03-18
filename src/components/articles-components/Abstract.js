@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 
 const Abstract = ({title, abstract, url}) =>{
 
@@ -12,6 +13,22 @@ const Abstract = ({title, abstract, url}) =>{
         
   )
   
+}
+
+Abstract.propTypes = {
+  title: PropTypes.string.isRequired,
+  abstract: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  // kicker: PropTypes.string.isRequired,
+  // multimedia: PropTypes.array.isRequired
+}
+
+Abstract.defaultProps = {
+  title: "title not found",
+  abstract: "abstract not found",
+  url: "url not found",
+  //kicker: "kicker not found",
+  //multimedia: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png" 
 }
 
 // function Abstract({slot}) {
