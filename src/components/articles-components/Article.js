@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useSelector } from "react-redux";
 import ImgArticle from "./ImgArticle";
 
-const Article = ({title, abstract, url}) => {
+const Article = ({title, abstract, url, sizeImg}) => {
   return(
     <section className="item">
          <a href={`${url}`}>

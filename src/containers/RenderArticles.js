@@ -20,9 +20,9 @@ const test ={
 ]
 }
 
-const RenderArticles = ({slot, typeArticle}) =>{
+const RenderArticles = ({slot, typeArticle, sizeImg}) =>{
   const articles = useSelector((state) => state.allArticles.articles);
-
+  console.log(articles);
   
   const RenderArticle = articles.map((article)=>{
     
@@ -37,21 +37,48 @@ const RenderArticles = ({slot, typeArticle}) =>{
 
     if(typeArticle === 'article'){
       return(
-        <Article key={`article:${title}`} title={title} abstract={abstract} url={url}/>
+        <Article 
+          key={`article:${title}`}
+          title={title} 
+          abstract={abstract} 
+          url={url}
+          sizeImg={sizeImg}
+          />
       )
     }
     else if(typeArticle === 'abstract'){
-      return (<Abstract key={`abstract:${title}`} title={title} abstract={abstract} url={url}/>
+      return (
+        <Abstract 
+          key={`abstract:${title}`}
+          title={title}
+          abstract={abstract}
+          url={url}
+          sizeImg={sizeImg}
+          />
       )
     }
     else if(typeArticle === 'figcaption'){
             
-      return (<Figcaption key={`figcaption:${title}`} title={title} multimedia={multimedia} url={url} kicker={kicker}/>
+      return (
+        <Figcaption 
+          key={`figcaption:${title}`} 
+          title={title} 
+          multimedia={multimedia} 
+          url={url} 
+          kicker={kicker}
+          sizeImg={sizeImg}
+          />
       )
     }
     else if(typeArticle === 'title'){
       return(
-        <Title key={`title:${title}`} title={title} multimedia={multimedia} url={url}/>
+        <Title 
+          key={`title:${title}`}
+          title={title}
+          multimedia={multimedia}
+          url={url}
+          sizeImg={sizeImg}
+          />
       )
     }
   })

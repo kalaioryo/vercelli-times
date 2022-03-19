@@ -2,14 +2,9 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
-function Figcaption({title, multimedia, url, kicker}) {
-  // const articles = useSelector((state) => state.allArticles.articles);
-  // const renderAbstarct = articles.map((article)=>{
-  //   const {title, kicker, url} = article;
-  //   const img = article.multimedia[sizeImg].url;
-  // const imgUrl = multimedia[0].url;
-  console.log(multimedia);
-  const imgUrl = multimedia[1].url;
+function Figcaption({title, multimedia, url, kicker, sizeImg}) {
+  // console.log(multimedia);
+  const imgUrl = multimedia[sizeImg].url;
   // const imgUrl = null;
 
 
@@ -27,6 +22,8 @@ function Figcaption({title, multimedia, url, kicker}) {
 
 Figcaption.propTypes = {
   imgUrl:PropTypes.string.isRequired,
+  sizeImg:PropTypes.number,
+
   multimedia: PropTypes.arrayOf(
     PropTypes.shape({
       url: PropTypes.string
@@ -37,6 +34,7 @@ Figcaption.propTypes = {
   url: PropTypes.string.isRequired
 }
 Figcaption.defaultProps = {
+  sizeImg: 1,
   multimedia: PropTypes.arrayOf(
     PropTypes.shape({
       url: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png"

@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
-const Abstract = ({title, abstract, url}) =>{
+const Abstract = ({title, abstract, url, sizeImg}) =>{
 
   return (
     <section className='item'>

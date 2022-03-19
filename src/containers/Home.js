@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import '../style/Body.css';
 import Article from '../components/articles-components/Article';
 import { useDispatch, useSelector } from 'react-redux';
-import useFecthArticle from '../service/fetchApi';
+import useFetchArticle from '../service/fetchApi';
 
 // import axios from 'axios';
 // import { setArticles } from '../redux/actions/articleAction';
@@ -13,17 +13,20 @@ import Abstract from '../components/articles-components/Abstract';
 import RenderArticles from './RenderArticles';
 import Figcaption from '../components/articles-components/Figcaption';
 const API_KEY = process.env.REACT_APP_API_KEY
-const url = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${API_KEY}`;
 
 function Home() {
+  const url = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${API_KEY}`;
+
+  useFetchArticle(url);
+
   // const articles = useSelector((state) => state.allArticles);
   // const dispatch = useDispatch()
   // const API_KEY = process.env.REACT_APP_API_KEY;
 
-  //Const for select size of image
-  // const large = 'large';
-  // const middle = 'middle';    
-  // const small = 'small';
+  // Const for select size of image
+  const large = 0; //'large';
+  const middle = 1; //'middle';    
+  const small = 2; //'small';
 
 
   let slot = 0;
@@ -50,7 +53,7 @@ function Home() {
       <div className='top-news' >
         <div className='main-news'>
           <section className='container'>
-            <RenderArticles slot={0} typeArticle={'article'}/>
+            <RenderArticles slot={0} typeArticle={'article'} />
             {/* <Article slot={slot = 0}/> */}
             {/* <Figure slot={0} sizeImg={sizeImg=0}/> */}
             <RenderArticles slot={1} typeArticle={'abstract'}/>
@@ -60,7 +63,7 @@ function Home() {
 
           </section>
           <section className='container'>
-          <RenderArticles slot={0} typeArticle={'figcaption'}/>
+          <RenderArticles slot={0} typeArticle={'figcaption'} sizeImg={middle}/>
 
           </section>
           

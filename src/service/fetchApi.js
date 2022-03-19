@@ -19,7 +19,7 @@ const useFetchArticle = (url) => {
 
   useEffect(()=>{
     fecthArticle()
-  }, [])
+  }, [url])
 }
 
 export default useFetchArticle;
