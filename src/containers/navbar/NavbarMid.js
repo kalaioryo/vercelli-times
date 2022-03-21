@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import DailyNewspaper from '../../components/DailyNewspaper';
 import DataComponent from '../../components/DataComponent';
 
-function HeaderMid() {
+function NavbarMid() {
   return (
     <div className='header-mid'>
       <div className='header-left column'>
@@ -21,4 +21,4 @@ function HeaderMid() {
   );
 }
 
-export default HeaderMid;
+export default NavbarMid;

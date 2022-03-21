@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import '../../style/Header.css';
 // import '../../HeaderUp';
-import HeaderUp from './HeaderUp';
-import HeaderMid from './HeaderMid';
-import HeaderDown from './HeaderDown';
-import HeaderMobile from './HeaderMobile';
+import NavbarUp from './NavbarUp';
+import NavbarMid from './NavbarMid';
+import NavbarDown from './NavbarDown';
+import NavbarMobile from './NavbarMobile';
 
-function Header() {
+function NavbarContainer() {
   const [size, setSize] = useState(window.innerWidth)
 
   const checkSize = () =>{
@@ -25,16 +25,16 @@ function Header() {
 
   if (isMobile) {
     return (
-      <HeaderMobile/>
+      <NavbarMobile/>
     )
   } else {
     return (
       <div className='header'>
-        <HeaderUp/>
+        <NavbarUp/>
 
-        <HeaderMid/>
+        <NavbarMid/>
 
-        <HeaderDown/>
+        <NavbarDown/>
 
 
       </div>
@@ -42,4 +42,4 @@ function Header() {
   }
 }
 
-export default Header;
+export default NavbarContainer;

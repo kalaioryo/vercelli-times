@@ -5,7 +5,7 @@ import NightButton from '../../components/NightButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
-function HeaderUp() {
+function NavbarUp() {
   return (
     <div  className="header-up">
       <div className='header-left'>
@@ -29,4 +29,4 @@ function HeaderUp() {
   );
 }
 
-export default HeaderUp;
+export default NavbarUp;

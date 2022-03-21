@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../style/Body.css';
 import Article from '../components/articles-components/Article';
 import { useDispatch, useSelector } from 'react-redux';
@@ -6,18 +6,23 @@ import useFetchArticle from '../service/fetchApi';
 
 // import axios from 'axios';
 // import { setArticles } from '../redux/actions/articleAction';
+import LoadingComponent from '../components/LoadingComponent';
 import Figure from '../components/articles-components/Figcaption';
 // import ImgArticle from '../components/articles-components/ImgArticle';
 import SectionArticle from '../components/SectionArticle';
 import Abstract from '../components/articles-components/Abstract';
-import RenderArticles from './RenderArticles';
+import RenderArticles from '../containers/RenderArticles';
 import Figcaption from '../components/articles-components/Figcaption';
 const API_KEY = process.env.REACT_APP_API_KEY
 
 function Home() {
+  // const [isLoading, setIsLoading] = useState(true)
+
   const url = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${API_KEY}`;
 
-  useFetchArticle(url);
+  const {isLoading} = useFetchArticle(url);
+  if (isLoading) return <LoadingComponent/>
+
 
   // const articles = useSelector((state) => state.allArticles);
   // const dispatch = useDispatch()
@@ -63,7 +68,7 @@ function Home() {
 
           </section>
           <section className='container'>
-          <RenderArticles slot={0} typeArticle={'figcaption'} sizeImg={middle}/>
+          <RenderArticles slot={0} typeArticle={'figcaption'}/>
 
           </section>
           

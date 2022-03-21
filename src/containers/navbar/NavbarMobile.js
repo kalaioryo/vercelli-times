@@ -6,7 +6,7 @@ import { faBars, faUser } from '@fortawesome/free-solid-svg-icons'
 import DataComponent from '../../components/DataComponent';
 import { Link } from 'react-router-dom';
 
-function HeaderMobile() {
+function NavbarMobile() {
   return (
     <>
       <div className='header-mobile'>
@@ -36,4 +36,4 @@ function HeaderMobile() {
   );
 }
 
-export default HeaderMobile;
+export default NavbarMobile;

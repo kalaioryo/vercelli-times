@@ -3,18 +3,41 @@ import PropTypes from 'prop-types';
 import { useSelector } from "react-redux";
 import ImgArticle from "./ImgArticle";
 
-const Article = ({title, abstract, url, sizeImg}) => {
-  return(
+const Article = ({title, abstract, url, multimedia, sizeImg, itemType}) => {
+  if(itemType === "EmbeddedInteractive" ) {
+    return null;
+  } else{
     <section className="item">
          <a href={`${url}`}>
            <div>
-             <h2>{title}</h2>
-             <p>{abstract}</p>
+             {sizeImg ? <ImgArticle multimedia={multimedia}/> : null}
+             {title ? <h2>{title}</h2> : null}
+             {abstract ? <p>{abstract}</p> : null}
           </div>
          </a>    
        </section>
-  )
+  }
+
+  return (
+    <section className="item">
+         <a href={`${url}`}>
+           <div>
+             {title ? <h2>{title}</h2> : null}
+             {abstract ? <p>{abstract}</p> : null}
+          </div>
+         </a>    
+       </section>
+  ) 
 }
+
+{/* <section className="item">
+         <a href={`${url}`}>
+           <div>
+             {title ? <h2>{title}</h2> : null}
+             {abstract ? <p>{abstract}</p> : null}
+          </div>
+         </a>    
+       </section> */}
 
 Article.propTypes = {
   title: PropTypes.string.isRequired,

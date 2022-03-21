@@ -4,14 +4,15 @@ import PropTypes from 'prop-types';
 
 function Figcaption({title, multimedia, url, kicker, sizeImg}) {
   // console.log(multimedia);
-  const imgUrl = multimedia[sizeImg].url;
+  // const imgUrl = multimedia[1].url;
   // const imgUrl = null;
+  const defaultImg = "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png";
 
 
   return (
     <figure className='figcaption' >
       <a href={`${url}`}>
-      <img src={`${imgUrl}`} width='100%' height='100%'></img>
+      <img src={`${multimedia ? multimedia[1].url : defaultImg}`} width='100%' height='100%'></img>
       </a>
       <figcaption>{kicker}</figcaption>
 
