@@ -33,7 +33,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='section/:section' element={<SectionPage/>}/>
           <Route path='*' element={<NotFoundPage/>}/>
-          <Route path='search' element={<Search/>} />
+          <Route path='search/' element={<Search/>} />
         </Routes>
         {/* <Home/> */}
         <Footer/>

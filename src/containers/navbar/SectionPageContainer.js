@@ -1,5 +1,5 @@
 import React from 'react';
-import useFetchArticle from '../../service/fetchApi';
+import useFetchArticle from '../../service/fetchApiArticle';
 import RenderArticles from '../RenderArticles';
 
 const SectionPageContainer = ({section}) => {

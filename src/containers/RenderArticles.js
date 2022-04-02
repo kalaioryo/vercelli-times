@@ -22,7 +22,7 @@ const test ={
 
 const RenderArticles = ({slot, typeArticle, sizeImg}) =>{
   const articles = useSelector((state) => state.allArticles.articles);
-  console.log(articles);
+  // console.log(articles);
   
   const RenderArticle = articles.map((article, index)=>{
     

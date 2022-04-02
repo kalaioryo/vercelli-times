@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../style/Body.css';
 import Article from '../components/articles-components/Article';
 import { useDispatch, useSelector } from 'react-redux';
-import useFetchArticle from '../service/fetchApi';
+import useFetchArticle from '../service/fetchApiArticle';
 
 // import axios from 'axios';
 // import { setArticles } from '../redux/actions/articleAction';
@@ -13,14 +13,24 @@ import SectionArticle from '../components/SectionArticle';
 import Abstract from '../components/articles-components/Abstract';
 import RenderArticles from '../containers/RenderArticles';
 import Figcaption from '../components/articles-components/Figcaption';
+import ErrorComponent from '../service/ErrorComponent';
 const API_KEY = process.env.REACT_APP_API_KEY
 
 function Home() {
-  // const [isLoading, setIsLoading] = useState(true)
+  // const [url, setUrl] = useState('')
+  // useEffect (()=>{
+  //   setUrl(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${API_KEY}`)
+  // },[])
 
-  const url = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${API_KEY}`;
+    
 
-  const {isLoading} = useFetchArticle(url);
+  let url = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${API_KEY}`;
+
+
+  const {isLoading, hasError, errorMessage} = useFetchArticle(url);
+
+  if (hasError) return <ErrorComponent message={errorMessage} />
+
   if (isLoading) return <LoadingComponent/>
 
 

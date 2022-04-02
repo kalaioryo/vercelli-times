@@ -7,6 +7,13 @@ export const setArticles = (articles) => {
   }
 }
 
+export const setQueryArticles = (articles) =>{
+  return {
+    type: ActionTypes.SET_ARTICLES_QUERY,
+    payload: articles
+  }
+}
+
 export const selectArticles = (articles) => {
   return {
     type: ActionTypes.SELECT_ARTICLE,

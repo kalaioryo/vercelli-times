@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 const SectionArticle = ({sectionName, slot}) =>{
   const articles = useSelector((state) => state.allArticles.articles);
-  console.log(articles);
+  // console.log(articles);
   const renderArticles = articles.filter(article => article.section === sectionName).map((article)=>{
     // console.log(articles);
     const {title, abstract, url, kicker} = article;
