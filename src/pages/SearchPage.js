@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import useFetchApiQuery from '../service/fetchApiQuery';
 import { useParams, useLocation } from "react-router-dom";
+
+import style from './searchPage.module.css'
+
 import RenderArticles from '../containers/RenderArticles';
 import ErrorComponent from '../service/ErrorComponent';
 import LoadingComponent from '../components/LoadingComponent';
@@ -29,11 +32,13 @@ const Search = () => {
   if (isLoading) return <LoadingComponent/>
 
   return (
-    <>
+    <div className={style.searchPage} >
       <div>Search Page query is ${query}</div>
-      <CardSearchArticle/>
-      {/* <RenderArticles typeArticle={'abstract'}/> */}
-    </>
+      <div>Form</div>
+      <section className={style.cardSection}>
+        <CardSearchArticle/>
+      </section>
+    </div>
     
   )
 }

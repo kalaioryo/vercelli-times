@@ -1,0 +1,21 @@
+.card{
+  width: 50%;
+  padding: 10px;
+  margin: 10 0;
+
+}
+
+.cardContent{
+  background-color: lightslategray;
+
+}
+
+.image{
+  margin: 5px;
+}
+
+@media only screen and (min-width: 900px){
+  .card{
+    width: 30%;
+  }
+}

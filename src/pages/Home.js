@@ -17,14 +17,9 @@ import ErrorComponent from '../service/ErrorComponent';
 const API_KEY = process.env.REACT_APP_API_KEY
 
 function Home() {
-  // const [url, setUrl] = useState('')
-  // useEffect (()=>{
-  //   setUrl(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${API_KEY}`)
-  // },[])
+  
 
-    
-
-  let url = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${API_KEY}`;
+  const url = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${API_KEY}`;
 
 
   const {isLoading, hasError, errorMessage} = useFetchArticle(url);
@@ -47,20 +42,6 @@ function Home() {
   let slot = 0;
   let image = null;
   let sectionName = '';
-
-  // const fecthArticle = async () =>{
-  //   const response = await axios.get(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${API_KEY}`)
-  //   .catch((err) => {
-  //     console.log("Err", err);
-  //   });
-  //   // console.log(response.data);
-  //   dispatch(setArticles(response.data.results));
-  // }
-
-  // useEffect(()=>{
-  //   useFecthArticle()
-    
-  // },[])
 
   return (
 

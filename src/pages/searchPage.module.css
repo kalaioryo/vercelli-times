@@ -1,0 +1,21 @@
+.searchPage{
+
+  text-align: center;
+  /* box-sizing: border-box; */
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+
+.cardSection{
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 900px){
+  
+  .cardSection{
+    margin: 10px 5%;
+  }
+}
