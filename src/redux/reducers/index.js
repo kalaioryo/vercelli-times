@@ -3,14 +3,14 @@ import loggedReducer from "./isLogged";
 import { articleReducer } from "./articleReducer";
 import { combineReducers } from "redux";
 import { articlesQueryReducer } from "./articleQueryReducer";
-// import { setQueryArticles } from "../actions/articleAction";
+import { singleArticleReducer } from "./singleArticleReducer";
 
 const allReducers = combineReducers({
   dayNigth : dayNigthReduder,
   isLogged : loggedReducer,
   allArticles : articleReducer,
-  queryArticle: articlesQueryReducer
-
+  queryArticle: articlesQueryReducer,
+  singleArticle: singleArticleReducer
 })
 
 export default allReducers;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useFetchApiQuery from '../service/fetchApiQuery';
-import { useParams, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import style from './searchPage.module.css'
 
@@ -8,12 +8,9 @@ import RenderArticles from '../containers/RenderArticles';
 import ErrorComponent from '../service/ErrorComponent';
 import LoadingComponent from '../components/LoadingComponent';
 import CardSearchArticle from '../components/articles-components/CardSearchSection';
-
+import SearchForm from '../components/SearchForm';
 
 const Search = () => {
-  //const [query, setQuery] = useState('');
-  // let { query } = useParams();
-
  
   const location = useLocation();
   const query = location.state;
@@ -34,7 +31,7 @@ const Search = () => {
   return (
     <div className={style.searchPage} >
       <div>Search Page query is ${query}</div>
-      <div>Form</div>
+      <SearchForm/>
       <section className={style.cardSection}>
         <CardSearchArticle/>
       </section>

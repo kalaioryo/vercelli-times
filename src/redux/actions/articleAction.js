@@ -14,18 +14,28 @@ export const setQueryArticles = (articles) =>{
   }
 }
 
-export const selectArticles = (articles) => {
+export const setSingleArticle = (article) =>{
   return {
-    type: ActionTypes.SELECT_ARTICLE,
-    payload: articles,
+    type: ActionTypes.SET_SINGLE_ARTICLE,
+    payload: article
   }
 }
+
 
 export const dayNight = () => {
   return {
     type: 'DAYNIGTH'
   };
 } 
+
+// export const selectArticles = (articles) => {
+//   return {
+//     type: ActionTypes.SELECT_ARTICLE,
+//     payload: articles,
+//   }
+// }
+
+
 // export const removeSelectArticles = (articles) => {
 //   return {
 //     type: ActionTypes.REMOVE_SELECT_ARTICLES,

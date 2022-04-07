@@ -11,6 +11,7 @@ import Footer from './containers/Footer';
 import SectionPage from './pages/SectionPage';
 import NotFoundPage from './pages/NotFoundPage';
 import SearchPage from './pages/SearchPage';
+import ArticlePage from './pages/ArticlePage';
 
 const API_VERSION = process.env.REACT_APP_VERSION
 const API_KEY = process.env.REACT_APP_API_KEY
@@ -33,7 +34,11 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='section/:section' element={<SectionPage/>}/>
           <Route path='*' element={<NotFoundPage/>}/>
-          <Route path='search/' element={<SearchPage/>} />
+          <Route path='search/' element={<SearchPage/>}/>
+          <Route path='article/' element={<ArticlePage/>}/>
+
+
+
         </Routes>
         {/* <Home/> */}
         <Footer/>

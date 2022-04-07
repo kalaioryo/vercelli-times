@@ -117,7 +117,7 @@ function Home() {
         {/* <SectionArticle sectionName={'us'}/>    */}
         <RenderArticles slot={18} typeArticle={'figcaption'}/>
         {/* <Figure slot={18} sizeImg={2}/> */}
-        <SectionArticle sectionName={'opinion'}/>
+        {/* <SectionArticle sectionName={'opinion'}/> */}
         {/* <SideArticle sectionName={'arts'}/> */}
       </div>
       </div>

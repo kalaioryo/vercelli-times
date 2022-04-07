@@ -1,11 +1,16 @@
 import React from 'react'
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams, Link, useNavigate } from "react-router-dom";
+import { setSingleArticle } from '../../redux/actions/articleAction';
 import style from "./cardSearchSection.module.css"
 
 
-
 const CardSearchArticle = () => {
+
+
   const articles = useSelector((state) => state.queryArticle.articles);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   console.log(articles);
 
   const Image = ({multimedia}) =>{
@@ -18,17 +23,25 @@ const CardSearchArticle = () => {
     )
   }
   const RenderCard = articles.map((article) =>{
-    const {abstract,_id, web_url, multimedia } = article;
+    const {abstract,_id, web_url, multimedia, headline } = article;
+
+    const prova = 'ciao';
+
+    const handleClick = () =>{
+      
+      dispatch(setSingleArticle(article));
+      navigate('/article');
+    }
     // console.log(multimedia);
     return(
       <section className={style.card} key={_id}>
         <div>
           <div className={style.cardContent}>
             <Image multimedia={multimedia}/> 
-            <p>{abstract}</p>
+            <p className={style.abstract}>{headline.main}</p>
           </div>
           <div>
-            <button className='btn '>Read More</button>
+            <button className={style.btn} onClick={handleClick}>Read More</button>
           </div>
           
           
