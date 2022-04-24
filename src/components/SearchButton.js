@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import {FaSearch} from 'react-icons/fa'
 import SearchForm from './SearchForm';
 
 
@@ -18,7 +19,7 @@ function SearchButton() {
         type='search'
         onClick={toggleClick}
       >
-        <FontAwesomeIcon icon={faSearch} size="lg"/>
+        <FaSearch size="22px"/>
       </button>
       { toggle ? <SearchForm/> : null}
     </>

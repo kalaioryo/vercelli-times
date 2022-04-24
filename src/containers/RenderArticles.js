@@ -20,22 +20,21 @@ const test ={
 ]
 }
 
-const RenderArticles = ({slot, typeArticle, sizeImg}) =>{
+const RenderArticles = ({slot, typeArticle, sizeImg, section, subSection}) =>{
+  // let filter = 'africa';
   const articles = useSelector((state) => state.allArticles.articles);
-  // console.log(articles);
+  console.log(articles);
   
-  const RenderArticle = articles.map((article, index)=>{
-    
-    const {title, abstract, url, kicker, multimedia, item_type} = article;
-    // const useTest = test.multimedia[0].url;
-    // const img = article.multimedia[1].url;
+  const RenderArticle = articles
+  .filter((article) => section ? article.section === section : true)
+  .filter((article) => subSection ? article.subsection === subSection : true)
+    .map((article, index)=>{
 
-    // const imgUrl = false;
-    // const imgUrl = multimedia[2].url;
-    // const imgUrl = multimedia?.[0]?.url? multimedia[0].url :  useTest; //temporaneo
     
+    const {title, abstract, url, kicker, multimedia, item_type, subsection} = article    
 
     if(typeArticle === 'article'){
+
       return(
         <Article 
           key={`article: ${index + title}`}
@@ -84,6 +83,8 @@ const RenderArticles = ({slot, typeArticle, sizeImg}) =>{
       )
     }
   })
+  //.console.log([...articlsizeImges]);
+  // .filter( filter ?  === filter : true))
   return(<>{slot === undefined ? RenderArticle : RenderArticle[slot]}</>)
 
   

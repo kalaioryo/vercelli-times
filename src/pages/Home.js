@@ -116,6 +116,7 @@ function Home() {
       <div className='side-news'>
         {/* <SectionArticle sectionName={'us'}/>    */}
         <RenderArticles slot={18} typeArticle={'figcaption'}/>
+        <RenderArticles typeArticle={'article'} section={'opinion'}/>
         {/* <Figure slot={18} sizeImg={2}/> */}
         {/* <SectionArticle sectionName={'opinion'}/> */}
         {/* <SideArticle sectionName={'arts'}/> */}

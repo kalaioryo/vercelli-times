@@ -12,27 +12,26 @@ const API_KEY = process.env.REACT_APP_API_KEY
 // const url =` https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query}&api-key=${API_KEY}`;
 
 const SearchForm = () => {
-  const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('default');
+  // const [search, setSearch] = useState('');
+  const [query, setQuery] = useState('');
   const navigate = useNavigate();
 
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    setQuery(search);
-    navigate(`search/`, {state: search});
-    // setSearch('');
+    navigate(`../search/${query}`, {state: query});
+    // setQuery('');
   }
 
   const onChange = (e) =>{
-    setSearch(e.target.value);
-    console.log(search);
+    setQuery(e.target.value);
+    console.log(query);
   }
 
   const handleClick = () =>{
     // console.log(query);
-    navigate(`search/`, {state: search});
-    // setSearch('');
+    navigate(`../search/${query}`, {state: query});
+    // setQuery('');
   }
 
   return (
@@ -42,7 +41,7 @@ const SearchForm = () => {
             <input 
               type="text" 
               placeholder='search'
-              value={search}
+              value={query}
               onChange={onChange} />
           </div>        
           <button 

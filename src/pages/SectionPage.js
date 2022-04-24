@@ -9,7 +9,7 @@ const API_KEY = process.env.REACT_APP_API_KEY
 
 const SectionPage = () =>{
 
-  let { section } = useParams();
+  let { section, subSection } = useParams();
 
   const url = `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${API_KEY}`;
 
@@ -24,7 +24,8 @@ const SectionPage = () =>{
     <>
       <p>SectionPage for</p>
       <p>{section}</p>
-      <SectionPageContainer section={section}/>
+      { subSection ? <p>SubSection {subSection}</p> : null }
+      <SectionPageContainer section={section} subSection={subSection}/>
     </>   
   )
 }

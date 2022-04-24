@@ -2,6 +2,7 @@ import { useEffect, useState} from "react";
 import axios from 'axios';
 import { setQueryArticles } from '../redux/actions/articleAction';
 import { useDispatch} from 'react-redux';
+
 const useFetchApiQuery = (url) => {
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -16,6 +17,7 @@ const useFetchApiQuery = (url) => {
       setErrorMessage('');
     
       const response = await axios.get(url)
+      // console.log(response)
       .catch(error => {
         setHasError(true);
         setErrorMessage(error.message);

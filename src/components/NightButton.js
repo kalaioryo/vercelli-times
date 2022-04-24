@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faToggleOff, faToggleOn, faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+
+import { FaToggleOff, FaToggleOn, FaSun, FaMoon } from "react-icons/fa";
+
 import { useSelector, useDispatch } from 'react-redux';
 import { dayNight } from '../redux/actions/articleAction';
 import { useEffect } from 'react';
@@ -16,14 +17,14 @@ function NightButton() {
     <div className='nigth-div' >
       <button className='Nigth-btn' onClick={() => dispatch(dayNight())}>
         {
-          toggle ? <FontAwesomeIcon icon={faToggleOff} size="2x"/> :
-          <FontAwesomeIcon icon={faToggleOn} size="2x"/>      
+          toggle ? <FaToggleOff size="22px"/> :
+          <FaToggleOn size="22px"/>      
         }
       </button>
       <div className='sun-moon' >
         {
-          toggle ? <FontAwesomeIcon icon={faSun} size="1x" color='yellow'/> :
-          <FontAwesomeIcon icon={faMoon} size="1x" color='white'/>
+          toggle ? <FaSun size="16px" color='yellow'/> :
+          <FaMoon size="16px" color='white'/>
         }
       </div>
     </div>

@@ -1,17 +1,21 @@
 import React from 'react';
 // import SearchForm from '../../components/SearchForm';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
 import SearchButton from '../../components/SearchButton';
 import ListRegion from '../../components/ListRegion';
 import NightButton from '../../components/NightButton';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Sidebar from '../../components/sidebar/Sidebar';
 
 function NavbarUp() {
   return (
     <div  className="header-up">
       <div className='header-left'>
         <button className='btn-sidebar'>
-          <FontAwesomeIcon icon={faBars} size="lg"/>
+          <Sidebar/>
+          {/* <FontAwesomeIcon icon={faBars} size="lg"/> */}
         </button>
         <SearchButton/>
       </div>

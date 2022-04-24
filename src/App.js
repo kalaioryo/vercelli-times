@@ -32,9 +32,13 @@ function App() {
         <Header/>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='section/:section' element={<SectionPage/>}/>
+          <Route path='section/:section' element={<SectionPage/>}>
+            <Route path=':subSection' element={<SectionPage/>}/>
+          </Route>
           <Route path='*' element={<NotFoundPage/>}/>
-          <Route path='search/' element={<SearchPage/>}/>
+          <Route path='search/' element={<SearchPage/>}>
+            <Route path=':query' element={<SearchPage/>}/>
+          </Route>
           <Route path='article/' element={<ArticlePage/>}/>
 
 
