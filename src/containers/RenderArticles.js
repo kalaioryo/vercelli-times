@@ -6,89 +6,43 @@ import Abstract from "../components/articles-components/Abstract";
 import Article from "../components/articles-components/Article"
 import Figcaption from "../components/articles-components/Figcaption";
 import Title from "../components/articles-components/Title";
+import ErrorComponent from "../service/ErrorComponent";
 
-const test ={
-  multimedia: [{
-    url: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png"
-  },
-  {
-    url:"https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png"
-  },
-  {
-    url: null
-  }
-]
-}
+// const test ={
+//   multimedia: [{
+//     url: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png"
+//   },
+//   {
+//     url:"https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png"
+//   },
+//   {
+//     url: null
+//   }
+// ]
+// }
 
 const RenderArticles = ({slot, typeArticle, sizeImg, section, subSection}) =>{
-  // let filter = 'africa';
   const articles = useSelector((state) => state.allArticles.articles);
-  console.log(articles);
-  
+
   const RenderArticle = articles
-  .filter((article) => section ? article.section === section : true)
-  .filter((article) => subSection ? article.subsection === subSection : true)
+    .filter((article) => section ? article.section === section : true)
+    .filter((article) => subSection ? article.subsection === subSection : true)
     .map((article, index)=>{
 
-    
-    const {title, abstract, url, kicker, multimedia, item_type, subsection} = article    
+    const {title} = article    
 
-    if(typeArticle === 'article'){
-
-      return(
-        <Article 
-          key={`article: ${index + title}`}
-          title={title} 
-          abstract={abstract} 
-          url={url}
-          sizeImg={sizeImg}
-          multimedia={multimedia}
-          itemType={item_type}
-          />
-      )
+    const Mycomponent = {
+      "article": <Article key={`article:${index + title}`} article={article} />,
+      "abstract": <Abstract key={`abstract:${index + title}`} article={article} />,
+      "figcaption": <Figcaption key={`figcaption:${index + title}`} article={article} />,
+      "title": <Title key={`title:${index + title}`} article={article} />,
+      "default": <ErrorComponent key={`Error${index + title}`} message={"no render, insert typeArticle"}/>
     }
-    else if(typeArticle === 'abstract'){
-      return (
-        <Abstract 
-          key={`abstract:${index + title}`}
-          title={title}
-          abstract={abstract}
-          url={url}
-          sizeImg={sizeImg}
-          />
-      )
-    }
-    else if(typeArticle === 'figcaption'){
-            
-      return (
-        <Figcaption 
-          key={`figcaption:${index + title}`} 
-          title={title} 
-          multimedia={multimedia} 
-          url={url} 
-          kicker={kicker}
-          sizeImg={sizeImg}
-          />
-      )
-    }
-    else if(typeArticle === 'title'){
-      return(
-        <Title 
-          key={`title:${index + title}`}
-          title={title}
-          multimedia={multimedia}
-          url={url}
-          sizeImg={sizeImg}
-          />
-      )
-    }
+    return Mycomponent[typeArticle] || Mycomponent["default"];
   })
   //.console.log([...articlsizeImges]);
   // .filter( filter ?  === filter : true))
   return(<>{slot === undefined ? RenderArticle : RenderArticle[slot]}</>)
-
-  
- 
 }
 
 RenderArticles.propTypes = {

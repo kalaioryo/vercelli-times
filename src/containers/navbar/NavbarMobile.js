@@ -4,15 +4,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faUser } from '@fortawesome/free-solid-svg-icons'
 
 import DataComponent from '../../components/DataComponent';
+
 import { Link } from 'react-router-dom';
+import SidebarMobile from '../../components/sidebar/SidebarMobile';
 
 function NavbarMobile() {
   return (
-    <>
+    <div>
       <div className='header-mobile'>
         <div className='header-left'>
           <button className='btn-sidebar'>
-          <FontAwesomeIcon icon={faBars} size="lg"/>
+          <SidebarMobile/>
+          {/* <FontAwesomeIcon icon={faBars} size="lg"/> */}
         </button>
         </div>
         
@@ -32,7 +35,7 @@ function NavbarMobile() {
         <DataComponent/>
         <p>subscribe</p>
       </div>
-    </>
+    </div>
   );
 }
 

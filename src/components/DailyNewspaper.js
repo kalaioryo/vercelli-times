@@ -1,8 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
+
 
 function DailyNewspaper() {
+
   return (
-    <p>Daily news</p>
+    <Link to='todayspaper'>
+      <span>Daily news</span>
+    </Link>
   );
 }
 

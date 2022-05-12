@@ -5,6 +5,7 @@ import {Route, Routes } from 'react-router-dom';
 
 
 import './style/App.css';
+
 import Header from './containers/navbar/NavbarContainer';
 import Home from './pages/Home';
 import Footer from './containers/Footer';
@@ -12,6 +13,7 @@ import SectionPage from './pages/SectionPage';
 import NotFoundPage from './pages/NotFoundPage';
 import SearchPage from './pages/SearchPage';
 import ArticlePage from './pages/ArticlePage';
+import TodayPaperPage from './pages/TodayPaperPage';
 
 const API_VERSION = process.env.REACT_APP_VERSION
 const API_KEY = process.env.REACT_APP_API_KEY
@@ -27,26 +29,24 @@ function App() {
   // const dayNight = useSelector(state => state.dayNight);
 
   return (
-    <div>
-      {/* <h1>{API_KEY}</h1> */}
+    <>
         <Header/>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='section/:section' element={<SectionPage/>}>
-            <Route path=':subSection' element={<SectionPage/>}/>
-          </Route>
-          <Route path='*' element={<NotFoundPage/>}/>
-          <Route path='search/' element={<SearchPage/>}>
-            <Route path=':query' element={<SearchPage/>}/>
-          </Route>
-          <Route path='article/' element={<ArticlePage/>}/>
-
-
-
-        </Routes>
-        {/* <Home/> */}
+          <section className='content'>
+            <Routes>
+              <Route path='/' element={<Home/>}/>
+              <Route path='section/:section' element={<SectionPage/>}>
+                <Route path=':subSection' element={<SectionPage/>}/>
+              </Route>
+              <Route path='*' element={<NotFoundPage/>}/>
+              <Route path='search/' element={<SearchPage/>}>
+                <Route path=':query' element={<SearchPage/>}/>
+              </Route>
+              <Route path='article/' element={<ArticlePage/>}/>
+              <Route path='todayspaper' element={<TodayPaperPage/>}/>
+          </Routes>
+          </section>       
         <Footer/>
-    </div>
+    </>
   );
 }
 

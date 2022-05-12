@@ -2,7 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 
-const Title = ({title, url, multimedia}) =>{
+const Title = ({article}) =>{
+  const {title, url, multimedia} = article
   return (
     
   <section>

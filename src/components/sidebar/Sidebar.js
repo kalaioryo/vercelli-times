@@ -14,22 +14,27 @@ const Sidebar = () => {
   const [isShown, setIsShown] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar)
+
+  const handleMouseEnter = () => setSidebar(true)
+
+  const handleMouseLeave = () => setSidebar(false)
+
   return (
     <>
       {/* <div className={style.navBar}> */}
-        <Link to='#' className={style.menuBars} onClick={showSidebar}>
+        <Link to='#' className={style.menuBars} onClick={showSidebar}  >
           <FaBars size='20px'/>
         </Link>
       {/* </div> */}
-      <nav className={sidebar ? style.navMenuActive : style.navMenu }>
-        <ul className='nav-menu-items' >
+      <nav className={sidebar ? style.navMenuActive : style.navMenu } onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter}>
+        <ul >
           <li className='navbar-toogle'>
             <Link to='#' className='menuBars'>
               <AiOutlineClose size='20px' onClick={showSidebar}/> 
             </Link>
           </li>
           <li className={style.list}>
-            <Link to='/' className={style.navText}><span>Home</span></Link>
+            <Link to='/' className={style.navText}><span className={style.itemList}>Home Page</span></Link>
 
           </li>
           <LinkSection/>

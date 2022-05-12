@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import { useSelector } from "react-redux";
 import ImgArticle from "./ImgArticle";
 
-const Article = ({title, abstract, url, multimedia, sizeImg, itemType}) => {
+const Article = ({article}) => {
+
+  const {title, abstract, url, multimedia, sizeImg, itemType} = article
+
   if(itemType === "EmbeddedInteractive" ) {
     return null;
   } else{

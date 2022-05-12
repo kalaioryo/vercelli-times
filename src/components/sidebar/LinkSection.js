@@ -13,12 +13,11 @@ const LinkSection = () => {
   return (
     <>
       {SidebarData.map((item) =>{
-            const {queryUrl, id, name, subSection} = item;
-            // console.log(subSection.name);
-            return(
-             <Item key={`item Sidebar ${id}`} item={item}/>
-            )
-          })}
+        const {id} = item;
+        return(
+          <Item key={`item Sidebar ${id}`} item={item}/>
+        )
+      })}
     </>
   )
 }
@@ -26,58 +25,44 @@ const LinkSection = () => {
 export default LinkSection
 
 const Item = ({item}) => {
-  const {path, id, name, subSection} = item;
-
   const [isShown, setIsShown] = useState(false);
+  const {path, id, name, cName, subSection} = item;
 
-  const handleClick = (id) => {
-    console.log(id.target);
-  }
+  const handleMouseEnter = () => setIsShown(true)
 
-  const handleMouseEnter = () => {
-    setIsShown(true)
-  }
-
-  const handleMouseLeave = () => {
-    setIsShown(false)
-  }
+  const handleMouseLeave = () => setIsShown(false)
 
   return(
     <>
     <li key={id} className={style.list}
-    onClick={handleClick}
     onMouseEnter={handleMouseEnter}
     onMouseLeave={handleMouseLeave}
   >
     <Link to={`${path}`} className={style.navText}>
-      <span className={style.items}>
+      <span className={style.itemList}>
         {name}
       </span>
     </Link>
 
-    { isShown && subSection ? <Submenu subSection={subSection}/> : null}
+    { isShown && subSection ? <Submenu subSection={subSection} cName={cName}/> : null}
 
   </li>
   </>
   )
 }
 
-const Submenu = ({subSection}) =>{
+const Submenu = ({subSection, cName}) =>{
 
   return(
-    <ul className={style.subMenuContainer}>
+    <ul style={cName}>
       {subSection.map((subItem) =>{
-        console.log(subItem);
         const {name, path} = subItem;
     
         return (
-          <li  className={style.item}>
-                          
-              <Link key={`subItem Sidebar ${name}`} className={style.link}  to={`${path}`}>
+          <li key={`subItem Sidebar ${name}`} className={style.item}>                         
+              <Link  className={style.link}  to={`${path}`}>
                 {name}
-              </Link>
-            
-            
+              </Link>            
           </li>
         )
       })}

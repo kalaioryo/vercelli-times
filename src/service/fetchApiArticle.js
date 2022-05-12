@@ -31,23 +31,6 @@ const useFetchArticle = (url) => {
     fecthArticle()
   },[url])
 
-
-  // const fecthArticle = async () =>{
-  //   setIsLoading(true);
-  //   const response = await axios.get(url)
-  //   .catch((err) => {
-  //     console.log("Err", err);
-  //   });
-  //   // console.log(response.data);
-  //   dispatch(setArticles(response.data.results));
-  //   setIsLoading(false);
-    
-  // }
-
-  // useEffect(()=>{
-  //   fecthArticle()
-  // }, [url])
-  // console.log(isLoading);
   return {isLoading, hasError, errorMessage}
 }
 

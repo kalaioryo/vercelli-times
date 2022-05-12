@@ -2,12 +2,13 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
-function Figcaption({title, multimedia, url, kicker, sizeImg}) {
+function Figcaption({article}) {
+
+  const {title, multimedia, url, kicker, sizeImg} = article;
   // console.log(multimedia);
   // const imgUrl = multimedia[1].url;
   // const imgUrl = null;
   const defaultImg = "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png";
-
 
   return (
     <figure className='figcaption' >
@@ -21,28 +22,28 @@ function Figcaption({title, multimedia, url, kicker, sizeImg}) {
   )
 }
 
-Figcaption.propTypes = {
-  imgUrl:PropTypes.string.isRequired,
-  sizeImg:PropTypes.number,
+// Figcaption.propTypes = {
+//   imgUrl:PropTypes.string.isRequired,
+//   sizeImg:PropTypes.number,
 
-  multimedia: PropTypes.arrayOf(
-    PropTypes.shape({
-      url: PropTypes.string
-    })
-  ),
-  kicker: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired
-}
-Figcaption.defaultProps = {
-  sizeImg: 1,
-  multimedia: PropTypes.arrayOf(
-    PropTypes.shape({
-      url: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png"
-    })),
-  imgUrl: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png"
+//   multimedia: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       url: PropTypes.string
+//     })
+//   ),
+//   kicker: PropTypes.string,
+//   title: PropTypes.string.isRequired,
+//   url: PropTypes.string.isRequired
+// }
+// Figcaption.defaultProps = {
+//   sizeImg: 1,
+//   multimedia: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       url: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png"
+//     })),
+//   imgUrl: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png"
 
-}
+// }
 
 // Article.propTypes = {
 //   title: PropTypes.string.isRequired,
