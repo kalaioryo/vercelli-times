@@ -4,10 +4,10 @@ import { Link, useNavigate, useLocation, useParams } from "react-router-dom";
 
 import style from './searchPage.module.css'
 
-import ErrorComponent from '../service/ErrorComponent';
+import ErrorComponent from '../components/ErrorComponent';
 import LoadingComponent from '../components/LoadingComponent';
 import CardSearchArticle from '../components/articles-components/CardSearchSection';
-import SearchForm from '../components/SearchForm';
+import SearchForm from '../components/form/SearchForm';
 
 const Search = () => {
 

@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 function DailyNewspaper() {
 
   return (
-    <Link to='todayspaper'>
+    <Link to='/section/todayspaper'>
       <span>Daily news</span>
     </Link>
   );

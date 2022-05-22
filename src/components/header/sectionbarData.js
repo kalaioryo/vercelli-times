@@ -1,8 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
-
-const sectionList = [
+export const sectionbarData = [
   {id: 1, name: 'World', queryUrl:'world'},
   {id: 2, name: 'U.S.', queryUrl:'us'},
   {id: 3, name: 'Politics', queryUrl:'politics'},
@@ -23,27 +20,3 @@ const sectionList = [
   {id: 18, name: 'Real Estate', queryUrl:'realestate'}
 
 ]
-
-function NavbarDown() {
-  
-
-  const renderLinkSection = sectionList.map(sections=>{
-    const {id, name, queryUrl} = sections;
-    return(
-      <li className='link-tag' key={`tag:${id}`}>
-      <Link to={`/section/${queryUrl}`}><p>{name}</p></Link>
-      </li>
-  
-    )
-  })
-
-  return (
-    <div className='header-tag'>
-      <ul className='tag'>
-        {renderLinkSection}
-      </ul>
-    </div>
-  );
-}
-
-export default NavbarDown;

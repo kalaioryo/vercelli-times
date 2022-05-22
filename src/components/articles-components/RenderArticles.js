@@ -2,24 +2,11 @@ import React from "react";
 import { useSelector } from "react-redux";
 import PropTypes from 'prop-types';
 
-import Abstract from "../components/articles-components/Abstract";
-import Article from "../components/articles-components/Article"
-import Figcaption from "../components/articles-components/Figcaption";
-import Title from "../components/articles-components/Title";
-import ErrorComponent from "../service/ErrorComponent";
-
-// const test ={
-//   multimedia: [{
-//     url: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png"
-//   },
-//   {
-//     url:"https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png"
-//   },
-//   {
-//     url: null
-//   }
-// ]
-// }
+import Abstract from "./Abstract";
+import Article from "./Article"
+import Figcaption from "./Figcaption";
+import Title from "./Title";
+import ErrorComponent from "../ErrorComponent";
 
 const RenderArticles = ({slot, typeArticle, sizeImg, section, subSection}) =>{
   const articles = useSelector((state) => state.allArticles.articles);

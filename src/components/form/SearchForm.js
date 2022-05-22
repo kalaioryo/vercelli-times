@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
-import useFetchArticle from '../service/fetchApiArticle';
+// import useFetchArticle from '../service/fetchApiArticle';
 import { useNavigate } from 'react-router-dom';
+
+import style from './searchForm.module.css'
 
 
 // /articlesearch.json?q={query}&fq={filter}
@@ -36,7 +38,7 @@ const SearchForm = () => {
 
   return (
     <div>
-        <form className='form-search' action="submit" onSubmit={handleSubmit}>
+        <form className={style.formSearch} action="submit" onSubmit={handleSubmit}>
           <div>
             <input 
               type="text" 

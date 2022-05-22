@@ -1,0 +1,35 @@
+.headerUp{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.leftSide{
+  display: flex;
+  width: 20%;
+}
+
+.leftSide button{
+  min-width: 30px;
+  padding: 2px;
+  background-color: transparent;
+}
+
+.centerSide{
+  display: flex;
+}
+
+.rigthSide{
+  display: flex;
+  justify-content: space-evenly;
+  width: 20%;
+}
+
+.rigthSide button{
+  min-width: 30px;
+  padding: 2px;
+  background-color: transparent;
+}
+

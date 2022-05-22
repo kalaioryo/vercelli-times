@@ -18,6 +18,45 @@ html,body{
   justify-content: space-between; */
 }
 
+
+
+/* body{
+  color: #333;
+  color: #5A5A5A
+} */
+h1{
+  color: black;
+}
+p{
+  color: #333;
+}
+
+h2{
+  font-size: 1.3em;
+}
+
+p{
+  font-size: 0.8em;
+  
+}
+
+/* button{
+  min-width: 30px;
+  padding: 2px;
+  background-color: transparent;
+} */
+
+/* input{
+  width: auto;
+} */
+
+.header{
+  background-color: lightgreen;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .content{
   /* min-height: 100%; */
   /* margin-top: 0px; */
@@ -50,6 +89,8 @@ html,body{
 
 a{
   display:block;
+  text-decoration: none;
+  color:black;
 }
 
 .App-logo {
@@ -94,5 +135,16 @@ a{
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 900px){
+
+  body{
+    margin: 0 5%;
+  } 
+
+  figure{
+    width: 100%;
   }
 }

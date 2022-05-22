@@ -6,14 +6,13 @@ import {Route, Routes } from 'react-router-dom';
 
 import './style/App.css';
 
-import Header from './containers/navbar/NavbarContainer';
+import Header from './components/header/Header';
 import Home from './pages/Home';
-import Footer from './containers/Footer';
+import Footer from './components/footer/Footer';
 import SectionPage from './pages/SectionPage';
 import NotFoundPage from './pages/NotFoundPage';
 import SearchPage from './pages/SearchPage';
 import ArticlePage from './pages/ArticlePage';
-import TodayPaperPage from './pages/TodayPaperPage';
 
 const API_VERSION = process.env.REACT_APP_VERSION
 const API_KEY = process.env.REACT_APP_API_KEY
@@ -42,7 +41,6 @@ function App() {
                 <Route path=':query' element={<SearchPage/>}/>
               </Route>
               <Route path='article/' element={<ArticlePage/>}/>
-              <Route path='todayspaper' element={<TodayPaperPage/>}/>
           </Routes>
           </section>       
         <Footer/>

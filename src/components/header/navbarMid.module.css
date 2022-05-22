@@ -1,0 +1,23 @@
+.headerMid{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftSide{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+
+}
+
+.title{
+  font-size: 40px;
+}
+
+.rigthSide{
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}

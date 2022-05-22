@@ -1,9 +1,12 @@
 import React, {useEffect, useState} from "react";
 import useFetchArticle from "../service/fetchApiArticle";
 import { useParams } from "react-router-dom";
-import SectionPageContainer from "../containers/navbar/SectionPageContainer";
+
+import style from './sectionPage.module.css';
+
+import SectionPageContainer from "../components/SectionPageContainer";
 import LoadingComponent from "../components/LoadingComponent";
-import ErrorComponent from "../service/ErrorComponent";
+import ErrorComponent from "../components/ErrorComponent";
 
 const API_KEY = process.env.REACT_APP_API_KEY
 

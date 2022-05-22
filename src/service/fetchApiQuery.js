@@ -7,28 +7,35 @@ const useFetchApiQuery = (url) => {
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
-  // const articles = useSelector((state) => state.allArticles);
+
   const dispatch = useDispatch();
 
-  useEffect(()=>{
-    const fecthArticle = async () =>{
-      setIsLoading(true);
-      setHasError(false);
-      setErrorMessage('');
-    
+  const fecthArticle = async () =>{
+    setIsLoading(true);
+    setHasError(false);
+    setErrorMessage('');
+
+    try{
       const response = await axios.get(url)
-      // console.log(response)
-      .catch(error => {
-        setHasError(true);
-        setErrorMessage(error.message);
-        console.log("Err", error);
-      });
-    // console.log(response.data);
+      if (!response.status === 200) {
+        throw new Error("Something went wrong!");
+      }
+      if (response.data.results === null) {
+        throw new Error("Results not found");
+      }
+
       dispatch(setQueryArticles(response.data.response.docs));
-      console.log(response.data.response.docs);
-      setIsLoading(false);
+      
+    } catch (error) {
+      setHasError(true);
+      setErrorMessage(error.message);
     }
 
+    setIsLoading(false);
+  
+  }
+
+  useEffect(()=>{
     fecthArticle()
   },[url])
 

@@ -1,0 +1,103 @@
+.body{
+  background-color: lightsalmon;
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.topNews{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border:  2px solid blue; /* border debug */
+}
+
+.mainNews{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.covidSection{
+  width: 100%;
+}
+
+.sideNews{
+  width: 100%;
+}
+
+.newsRandomContainer{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border:  2px solid blue; /* border debug */
+}
+
+.newsRandom{
+  width: 25%;
+}
+
+.moreNewsContainer{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border:  2px solid blue; /* border debug */
+}
+
+.moreNews{
+  width: 100%;
+}
+
+.sideMoreNews{
+  width: 100%;
+}
+
+.categoryNewsSection{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border:  2px solid blue; /* border debug */
+}
+
+.newsCategory{
+  width: 20%;
+  font-size: 0.8em;
+}
+
+.game{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border:  2px solid blue; /* border debug */
+}
+
+
+@media only screen and (min-width: 900px){
+  
+  .mainNews{
+    width: 70%;
+  }
+
+  .container{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-flow: column;
+    width: 50%;
+    /* justify-items: start; */
+    /* grid-column: span 9; */
+  }
+
+  .sideNews{
+    width: 30%;
+  }
+
+  .moreNews{
+    width: 70%;
+  }
+  
+  .sideMoreNews{
+    width: 30%;
+  }
+
+
+}

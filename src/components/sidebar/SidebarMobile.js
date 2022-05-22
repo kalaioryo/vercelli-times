@@ -6,12 +6,14 @@ import { AiOutlineClose } from "react-icons/ai";
 import style from './sidebarMobile.module.css'
 
 import { sidebarMobileData } from './sidebarMobileData';
+import SearchForm from '../form/SearchForm';
 
 const SidebarMobile = () => {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => {
     setSidebar(!sidebar)
+
     if(!sidebar) {
         document.body.style.overflow = 'hidden';
       } else {
@@ -19,7 +21,10 @@ const SidebarMobile = () => {
       }
   }
 
+  const closeSidebar = () =>{
+    setSidebar(false)
 
+  }
 
   return (
     <>
@@ -35,19 +40,7 @@ const SidebarMobile = () => {
 export default SidebarMobile
 
 const ModalSiderbar = ({showSidebar}) =>{
-  // const [scrollbar, setScrollbar] = useState(true)
 
-  // if(scrollbar) {
-  //   document.body.style.overflow = 'hidden';
-  // }
-
-  // const handleMouseEnter = ()=>{
-  //   setScrollbar(true)
-  // }
-
-  // const handleMouseLeave = ()=>{
-  //   setScrollbar(false)
-  // }
   return (
     <div className={style.wrap}>
       <div className={style.modalContainer}>
@@ -56,6 +49,7 @@ const ModalSiderbar = ({showSidebar}) =>{
             <AiOutlineClose size='20px' onClick={showSidebar}/> 
           </Link>
         </div>
+        {/* <SearchForm/>  */}
         <Item/>
     </div>
     </div>

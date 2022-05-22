@@ -28,8 +28,8 @@ const Sidebar = () => {
       {/* </div> */}
       <nav className={sidebar ? style.navMenuActive : style.navMenu } onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter}>
         <ul >
-          <li className='navbar-toogle'>
-            <Link to='#' className='menuBars'>
+          <li className={style.navbarToogle}>
+            <Link to='#' className={style.menuBars}>
               <AiOutlineClose size='20px' onClick={showSidebar}/> 
             </Link>
           </li>

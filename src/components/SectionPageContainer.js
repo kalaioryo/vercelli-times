@@ -1,6 +1,7 @@
 import React from 'react';
-import useFetchArticle from '../../service/fetchApiArticle';
-import RenderArticles from '../RenderArticles';
+import style from './sectionPageContainer.module.css'
+import useFetchArticle from '../service/fetchApiArticle';
+import RenderArticles from './articles-components/RenderArticles';
 
 const SectionPageContainer = ({section, subSection}) => {
 

@@ -38,6 +38,10 @@
   z-index: 99;
 }
 
+.navbarToogle{
+  list-style-type: none;
+}
+
 /* .sidebarContainer{
   width: 200 px;
 } */
@@ -78,7 +82,7 @@
 }
 
 /* .list :hover{
-  background-color: black;
+  background-color: orange;
   color: white;
 } */
 

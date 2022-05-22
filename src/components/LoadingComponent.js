@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import style from './loadingComponent.module.css'
 
 const LoadingComponent = () => {
   return (

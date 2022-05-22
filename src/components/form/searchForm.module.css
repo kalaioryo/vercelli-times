@@ -1,0 +1,7 @@
+.formSearch{
+  display: inline-flex;
+}
+
+.formSearch input{
+  width: auto;
+}

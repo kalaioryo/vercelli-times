@@ -132,7 +132,7 @@ export const SidebarData = [
     path: '/section/technology',
     cName: subMenuContainer,
     subSection: [
-      { name: 'Personal Tech', path: '/section/sports/personaltech'},
+      { name: 'Personal Tech', path: '/section/technology/personaltech'},
     ]
   },
   {
@@ -257,7 +257,7 @@ export const SidebarData = [
       { name: 'Reader Center', path: '/section/reader-center'},
       { name: 'Parenting', path: '/section/parenting'},
       { name: 'The Learning Network', path: '/section/learning'},
-      { name: 'Today\'\s Paper', path: 'todayspaper'},
+      { name: 'Today\'\s Paper', path: '/section/todayspaper'},
       { name: 'Jobs', path: '/section/jobs'},
       { name: 'Corrections', path: '/section/corrections'},
     ]

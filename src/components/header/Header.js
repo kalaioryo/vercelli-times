@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import '../../style/Header.css';
-// import '../../HeaderUp';
+
+import style from './header.module.css'
+
 import NavbarUp from './NavbarUp';
 import NavbarMid from './NavbarMid';
-import NavbarDown from './NavbarDown';
-import NavbarMobile from './NavbarMobile';
+import SectionBar from './SectionBar';
+import NavbarMobile from './HeaderMobile';
 
 function NavbarContainer() {
   const [size, setSize] = useState(window.innerWidth)
@@ -29,13 +30,12 @@ function NavbarContainer() {
     )
   } else {
     return (
-      <div className='header'>
+      <div className={style.header}>
         <NavbarUp/>
 
         <NavbarMid/>
 
-        <NavbarDown/>
-
+        <SectionBar/>
 
       </div>
     );
