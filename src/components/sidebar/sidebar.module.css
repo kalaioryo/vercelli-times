@@ -68,14 +68,14 @@
   /* color:white; */
 }
 
-.list{
-  /* justify-content: right; */
-  /* padding: 1px; */
+/* .list{
+  justify-content: right;
+  padding: 1px;
   width: 180 px;
   display: flex;
   position: relative;
   z-index: 5;
-}
+} */
 
 .itemList{
   width: 100%;

@@ -1,0 +1,14 @@
+.subItem{
+  padding: 0;
+  width: 50%;
+  cursor: pointer;
+}
+
+.subItemLink{
+  text-decoration: none;
+  color: black;
+}
+
+.subItemName{
+  text-decoration: none;
+}

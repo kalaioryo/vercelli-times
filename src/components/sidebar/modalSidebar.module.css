@@ -1,7 +1,3 @@
-
-/* body{
-  overflow: auto;
-} */
 .wrap{
   position: fixed;
   background-color: rgba(0, 0, 0, 0.4);
@@ -26,32 +22,8 @@
   /* margin:auto */
 }
 
-/* .itemContainer{
-  padding: 5% 15%;
-  text-align: start;
+.menuBars{
+  /* margin-left: 2em; */
+  font-size: 2em;
+  background-color: none;
 }
-
-.itemName{
-  font-size: 0.8em;
-}
-
-.subItemContainer{
-  padding: 0px;
-  display: flex;
-  flex-wrap: wrap;
-} */
-
-/* .subItem{
-  padding: 0;
-  width: 50%;
-  cursor: pointer;
-}
-
-.subItemLink{
-  text-decoration: none;
-  color: black;
-}
-
-.subItemName{
-  text-decoration: none;
-} */

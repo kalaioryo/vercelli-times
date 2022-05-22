@@ -1,21 +1,24 @@
-import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
-import style from './sidebar.module.css';
+import React from "react";
+import { Link } from "react-router-dom";
 
+import style from './submenu.module.css';
 
-const Submenu = ({isShown}) => {
-  // const [isShown, setIsShown] = useState(true);
+const Submenu = ({subSection, cName}) =>{
 
-  return (
-    <>
-      {isShown ? <span>World</span> : null}
-    </>
-
-    // <span id='subMenu'  className={ isShown ? style.visible : style.listSubSection}>
-    //     <Link to='#'>
-    //       subMenu
-    //     </Link>
-    // </span>
+  return(
+    <ul style={cName}>
+      {subSection.map((subItem) =>{
+        const {name, path} = subItem;
+    
+        return (
+          <li key={`subItem Sidebar ${name}`} className={style.item}>                         
+              <Link  className={style.link}  to={`${path}`}>
+                {name}
+              </Link>            
+          </li>
+        )
+      })}
+    </ul>
   )
 }
 

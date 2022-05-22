@@ -5,7 +5,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { SidebarData } from './sidebarData';
 
 import style from './sidebar.module.css';
-import LinkSection from './LinkSection';
+import Menu from './Menu';
 
 
 
@@ -37,7 +37,7 @@ const Sidebar = () => {
             <Link to='/' className={style.navText}><span className={style.itemList}>Home Page</span></Link>
 
           </li>
-          <LinkSection/>
+          <Menu/>
 
         </ul>
       </nav>

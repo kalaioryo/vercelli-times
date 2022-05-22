@@ -1,0 +1,16 @@
+.itemContainer{
+  list-style-type: none;
+  padding: 5% 15%;
+  text-align: start;
+}
+
+.itemName{
+  font-size: 0.8em;
+}
+
+.subItemContainer{
+  list-style-type: none;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
