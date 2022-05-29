@@ -1,8 +1,10 @@
 .footer{
+  margin: 0% 5%;
   bottom: 0;
-  background-color: lightskyblue;
+  /* border debug */
+  /* background-color: lightskyblue; */
   position: absolute;
   height: 100px;
-  width: 100%;
+  width: 95%;
   text-align: center;
 }

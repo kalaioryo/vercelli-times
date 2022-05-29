@@ -22,12 +22,6 @@ export const setSingleArticle = (article) =>{
 }
 
 
-export const dayNight = () => {
-  return {
-    type: 'DAYNIGTH'
-  };
-} 
-
 // export const selectArticles = (articles) => {
 //   return {
 //     type: ActionTypes.SELECT_ARTICLE,

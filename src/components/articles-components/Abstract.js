@@ -2,12 +2,14 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import style from './abstract.module.css';
+
 const Abstract = ({article}) =>{
 
   const {title, abstract, url, sizeImg} = article;
 
   return (
-    <section className='item'>
+    <section className={style.item}>
       <a href={`${url}`}>
         <p>{abstract}</p>
       </a>

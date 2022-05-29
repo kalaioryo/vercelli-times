@@ -1,5 +1,5 @@
 *{
-  border: red 1px solid;
+  /* border: red 1px solid; */
   /* padding: 2px; */
   margin: 0;
   box-sizing: border-box;
@@ -24,12 +24,12 @@ html,body{
   color: #333;
   color: #5A5A5A
 } */
-h1{
+/* h1{
   color: black;
 }
 p{
   color: #333;
-}
+} */
 
 h2{
   font-size: 1.3em;
@@ -51,7 +51,7 @@ p{
 } */
 
 .header{
-  background-color: lightgreen;
+  /* background-color: lightgreen; */ /*debug*/
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -90,7 +90,7 @@ p{
 a{
   display:block;
   text-decoration: none;
-  color:black;
+  /* color:black; */
 }
 
 .App-logo {
@@ -140,9 +140,9 @@ a{
 
 @media only screen and (min-width: 900px){
 
-  body{
-    margin: 0 5%;
-  } 
+  /* body{
+    padding: 0 5%;
+  }  */
 
   figure{
     width: 100%;

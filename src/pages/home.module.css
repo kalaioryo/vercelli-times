@@ -1,14 +1,18 @@
 .body{
-  background-color: lightsalmon;
+  /*debug*/
+  /* background-color: lightsalmon;*/
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
+  margin: 0% 5%;
+
 }
 
 .topNews{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  border:  2px solid blue; /* border debug */
+  /* border debug */
+  border:  2px solid blue; 
 }
 
 .mainNews{
@@ -29,7 +33,8 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  border:  2px solid blue; /* border debug */
+  /* border debug */
+  border:  2px solid blue;
 }
 
 .newsRandom{
@@ -40,7 +45,8 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  border:  2px solid blue; /* border debug */
+  /* border debug */
+  border:  2px solid blue;
 }
 
 .moreNews{
@@ -55,7 +61,8 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  border:  2px solid blue; /* border debug */
+  /* border debug */
+  border:  2px solid blue; 
 }
 
 .newsCategory{
@@ -67,7 +74,8 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  border:  2px solid blue; /* border debug */
+  /* border debug */
+  border:  2px solid blue; 
 }
 
 

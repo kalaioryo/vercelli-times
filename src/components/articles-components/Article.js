@@ -1,4 +1,5 @@
 import React from "react";
+import style from './article.module.css';
 import PropTypes from 'prop-types';
 import { useSelector } from "react-redux";
 import ImgArticle from "./ImgArticle";
@@ -10,11 +11,11 @@ const Article = ({article}) => {
   if(itemType === "EmbeddedInteractive" ) {
     return null;
   } else{
-    <section className="item">
+    <section className={style.item}>
          <a href={`${url}`}>
            <div>
              {sizeImg ? <ImgArticle multimedia={multimedia}/> : null}
-             {title ? <h2>{title}</h2> : null}
+             {title ? <h3>{title}</h3> : null}
              {abstract ? <p>{abstract}</p> : null}
           </div>
          </a>    
@@ -22,10 +23,10 @@ const Article = ({article}) => {
   }
 
   return (
-    <section className="item">
+    <section className={style.item}>
          <a href={`${url}`}>
            <div>
-             {title ? <h2>{title}</h2> : null}
+             {title ? <h3>{title}</h3> : null}
              {abstract ? <p>{abstract}</p> : null}
           </div>
          </a>    
