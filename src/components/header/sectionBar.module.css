@@ -13,6 +13,11 @@
 
 .tag li{
   display: inline-block;
+  /* padding: 4px; */
+  /* font-size: 12px; */
+}
+
+.tag a {
   padding: 4px;
   font-size: 12px;
 }

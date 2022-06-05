@@ -9,7 +9,6 @@ import { darkMode } from '../../redux/actions/themeAction';
 import { lightMode } from '../../redux/actions/themeAction';
 import { useEffect } from 'react';
 
-
 import "../../style/darkMode.css";
 
 function DarkModeButton() {
@@ -28,8 +27,7 @@ function DarkModeButton() {
   }
   
   const storiedTheme = localStorage.getItem("theme");
-  console.log(localStorage);
-  
+    
   const prefersDark =
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches;

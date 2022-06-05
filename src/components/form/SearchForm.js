@@ -37,10 +37,10 @@ const SearchForm = () => {
   }
 
   return (
-    <div>
+    <div className={style.containerForm}>
         <form className={style.formSearch} action="submit" onSubmit={handleSubmit}>
-          <div>
-            <input 
+          <div >
+            <input
               type="text" 
               placeholder='search'
               value={query}

@@ -1,13 +1,19 @@
 :root{
   --font-color: #333;
-  --background-color: #eee;
-  --link-color: cornflowerblue;
+  --background-color: white;
+  --link-color: #333;
+  --button-color: #333;
+  --title: #121212;
+  --p-color: #5A5A5A;
 }
 
 [data-theme="dark"]{
   --font-color: #eee;
   --background-color: #333;
-  --link-color: cornflowerblue;
+  --link-color: #eee;
+  --button-color: #eee;
+  --title: #eee;
+  --p-color: #aaa9a9;
 }
 
 body{
@@ -17,4 +23,16 @@ body{
 
 a {
   color: var(--link-color);
+}
+
+h1, h3 {
+  color: var(--title);
+}
+
+p{
+  color: var(--p-color);
+}
+
+button {
+  color: var(--button-color);
 }

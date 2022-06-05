@@ -12,9 +12,9 @@ function Figcaption({article}) {
   const defaultImg = "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png";
 
   return (
-    <figure className='figcaption' >
+    <figure>
       <a href={`${url}`}>
-      <img src={`${multimedia ? multimedia[1].url : defaultImg}`} width='100%' height='100%'></img>
+      <img className={style.image} src={`${multimedia ? multimedia[1].url : defaultImg}`} width='100%' height='100%'></img>
       </a>
       <figcaption>{kicker}</figcaption>
 

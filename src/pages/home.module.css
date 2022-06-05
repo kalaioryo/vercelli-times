@@ -21,6 +21,10 @@
   flex-wrap: wrap;
 }
 
+.container{
+  width: 100%;
+}
+
 .covidSection{
   width: 100%;
 }

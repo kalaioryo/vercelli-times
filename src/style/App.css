@@ -18,6 +18,11 @@ html,body{
   justify-content: space-between; */
 }
 
+a,span{
+  display: block;
+}
+
+
 
 
 /* body{
@@ -74,6 +79,12 @@ p{
   /* display: flex; */
   /* flex-direction: column; */
   /* justify-content: flex-start; */
+}
+
+button {
+  border: none;
+  /* padding: 20px; */
+  margin: 5px;
 }
 
 
