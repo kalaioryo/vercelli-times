@@ -7,7 +7,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import SearchButton from '../button/SearchButton';
 import ListRegion from './ListRegion';
 import DarkModeButton from '../button/DarkModeButton';
-import Sidebar from '../sidebar/Sidebar';
+import Sidebar from '../sidebar/desktop/Sidebar';
 
 function NavbarUp() {
   return (

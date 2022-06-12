@@ -1,13 +1,21 @@
 .containerTag{
   display: flex;
   justify-content: center;
+  border-top: 1px solid ;
+  border-bottom: 4px double #000;
 }
+
+/* .containerTag::after {
+  content: '';
+  border-bottom: 4px double #000;
+  display: block;
+} */
 
 .tag{
   display: flex;
   display: inline-block;
   justify-content: flex-end; /*warning */
-  padding: 10px;
+  padding: 5px 10px;
   list-style-type: none;
 }
 

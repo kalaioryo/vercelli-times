@@ -4,6 +4,7 @@
   --link-color: #333;
   --button-color: #333;
   --title: #121212;
+  --secondary-color: #121212;
   --p-color: #5A5A5A;
 }
 
@@ -13,6 +14,7 @@
   --link-color: #eee;
   --button-color: #eee;
   --title: #eee;
+  --secondary-color: #eee;
   --p-color: #aaa9a9;
 }
 
@@ -31,6 +33,14 @@ h1, h3 {
 
 p{
   color: var(--p-color);
+}
+
+li{
+  color: var(--secondary-color);
+}
+
+svg{
+  color: var(--secondary-color);
 }
 
 button {

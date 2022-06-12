@@ -2,6 +2,7 @@
   /* border: red 1px solid; */
   /* padding: 2px; */
   margin: 0;
+  /* padding: 0; */
   box-sizing: border-box;
 }
 
@@ -151,9 +152,10 @@ a{
 
 @media only screen and (min-width: 900px){
 
-  /* body{
-    padding: 0 5%;
-  }  */
+  body{
+    max-width: 1200px;
+    margin: auto;
+  }
 
   figure{
     width: 100%;

@@ -29,7 +29,9 @@ const Article = ({article}) => {
              {title ? <h3>{title}</h3> : null}
              {abstract ? <p>{abstract}</p> : null}
           </div>
-         </a>    
+         </a>
+         <div className={style.borderHorizontal}></div>
+   
        </section>
   ) 
 }

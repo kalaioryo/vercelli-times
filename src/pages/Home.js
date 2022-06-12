@@ -6,6 +6,7 @@ import useFetchArticle from '../service/fetchApiArticle';
 import RenderArticles from '../components/articles-components/RenderArticles';
 import LoadingComponent from '../components/LoadingComponent';
 import ErrorComponent from '../components/ErrorComponent';
+import CategoryNews from '../components/articles-components/CategoryNews';
 
 const API_KEY = process.env.REACT_APP_API_KEY
 
@@ -36,19 +37,24 @@ function Home() {
           <section className={style.container}>
             <RenderArticles slot={0} typeArticle={'article'} />
             <RenderArticles slot={1} typeArticle={'abstract'}/>
+            <div className={style.borderHorizontal}></div>
             <RenderArticles slot={2} typeArticle={'abstract'}/>
+            <div className={style.borderHorizontal}></div>
             <RenderArticles slot={3} typeArticle={'abstract'}/>
 
           </section>
           <section className={style.container}>
-          <RenderArticles slot={0} typeArticle={'figcaption'}/>
+            <RenderArticles slot={0} typeArticle={'figcaption'}/>
 
           </section>
           
           <section className={style.container}>
             <RenderArticles slot={4} typeArticle={'abstract'}/>
+            <div className={style.borderHorizontal}></div>
             <RenderArticles slot={5} typeArticle={'abstract'}/>
+            <div className={style.borderHorizontal}></div>
             <RenderArticles slot={6} typeArticle={'abstract'}/>
+            <div className={style.borderHorizontal}></div>
             <RenderArticles slot={7} typeArticle={'abstract'}/>
 
           </section>
@@ -80,23 +86,27 @@ function Home() {
           </section>
                 
           <section className={style.container}>
-          <RenderArticles slot={10} typeArticle={'article'}/>
+            <RenderArticles slot={10} typeArticle={'article'}/>
           </section>
 
           <section className={style.container}>
-          <RenderArticles slot={10} typeArticle={'figcaption'}/>
+            <RenderArticles slot={10} typeArticle={'figcaption'}/>
           </section>
 
           <section className={style.container}>
-          <RenderArticles slot={11} typeArticle={'article'}/>
+            <RenderArticles slot={11} typeArticle={'article'}/>
           </section>
 
           <section className={style.container}>
-          <RenderArticles slot={11} typeArticle={'figcaption'}/>
+            <RenderArticles slot={11} typeArticle={'figcaption'}/>
           </section>
       </div>
+
+      <div className={style.borderVertical} ></div>
+
       <div className={style.sideNews}>
         <RenderArticles slot={0} typeArticle={'figcaption'} section={'opinion'}/>
+        <div className={style.borderHorizontal}></div>
         <RenderArticles typeArticle={'article'} section={'opinion'}/>
       </div>
       </div>
@@ -161,82 +171,35 @@ function Home() {
     </div>
 
     <div className={style.categoryNewsSection}>
-      <div className={style.newsCategory}>
-        <p>World News</p>
-        <RenderArticles slot={0} typeArticle={'figcaption'} section={'world'}/>
-        <RenderArticles slot={0} typeArticle={'title'} section={'world'}/>
-        <RenderArticles slot={1} typeArticle={'title'} section={'world'}/>
-        <RenderArticles slot={2} typeArticle={'title'} section={'world'}/>
-      </div>
 
-      <div className={style.newsCategory}>
-      <p>U.S News</p>
-        <RenderArticles slot={0} typeArticle={'figcaption'} section={'us'}/>
-        <RenderArticles slot={0} typeArticle={'title'} section={'us'}/>
-        <RenderArticles slot={1} typeArticle={'title'} section={'us'}/>
-        <RenderArticles slot={2} typeArticle={'title'} section={'us'}/>
-      </div>
-      <div className={style.newsCategory}>
-      <p>U.S Politics</p>
-        <RenderArticles slot={0} typeArticle={'figcaption'} section={'us'} subSection={"politics"}/>
-        <RenderArticles slot={0} typeArticle={'title'} section={'us'} subSection={"politics"}/>
-        <RenderArticles slot={1} typeArticle={'title'} section={'us'} subSection={"politics"}/>
-        <RenderArticles slot={2} typeArticle={'title'} section={'us'} subSection={"politics"}/>
-      </div>
-      <div className={style.newsCategory}>
-      <p>New York </p>
-        <RenderArticles slot={0} typeArticle={'figcaption'} section={'nyregion'}/>
-        <RenderArticles slot={0} typeArticle={'title'} section={'nyregion'}/>
-        <RenderArticles slot={1} typeArticle={'title'} section={'nyregion'}/>
-        <RenderArticles slot={2} typeArticle={'title'} section={'nyregion'}/>
-      </div>
-      <div className={style.newsCategory}>
-      <p>Business</p>
-        <RenderArticles slot={0} typeArticle={'figcaption'} section={'business'}/>
-        <RenderArticles slot={0} typeArticle={'title'} section={'business'}/>
-        <RenderArticles slot={1} typeArticle={'title'} section={'business'}/>
-        <RenderArticles slot={2} typeArticle={'title'} section={'business'}/>
-      </div>
-      <div className={style.newsCategory}>
-      <p>Technology</p>
-        <RenderArticles slot={0} typeArticle={'figcaption'} section={'technology'}/>
-        <RenderArticles slot={0} typeArticle={'title'} section={'technology'}/>
-        <RenderArticles slot={1} typeArticle={'title'} section={'technology'}/>
-        <RenderArticles slot={2} typeArticle={'title'} section={'technology'}/>
-      </div>
-      <div className={style.newsCategory}>
-      <p>Science</p>
-        <RenderArticles slot={0} typeArticle={'figcaption'} section={'science'}/>
-        <RenderArticles slot={0} typeArticle={'title'} section={'science'}/>
-        <RenderArticles slot={1} typeArticle={'title'} section={'science'}/>
-        <RenderArticles slot={2} typeArticle={'title'} section={'science'}/>
-      </div>
-      <div className={style.newsCategory}>
-        <p>Sports</p>
-        <RenderArticles slot={0} typeArticle={'figcaption'} section={'sports'}/>
-        <RenderArticles slot={0} typeArticle={'title'} section={'sports'}/>
-        <RenderArticles slot={1} typeArticle={'title'} section={'sports'}/>
-        <RenderArticles slot={2} typeArticle={'title'} section={'sports'}/>
-      </div>
-      <div className={style.newsCategory}>
-        <p>Obituaries</p>
-        <RenderArticles slot={0} typeArticle={'figcaption'} section={'obituaries'}/>
-        <RenderArticles slot={0} typeArticle={'title'} section={'obituaries'}/>
-        <RenderArticles slot={1} typeArticle={'title'} section={'obituaries'}/>
-        <RenderArticles slot={2} typeArticle={'title'} section={'obituaries'}/>
-      </div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
+      <h3>News</h3>
+  
+      <CategoryNews section={'world'} category={'World news'}/>
+      <CategoryNews section={'us'} category={'U.S. News'}/>
+      <CategoryNews section={'politics'} category={'U.S. Politics'}/>
+      <CategoryNews section={'nyregion'} category={'New York'}/>
+      <CategoryNews section={'business'} category={'Business'}/>
+      <CategoryNews section={'technology'} category={'Technology'}/>
+      <CategoryNews section={'science'} category={'Science'}/>
+      <CategoryNews section={'sports'} category={'Sports'}/>
+      <CategoryNews section={'obituaries'} category={'Obituaries'}/>   
+
+      <CategoryNews section={'opinion'} category={'Opinion'}/>
+      <CategoryNews subSection={'columnist'} category={'Columnist'}/>
+      <CategoryNews subSection={'editorials'} category={'Editorials'}/>
+      <CategoryNews subSection={'contributors'} category={'Guest Essays'}/>
+      <CategoryNews subSection={'sunday'} category={'Sunday Review'}/>
+
+      <CategoryNews section={'arts'} category={'Arts'}/>
+      <CategoryNews subSection={'design'} category={'Art & Design'}/>
+      <CategoryNews subSection={'movies'} category={'Movies'}/>
+      <CategoryNews subSection={'television'} category={'Television'}/>
+      <CategoryNews subSection={'music'} category={'Music'}/>
+      <CategoryNews subSection={'theater'} category={'Theater'}/>
+      <CategoryNews subSection={'dance'} category={'Dance'}/>
+
     </div>
+
     </div>
   );
 }

@@ -7,12 +7,12 @@ import style from './headerMobile.module.css';
 
 import DarkModeButton from '../button/DarkModeButton';
 import DateComponent from './DateComponent';
-import SidebarMobile from '../sidebar/SidebarMobile';
+import SidebarMobile from '../sidebar/mobile/SidebarMobile';
 
 
 function HeaderMobile() {
   return (
-    <div>
+    <div className={style.containerHeader}>
       <div className={style.headerMobile}>
         <div className={style.headerLeftSection}>
           <div className='btn-sidebar'>
@@ -25,11 +25,10 @@ function HeaderMobile() {
         <Link to={'/'}><h1 className={style.titleMobile}>The Vercelli Times</h1></Link>
         
         <div className={style.headerRightSection}>
-        <DarkModeButton/>
-        
-        <button>
-          <FontAwesomeIcon icon={faUser} size="lg"/>
-        </button>
+          <DarkModeButton/>
+          
+          <button><FontAwesomeIcon icon={faUser} size="lg"/></button>
+          
         </div>
       </div>
 

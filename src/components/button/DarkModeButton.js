@@ -64,7 +64,7 @@ function DarkModeButton() {
       <div>
         {
           toggle ? <FaMoon size="16px" color='white'/> :
-           <FaSun size="16px" color='yellow'/>
+           <FaSun size="16px" color='orange'/>
         }
       </div>
     </div>

@@ -6,7 +6,7 @@ import style from './sidebarMobile.module.css'
 
 import ModalSidebar from './ModalSidebar';
 
-import SearchForm from '../form/SearchForm';
+import SearchForm from '../../form/SearchForm';
 
 const SidebarMobile = () => {
   const [sidebar, setSidebar] = useState(false);

@@ -12,7 +12,7 @@
   flex-wrap: wrap;
   width: 100%;
   /* border debug */
-  border:  2px solid blue; 
+  /* border:  2px solid blue;  */
 }
 
 .mainNews{
@@ -25,12 +25,19 @@
   width: 100%;
 }
 
+.borderHorizontal{
+  border-top: 1px solid red;
+  width: 100%;
+  margin: 2% 0%;
+}
+
 .covidSection{
   width: 100%;
 }
 
 .sideNews{
   width: 100%;
+  margin-top: 9px;
 }
 
 .newsRandomContainer{
@@ -63,10 +70,17 @@
 
 .categoryNewsSection{
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
   /* border debug */
-  border:  2px solid blue; 
+  /* border:  2px solid blue;  */
+  
+}
+
+.categoryNewsSection h3{
+  width: 100%;
+  margin-bottom: 12px;
 }
 
 .newsCategory{
@@ -86,7 +100,7 @@
 @media only screen and (min-width: 900px){
   
   .mainNews{
-    width: 70%;
+    width: 69%;
   }
 
   .container{
@@ -95,12 +109,29 @@
     flex-wrap: wrap;
     flex-flow: column;
     width: 50%;
+    /* margin-right: 2%; */
+    margin: 10px 0px;
+    border-bottom: 1px solid black;
     /* justify-items: start; */
     /* grid-column: span 9; */
   }
 
+  .borderVertical{
+    border-left: 1px solid red;
+    width: 1%;
+    margin-left: 1%;
+  }
+
+  .borderHorizontal{
+    border-top: 1px solid red;
+    width: 95%;
+    margin:  2% 2% 2% 0%;
+    /* margin-top: 1%; */
+  }
+
   .sideNews{
-    width: 30%;
+    width: 29%;
+    padding: 2px;
   }
 
   .moreNews{
@@ -110,6 +141,7 @@
   .sideMoreNews{
     width: 30%;
   }
+
 
 
 }
