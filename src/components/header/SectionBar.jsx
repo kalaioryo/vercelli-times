@@ -12,7 +12,7 @@ function SectionBar() {
     const {id, name, queryUrl} = sections;
     return(
       <li key={`tag:${id}`}>
-      <Link to={`/section/${queryUrl}`}>{name}</Link>
+      <Link to={`/section/${queryUrl}`}><span>{name}</span></Link>
       </li> 
     )
   })

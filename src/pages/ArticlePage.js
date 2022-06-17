@@ -5,7 +5,8 @@ import moment from 'moment';
 import style from './articlePage.module.css';
 
 const ArticlePage = () => {
-  const article = useSelector((state) => state.singleArticle.article)
+  // const article = useSelector((state) => state.singleArticle.article)
+  let article = JSON.parse(localStorage.singleArticle);
   console.log(article);
   const {headline, multimedia, lead_paragraph, abstract, pub_date, section_name, snippet,web_url,_id} = article;
 

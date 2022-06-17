@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { setSingleArticle } from '../../redux/actions/articleAction';
 
@@ -9,9 +9,7 @@ import style from "./cardSearchSection.module.css"
 
 const CardSearchArticle = () => {
 
-
   const articles = useSelector((state) => state.queryArticle.articles);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
   console.log(articles);
 
@@ -20,19 +18,17 @@ const CardSearchArticle = () => {
     const defaultImg = "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png";
     return (
       <>
-        <img className={style.image} src={`${multimedia?.[0]?.url ? urlBase + multimedia[1].url : defaultImg}`} width='90%' height='90%'></img>
+        <img className={style.image} src={`${multimedia?.[1]?.url ? urlBase + multimedia[1].url : defaultImg}`} width='90%' height='90%'></img>
       </>
     )
   }
   const RenderCard = articles.map((article) =>{
-    const {abstract,_id, web_url, multimedia, headline } = article;
+    const {_id, multimedia, headline} = article;
 
     const handleClick = () =>{
-      
-      dispatch(setSingleArticle(article));
+      localStorage.singleArticle = JSON.stringify(article)
       navigate('/article');
     }
-    // console.log(multimedia);
     return(
       <section className={style.card} key={_id}>
         <div>

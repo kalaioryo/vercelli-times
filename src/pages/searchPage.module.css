@@ -1,11 +1,18 @@
 .searchPage{
 
   text-align: center;
+  margin: 5%;
   /* box-sizing: border-box; */
   /* display: flex;
   flex-wrap: wrap; */
 }
 
+.containerForm{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
 .cardSection{
   width: auto;
   display: flex;

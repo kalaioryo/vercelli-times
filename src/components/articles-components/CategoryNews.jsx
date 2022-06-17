@@ -8,13 +8,13 @@ const CategoryNews = ({section, subSection, category}) => {
   let arrayOfTitle = []
   let arrayOfUrlImage = []
   let arrayOfUrlArticle = []
-  console.log(articles);
+  // console.log(articles);
 
   const RenderCategoryNews = articles
     .filter((article) => section ? article.section === section : true)
     .filter((article) => subSection ? article.subsection === subSection : true)
     .map((article)=>{
-      console.log(article.multimedia);
+      // console.log(article.multimedia);
       const {title, multimedia, url} = article
       arrayOfTitle.push(title)
       arrayOfUrlArticle.push(url)

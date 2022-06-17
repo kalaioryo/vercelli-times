@@ -3,7 +3,7 @@
 }
 
 .borderHorizontal{
-  border-top: 1px solid red;
+  border-top: 1px solid;
   width: 100%;
   margin: 2% 0%;
 }

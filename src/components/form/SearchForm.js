@@ -2,8 +2,10 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
 // import useFetchArticle from '../service/fetchApiArticle';
 import { useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import style from './searchForm.module.css';
+import { closeSiderbarMobile } from '../../redux/actions/siderMobileAction';
 
-import style from './searchForm.module.css'
 
 
 // /articlesearch.json?q={query}&fq={filter}
@@ -17,12 +19,15 @@ const SearchForm = () => {
   // const [search, setSearch] = useState('');
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
 
   const handleSubmit = (e) =>{
+    // closeSidebar()
     e.preventDefault();
     navigate(`../search/${query}`, {state: query});
     // setQuery('');
+    dispatch(closeSiderbarMobile());
   }
 
   const onChange = (e) =>{
@@ -38,7 +43,7 @@ const SearchForm = () => {
 
   return (
     <div className={style.containerForm}>
-        <form className={style.formSearch} action="submit" onSubmit={handleSubmit}>
+        <form className={style.formSearch} action="submit" onSubmit={handleSubmit} >
           <div >
             <input
               type="text" 
@@ -48,10 +53,10 @@ const SearchForm = () => {
           </div>        
           <button 
             className='btn' 
-            onClick={handleClick}
+            // onClick={handleClick}
             type='submit'
-          >
-            <Link to={'/search'} props={query}>Go</Link>
+          >GO
+            {/* <Link to={'/search'} props={query}>Go</Link> */}
           </button>
       </form>
       </div>

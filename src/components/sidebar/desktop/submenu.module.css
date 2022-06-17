@@ -1,27 +1,21 @@
 .item{
-  background-color: white;
   position: relative;
-  z-index: 3;
+  z-index: 2;
   padding: 2px;
   width: 150px;
-  font-size: 11px;
+  font-size: 12px;
   display: block;
   text-align: start;
-  /* vertical-align: sub; */
-
-  /* text-align: justify; */
-  /* width: fit-content; */
 }
 
 .item :hover {
-  background-color: lightgrey;
+  z-index: 2;
   border-radius: 2px;
-  /* color: black; */
-  /* width: fit-content; */
 }
 
 .link{
   display: block;
-  color: black;
   text-decoration: none;
+  padding: 2px;
+  font-size: 12px;
 }

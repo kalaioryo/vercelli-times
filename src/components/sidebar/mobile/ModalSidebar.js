@@ -6,19 +6,20 @@ import { AiOutlineClose } from "react-icons/ai";
 import style from './modalSidebar.module.css';
 
 import ItemMobile from './ItemMobile';
+import SearchForm from '../../form/SearchForm';
 
-const ModalSidebar = ({showSidebar}) =>{
+const ModalSidebar = ({showSidebar,closeSidebar}) =>{
 
   return (
     <div className={style.wrap}>
       <div className={style.modalContainer}>
         <div>
           <Link to='#' className={style.menuBars}>
-            <AiOutlineClose size='20px' onClick={showSidebar}/> 
+            <AiOutlineClose color='red' size='20px' onClick={showSidebar}/> 
           </Link>
         </div>
-        {/* <SearchForm/>  */}
-        <ItemMobile/>
+        <div className={style.containerForm}><SearchForm closeSidebar={closeSidebar}/></div>
+        <ItemMobile showSidebar={showSidebar}/>
     </div>
     </div>
     

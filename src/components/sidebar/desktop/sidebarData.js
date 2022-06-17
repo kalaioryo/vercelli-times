@@ -5,28 +5,26 @@ import { AiOutlineClose } from "react-icons/ai";
 
 
   const subMenuContainer = {
-    backgroundColor: 'white',
     borderRadius: '3px',
     border: '1px solid rgb(204,204,204)',
     boxShadow: 'rgba(0, 0, 0, 0.09) -1px 4px 6px',  
     alignSelf: 'flex-start',
     position: 'absolute',
-    left: '65px',
+    left: '90px',
     top: '-50%',
-    zIndex: 1,
-    padding: '10px 18px'
+    zIndex: 6,
+    padding: '10px 18px',
   }
   
   const lastSubMenuContainer = {
-    backgroundColor: 'white',
     borderRadius: '3px',
     border: '1px solid rgb(204,204,204)',
     boxShadow: 'rgba(0, 0, 0, 0.09) -1px 4px 6px',  
     alignSelf: 'flex-start',
     position: 'absolute',
-    left: '65px',
+    left: '90px',
     top: '-90px',
-    zIndex: 1,
+    zIndex: 6,
     padding: '10px 18px'
   }
 

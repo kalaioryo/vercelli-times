@@ -1,6 +1,4 @@
 .list{
-  /* justify-content: right; */
-  /* padding: 1px; */
   width: 180 px;
   display: flex;
   position: relative;
@@ -8,28 +6,40 @@
 }
 
 .navText{
+  background-color: transparent;
+  display: inline-block;
   position: relative;
   z-index: 5;
   display: flex;
-  padding: 1px;
   width: 100%;
+  min-width: 130px;
   text-align: start;
-  /* justify-content: start; */
-  align-items: start;
-  /* padding: 8px 0px 8px 8px; */
   list-style: none;
-  /* height: 25px; */
   text-decoration: none;
-  color: black;
-  font-size: 14px;
+  /* color: black; */
+  font-size: 12px;
+}
+.navText a{
+  z-index: 5;
+}
 
+.navText a :hover{
+  z-index: 5;
 }
 
 .navText :hover{
-  background-color: lightgrey;
+  z-index: 5;
+  /* background-color: lightgrey; */
+  /* height: 25px; */
   /* color:white; */
 }
 
 .itemList{
+  /* background-color: transparent; */
+  display: block;
+  margin-left: 2px;
+  padding: 5px;
+  height: 25px;
+  z-index: 5;
   width: 100%;
 }

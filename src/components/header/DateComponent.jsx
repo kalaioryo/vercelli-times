@@ -13,7 +13,7 @@ function DateComponent() {
 
 
   return (
-    <span>{day}, {month} {numberDay}, {year} </span>
+    <span className={style.date}>{day}, {month} {numberDay}, {year} </span>
   );
 }
 

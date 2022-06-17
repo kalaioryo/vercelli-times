@@ -1,7 +1,12 @@
 :root{
   --font-color: #333;
   --background-color: white;
+
+  --hover-color: #eee;
+  --hover-background-color: #333;
+
   --link-color: #333;
+
   --button-color: #333;
   --title: #121212;
   --secondary-color: #121212;
@@ -11,6 +16,10 @@
 [data-theme="dark"]{
   --font-color: #eee;
   --background-color: #333;
+
+  --hover-color: #333;
+  --hover-background-color:#eee;
+
   --link-color: #eee;
   --button-color: #eee;
   --title: #eee;
@@ -18,13 +27,39 @@
   --p-color: #aaa9a9;
 }
 
+*{
+  border-color: var(--p-color);
+}
+
 body{
   background-color: var(--background-color);
   color: var(--font-color);
 }
 
+div {
+  background-color: var(--background-color);
+}
+
+div :after{
+  background-color: var(--background-color);
+}
+
+ul{
+  color: var(--font-color);
+  background-color: var(--background-color);
+}
+
 a {
   color: var(--link-color);
+}
+
+li > a :hover{
+  color: var(--hover-color);
+  background-color: var(--hover-background-color);
+}
+
+span :hover {
+  color: var(--font-color);
 }
 
 h1, h3 {
@@ -35,14 +70,15 @@ p{
   color: var(--p-color);
 }
 
-li{
-  color: var(--secondary-color);
-}
 
 svg{
   color: var(--secondary-color);
 }
 
 button {
+  background-color: var(--background-color);
   color: var(--button-color);
+  border-color: var(--secondary-color);
+
+  border-radius: 5px;;
 }

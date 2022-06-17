@@ -24,12 +24,12 @@ const SectionPage = () =>{
   if (isLoading) return <LoadingComponent/>
 
   return (
-    <>
+    <div className={style.pageContainer}>
       <p>SectionPage for</p>
       <p>{section}</p>
       { subSection ? <p>SubSection {subSection}</p> : null }
       <SectionPageContainer section={section} subSection={subSection}/>
-    </>   
+    </div>   
   )
 }
 

@@ -1,12 +1,12 @@
 .subItem{
-  padding: 0;
+  padding: 2px 0px ;
   width: 50%;
   cursor: pointer;
 }
 
 .subItemLink{
   text-decoration: none;
-  color: black;
+  /* color: black; */
 }
 
 .subItemName{

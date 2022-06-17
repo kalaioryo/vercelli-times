@@ -27,7 +27,7 @@ const Search = () => {
   return (
     <div className={style.searchPage} >
       <div>Search Page query is ${query}</div>
-      <SearchForm/>
+      <div className={style.containerForm}><SearchForm/></div>      
       <section className={style.cardSection}>
         <CardSearchArticle/>
       </section>

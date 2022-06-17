@@ -17,7 +17,7 @@ const Sidebar = () => {
 
   const handleMouseEnter = () => setSidebar(true)
 
-  const handleMouseLeave = () => setSidebar(false)
+  const handleMouseLeave = () => setSidebar(true)
 
   return (
     <>
@@ -27,7 +27,7 @@ const Sidebar = () => {
         </Link>
       {/* </div> */}
       <nav className={sidebar ? style.navMenuActive : style.navMenu } onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter}>
-        <ul >
+        <ul className={style.ulContainer}>
           <li className={style.navbarToogle}>
             <Link to='#' className={style.menuBars}>
               <AiOutlineClose size='20px' onClick={showSidebar}/> 
