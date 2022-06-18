@@ -44,8 +44,8 @@ function App() {
                 <Route path=':subSection' element={<SectionPage/>}/>
               </Route>
               <Route path='*' element={<NotFoundPage/>}/>
-              <Route path='search/' element={<SearchPage/>}>
-                <Route path=':query' element={<SearchPage/>}/>
+              <Route path='search/:query' element={<SearchPage/>}>
+                {/* <Route path=':query' element={<SearchPage/>}/> */}
               </Route>
               <Route path='article/' element={<ArticlePage/>}/>
           </Routes>

@@ -30,7 +30,14 @@ const SidebarMobile = () => {
 
   const closeSidebar = () =>{
     // setSidebar(false)
+    // document.body.style.overflow = 'visible';
+
     dispatch(closeSiderbarMobile())
+
+    if(siderbarMobile) {
+      document.body.style.overflow = 'visible';
+
+    }
 
   }
 

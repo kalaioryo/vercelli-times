@@ -31,15 +31,17 @@ const CardSearchArticle = () => {
     }
     return(
       <section className={style.card} key={_id}>
-        <div>
+        
           <div className={style.cardContent}>
-            <Image multimedia={multimedia}/> 
+            <div  className={style.containerImage}>
+              <Image multimedia={multimedia}/>
+            </div>
             <p className={style.abstract}>{headline.main}</p>
           </div>
           <div>
             <button className={style.btn} onClick={handleClick}>Read More</button>
           </div>
-        </div>       
+              
       </section>
     )
   })

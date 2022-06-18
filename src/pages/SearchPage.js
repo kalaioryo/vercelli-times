@@ -23,7 +23,7 @@ const Search = () => {
   if (hasError) return <ErrorComponent message={errorMessage} />
 
   if (isLoading) return <LoadingComponent/>
-
+  
   return (
     <div className={style.searchPage} >
       <div>Search Page query is ${query}</div>

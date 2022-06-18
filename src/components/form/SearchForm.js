@@ -1,19 +1,11 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
-// import useFetchArticle from '../service/fetchApiArticle';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import style from './searchForm.module.css';
 import { closeSiderbarMobile } from '../../redux/actions/siderMobileAction';
 
-
-
-// /articlesearch.json?q={query}&fq={filter}
-// example
-//https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=yourkey
 const API_KEY = process.env.REACT_APP_API_KEY
-// let query = 'war';
-// const url =` https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query}&api-key=${API_KEY}`;
 
 const SearchForm = () => {
   // const [search, setSearch] = useState('');
@@ -28,6 +20,8 @@ const SearchForm = () => {
     navigate(`../search/${query}`, {state: query});
     // setQuery('');
     dispatch(closeSiderbarMobile());
+    document.body.style.overflow = 'visible';
+
   }
 
   const onChange = (e) =>{
