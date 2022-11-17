@@ -17,6 +17,7 @@ const SearchForm = () => {
   const handleSubmit = (e) =>{
     // closeSidebar()
     e.preventDefault();
+    if (!query) return alert("Insert a word");
     navigate(`../search/${query}`, {state: query});
     // setQuery('');
     dispatch(closeSiderbarMobile());

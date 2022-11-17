@@ -15,9 +15,9 @@ const Sidebar = () => {
 
   const showSidebar = () => setSidebar(!sidebar)
 
-  const handleMouseEnter = () => setSidebar(true)
+  const handleMouseEnter = () => {setSidebar(true)}
 
-  const handleMouseLeave = () => setSidebar(true)
+  const handleMouseLeave = () => setSidebar(false)
 
   return (
     <>
