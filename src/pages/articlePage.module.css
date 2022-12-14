@@ -3,6 +3,10 @@
   margin: 10px 5%;
 }
 
+.abstract{
+  margin: 10px 5%;
+}
+
 .article{
   display: flex;
   flex-direction: column;

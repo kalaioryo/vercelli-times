@@ -6,8 +6,8 @@ import style from './searchPage.module.css'
 
 import ErrorComponent from '../components/ErrorComponent';
 import LoadingComponent from '../components/LoadingComponent';
-import CardSearchArticle from '../components/articles-components/CardSearchSection';
 import SearchForm from '../components/form/SearchForm';
+import ArticleSearchNews from '../components/articles-components/ArticleSearchNews';
 
 const Search = () => {
 
@@ -26,10 +26,14 @@ const Search = () => {
   
   return (
     <div className={style.searchPage} >
-      <div>Search Page query is ${query}</div>
-      <div className={style.containerForm}><SearchForm/></div>      
-      <section className={style.cardSection}>
-        <CardSearchArticle/>
+      <div>
+        <h1 className={style.query}>{query}</h1>
+      </div>
+      <div className={style.containerForm}>
+        <SearchForm/>
+      </div>      
+      <section className={style.NewsSection}>
+        <ArticleSearchNews/>
       </section>
     </div>
   )

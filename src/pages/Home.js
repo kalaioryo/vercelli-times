@@ -107,67 +107,46 @@ function Home() {
       <div className={style.sideNews}>
         <RenderArticles slot={0} typeArticle={'figcaption'} section={'opinion'}/>
         <div className={style.borderHorizontal}></div>
-        <RenderArticles typeArticle={'article'} section={'opinion'}/>
+        <h3>Opinion</h3>
+        <RenderArticles typeArticle={'title'} section={'opinion'}/>
+        {/* <h3>Side More news</h3> */}
+        <div className={style.borderHorizontal}></div>
+        <RenderArticles typeArticle={'article'} restNews={'side-more-news'}/>
       </div>
       </div>
-
-      <div className={style.newsRandomContainer}>
-        <div className={style.newsRandom}>news random</div>
-        <div className={style.newsRandom}>news random</div>
-        <div className={style.newsRandom}>news random</div>
-        <div className={style.newsRandom}>news random</div>
-      </div>
-      
 
       <div className={style.moreNewsContainer}>
-        <div className={style.moreNews}>More News</div>
-        <div className={style.sideMoreNews}>Side More News</div>
+        <h1>More news</h1>
+        <div className={style.mainMoreNews}>
+          <div>
+            <RenderArticles slot={12} typeArticle={'figcaption'}/>
+            <RenderArticles slot={12} typeArticle={'article'}/>
+          </div>
+          <div>
+            <RenderArticles typeArticle={'article'} restNews={'more-news-1'}/>
+          </div>
+        </div>
       </div>
+      <div className={style.borderHorizontal}></div>
+
+
+      <div className={style.moreNewsContainer}>
+        <h1>More news 2</h1>
+        <div className={style.mainMoreNews}>
+          <div>
+            <RenderArticles slot={13} typeArticle={'figcaption'}/>
+            <RenderArticles slot={13} typeArticle={'article'}/>
+          </div>
+          <div>
+            <RenderArticles typeArticle={'article'} restNews={'more-news-2'}/>
+          </div>
+        </div>
+      </div>
+      <div className={style.borderHorizontal}></div>
 
     
     <div className={style.categoryNewsSection}>
       <RenderArticles typeArticle={'article'} section={'well'}/>
-
-
-    </div>
-
-    <div className={style.categoryNewsSection}>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-    </div>
-
-    <div className={style.categoryNewsSection}>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-    </div>
-
-    <div className={style.categoryNewsSection}>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-    </div>
-
-    <div className={style.game}>
-      <div className={style.newsRandom}>Game random</div>
-      <div className={style.newsRandom}>Game random</div>
-      <div className={style.newsRandom}>Game random</div>
-      <div className={style.newsRandom}>Game random</div>
-    </div>
-    
-    <div className={style.categoryNewsSection}>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
-      <div className={style.newsCategory}>news category</div>
     </div>
 
     <div className={style.categoryNewsSection}>

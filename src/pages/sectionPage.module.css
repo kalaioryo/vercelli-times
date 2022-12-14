@@ -1,3 +1,22 @@
 .pageContainer{
-  margin: 5%;
+  margin: 0 5%;
+}
+
+.title{
+  margin-left: 2%;
+  font-size: 3em;
+}
+
+.section{
+  margin-left: 2%;
+}
+
+@media only screen and (min-width: 500px) {
+  .title{
+    margin-left: 4%;
+  }
+
+  .section{
+    margin-left: 4%;
+  }
 }

@@ -6,9 +6,9 @@ import ImgArticle from "./ImgArticle";
 
 const Article = ({article}) => {
 
-  const {title, abstract, url, multimedia, sizeImg, itemType} = article
-
-  if(itemType === "EmbeddedInteractive" ) {
+  const {title, abstract, url, multimedia, sizeImg, item_type} = article
+  
+  if(item_type !== "Article") {
     return null;
   } else{
     <section className={style.item}>
@@ -94,6 +94,8 @@ Article.defaultProps = {
 //     // {renderArticles}
 //   )
 // }
+
+//"EmbeddedInteractive" && "Promo" 
 
 export default Article;
 

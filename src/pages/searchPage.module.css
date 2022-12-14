@@ -10,7 +10,14 @@
   display: flex;
   justify-content: center;
 }
-.cardSection{
+
+.containerForm input{
+  width: 500px;
+  height: 100px;
+  color:red; 
+}
+
+.newsSection{
   width: auto;
   height: auto;
   display: flex;
@@ -20,7 +27,26 @@
 
 @media only screen and (min-width: 900px){
   
-  .cardSection{
+  .newsSection{
     margin: 10px 5%;
+  }
+
+  .containerForm input{
+    width: 500px;
+    height: 100px;
+    color:red; 
+  }
+}
+
+@media only screen and (min-width: 1024px){
+  
+  .newsSection{
+    margin: 10px 5%;
+  }
+
+  .containerForm input{
+    width: 300px;
+    height: 300px;
+    color:red; 
   }
 }

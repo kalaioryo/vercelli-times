@@ -9,11 +9,8 @@ const ArticlePage = () => {
   let article = JSON.parse(localStorage.singleArticle);
   console.log(article);
   const {headline, multimedia, lead_paragraph, abstract, pub_date, section_name, snippet,web_url,_id} = article;
-
   
   let date = moment(pub_date).format('LLL');
-
-//  console.log(article);
 
   const Image = ({multimedia}) =>{
     const urlBase = "https://www.nytimes.com/";
@@ -25,8 +22,6 @@ const ArticlePage = () => {
     )
   }
 
-
-
   return (
     <article className={style.article}>
       <div>Article Page</div>
@@ -37,6 +32,7 @@ const ArticlePage = () => {
       </section>
       <Image multimedia={multimedia}/> 
       <p className={style.lead} >{lead_paragraph}</p>
+      <p className={style.abstract}>{abstract}</p>
       <button className={style.btn}>
         <a href={`${web_url}`} target='_blank'>Read Full Article</a>
       </button>

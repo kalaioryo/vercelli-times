@@ -14,7 +14,7 @@ function Figcaption({article}) {
   return (
     <figure className={style.figure}>
       <a href={`${url}`}>
-      <img className={style.image} src={`${multimedia ? multimedia[1].url : defaultImg}`} width='100%' height='100%'></img>
+      <img className={style.image} src={`${multimedia ? multimedia[1]?.url : defaultImg}`} width='100%' height='100%'></img>
       </a>
       <figcaption>{kicker}</figcaption>
     </figure>

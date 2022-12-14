@@ -23,13 +23,39 @@ const SectionPage = () =>{
 
   if (isLoading) return <LoadingComponent/>
 
+  function camelCase(str){
+    return str.split(' ')
+      .map(a => a.trim())
+      .map(a => a[0].toUpperCase() + a.slice(1))
+      .join("")
+  }
+
+  const SectionPageNews = ()=>{
+    if(section === 'us' ) return section ='U.S.';
+    if(section === 'nyregion' ) return section ='New York';
+
+    return (
+      <h1 className={style.title}>{camelCase(section)} News</h1>
+    )
+  }
+
+  const SubSectionPageNews = ()=>{
+    if(section === 'us' ) return section ='U.S.';
+    if(section === 'nyregion' ) return section ='New York';
+    return (
+      <>
+        <h5 className={style.section}>{section.toUpperCase()}</h5>
+        <h1 className={style.title}>{camelCase(subSection)} News</h1>
+      </>
+      
+    )
+  }
+
   return (
     <div className={style.pageContainer}>
-      <p>SectionPage for</p>
-      <p>{section}</p>
-      { subSection ? <p>SubSection {subSection}</p> : null }
+      {subSection ? <SubSectionPageNews/> : <SectionPageNews/>}
       <SectionPageContainer section={section} subSection={subSection}/>
-    </div>   
+    </div>
   )
 }
 

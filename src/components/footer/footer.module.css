@@ -3,11 +3,23 @@
   margin: 0% 5% 0% 5%;
   bottom: 0;
   
-  /* background-color: black; */
+  background-color: black;
   position: absolute;
   height: 100px;
   /* max-width: 1000px; */
   width: 90%;
   text-align: center;
   z-index: 2;
+}
+
+.footer p{
+  margin-top: 10px;
+  font-size: 16px;
+  color:white;
+
+}
+
+.footer img{
+  margin:auto;
+  margin-top: 10px;
 }

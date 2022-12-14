@@ -6,7 +6,16 @@ import RenderArticles from './articles-components/RenderArticles';
 const SectionPageContainer = ({section, subSection}) => {
 
   return (
-    <div>
+    <div className={style.articleContainer}>
+      <div className={style.figcaption}>
+        <RenderArticles 
+        typeArticle={'figcaption'} 
+        slot={0}
+        sizeImg={true}
+        subSection={subSection}/>
+      </div>
+      
+
       <RenderArticles 
         typeArticle={'article'} 
         sizeImg={true}

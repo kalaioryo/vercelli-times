@@ -10,7 +10,7 @@ const useFetchArticle = (url) => {
 
   const dispatch = useDispatch();
 
-  const fecthArticle = async () =>{
+  const fetchArticle = async () =>{
     setIsLoading(true);
     setHasError(false);
     setErrorMessage('');
@@ -23,7 +23,7 @@ const useFetchArticle = (url) => {
       if (response.data.results === null) {
         throw new Error("Results not found");
       }
-
+      console.log(response.data.results);
       dispatch(setArticles(response.data.results));
       
     } catch (error) {
@@ -36,7 +36,7 @@ const useFetchArticle = (url) => {
   }
 
   useEffect(()=>{
-    fecthArticle()
+    fetchArticle()
   },[url])
 
   return {isLoading, hasError, errorMessage}

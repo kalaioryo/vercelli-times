@@ -18,7 +18,7 @@ function NavbarMid() {
         <h1 className={style.title}>The Vercelli Times</h1>
       </Link>
 
-      <div className={style.rigthSide}>
+      <div className={style.rightSide}>
         <p>Meteo</p>
         <p>finanza</p>
       </div>
