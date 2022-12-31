@@ -5,6 +5,8 @@ import moment from 'moment';
 import style from './articlePage.module.css';
 
 const ArticlePage = () => {
+
+  //10:30 video
   // const article = useSelector((state) => state.singleArticle.article)
   let article = JSON.parse(localStorage.singleArticle);
   console.log(article);
