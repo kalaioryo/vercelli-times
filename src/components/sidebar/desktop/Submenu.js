@@ -13,7 +13,7 @@ const Submenu = ({subSection, cName}) =>{
         return (
           <li key={`subItem Sidebar ${name}`} className={style.item}>                         
               <Link  className={style.link}  to={`${path}`}>
-                <span>{name}</span>                
+                <span className={style.spanLink}>{name}</span>                
               </Link>            
           </li>
         )
