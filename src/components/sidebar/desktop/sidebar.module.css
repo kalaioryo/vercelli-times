@@ -33,7 +33,7 @@
   justify-content: start;
   position: fixed;
   top:0;
-  left: -3%;
+  left: -1%;
   transition: 350ms;
   z-index: 4;
 }
