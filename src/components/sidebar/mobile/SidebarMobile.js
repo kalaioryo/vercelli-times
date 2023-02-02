@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import {Link} from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { closeSiderbarMobile, switchSiderbarMobile } from '../../../redux/actions/siderMobileAction';
+import { closeSidebarMobile, switchSidebarMobile } from '../../../redux/actions/sidebarMobileAction';
 import { FaBars } from "react-icons/fa";
 
 import style from './sidebarMobile.module.css'
@@ -13,15 +13,15 @@ import SearchForm from '../../form/SearchForm';
 
 const SidebarMobile = () => {
   // const [sidebar, setSidebar] = useState(false);
-  const siderbarMobile = useSelector(state => state.siderbarMobile);
+  const sidebarMobile = useSelector(state => state.sidebarMobile);
 
   const dispatch = useDispatch();
 
   const showSidebar = () => {
     // setSidebar(!sidebar)
-    dispatch(switchSiderbarMobile())
+    dispatch(switchSidebarMobile())
 
-    if(!siderbarMobile) {
+    if(!sidebarMobile) {
         document.body.style.overflow = 'hidden';
       } else {
         document.body.style.overflow = 'visible';
@@ -32,9 +32,9 @@ const SidebarMobile = () => {
     // setSidebar(false)
     // document.body.style.overflow = 'visible';
 
-    dispatch(closeSiderbarMobile())
+    dispatch(closeSidebarMobile())
 
-    if(siderbarMobile) {
+    if(sidebarMobile) {
       document.body.style.overflow = 'visible';
 
     }
@@ -47,7 +47,7 @@ const SidebarMobile = () => {
         <FaBars  size='20px'/>
       </Link>
       
-      {siderbarMobile ? <ModalSidebar closeSidebar={closeSidebar} showSidebar={showSidebar}/> : null}
+      {sidebarMobile ? <ModalSidebar closeSidebar={closeSidebar} showSidebar={showSidebar}/> : null}
     </>
   )
 }

@@ -1,4 +1,4 @@
-import { ActionTypes } from "../contants/action-tipes";
+import { ActionTypes } from "../constants/action-types";
 
 // const initialState = false;
 const storiedTheme = localStorage.getItem("theme");

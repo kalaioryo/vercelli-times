@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import style from './searchForm.module.css';
-import { closeSiderbarMobile } from '../../redux/actions/siderMobileAction';
+import { closeSidebarMobile } from '../../redux/actions/sidebarMobileAction';
 
 const API_KEY = process.env.REACT_APP_API_KEY
 
@@ -20,7 +20,7 @@ const SearchForm = () => {
     if (!query) return alert("Insert a word");
     navigate(`../search/${query}`, {state: query});
     // setQuery('');
-    dispatch(closeSiderbarMobile());
+    dispatch(closeSidebarMobile());
     document.body.style.overflow = 'visible';
 
   }

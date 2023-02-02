@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineClose } from "react-icons/ai";
 
-
 import style from './modalSidebar.module.css';
 
 import ItemMobile from './ItemMobile';

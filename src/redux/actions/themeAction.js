@@ -1,4 +1,4 @@
-import { ActionTypes } from "../contants/action-tipes";
+import { ActionTypes } from "../constants/action-types";
 
 export const darkMode = () => {
   return {
