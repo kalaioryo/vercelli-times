@@ -37,24 +37,24 @@ const SearchForm = () => {
   }
 
   return (
-    <div className={style.containerForm}>
-        <form className={style.formSearch} action="submit" onSubmit={handleSubmit} >
-          <div >
-            <input
-              type="text" 
-              placeholder='search'
-              value={query}
-              onChange={onChange} />
-          </div>        
-          <button 
-            className='btn' 
-            // onClick={handleClick}
-            type='submit'
-          >GO
-            {/* <Link to={'/search'} props={query}>Go</Link> */}
-          </button>
+    <>
+      <form className={style.searchForm} action="submit" onSubmit={handleSubmit} >
+        {/* <div className={style.containerInput}> */}
+          <input
+            type="text" 
+            placeholder='search'
+            value={query}
+            onChange={onChange} />
+        {/* </div>         */}
+        <button 
+          className={style.btn} 
+          // onClick={handleClick}
+          type='submit'
+        >GO
+          {/* <Link to={'/search'} props={query}>Go</Link> */}
+        </button>
       </form>
-      </div>
+    </>
   )
 }
 

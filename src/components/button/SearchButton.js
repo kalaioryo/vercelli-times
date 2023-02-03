@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import {FaSearch} from 'react-icons/fa'
 import SearchForm from '../form/SearchForm';
+import style from "./searchButton.module.css"
 
 
 function SearchButton() {
@@ -20,7 +21,12 @@ function SearchButton() {
       >
         <FaSearch size="22px"/>
       </button>
-      { toggle ? <SearchForm/> : null}
+      { toggle ?
+        <div className={style.containerForm}>
+          <SearchForm/>
+        </div> 
+        : null
+      }
     </>
   );
 }

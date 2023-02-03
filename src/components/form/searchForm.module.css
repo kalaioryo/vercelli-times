@@ -3,16 +3,16 @@
   align-items: center;
 }
 
-.formSearch{
+.searchForm{
   display: inline-flex;
 }
 
-.formSearch input{
+.searchForm input{
   width: auto;
   border-radius: 3px;
 }
 
-.formSearch[type="text"] {
+.searchForm[type="text"] {
   border: 1px solid rgb(226, 226, 226);
   box-sizing: border-box;
   color: rgb(102, 102, 102);
@@ -29,13 +29,11 @@
 }
 
 @media (min-width: 1024px){
-  .formSearch input[type="text"] {
-      /* border: 0px; */
-      height: 31px;
+  .searchForm input[type="text"] {
       letter-spacing: 0.5px;
   }
 
-  .formSearch input {
+  .searchForm input {
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(226, 226, 226);
     border-radius: 3px;

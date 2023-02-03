@@ -27,10 +27,10 @@ const Search = () => {
   return (
     <div className={style.searchPage} >
       <div>
-        <h1 className={style.query}>{query}</h1>
+        <h1 className={style.query}>results for "{query}"</h1>
       </div>
       <div className={style.containerForm}>
-        <SearchForm/>
+        <SearchForm className={style.containerForm}/>
       </div>      
       <section className={style.NewsSection}>
         <ArticleSearchNews/>

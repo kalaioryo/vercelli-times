@@ -1,20 +1,33 @@
 .searchPage{
-  /* height: 800px; */
   text-align: center;
   margin: 5%;
 }
 
 .containerForm{
-  margin-top: 10px;
-  margin-bottom: 10px;
   display: flex;
-  justify-content: center;
+  margin: 40px 5% 40px 5%;
+}
+
+.containerForm form{
+  width: 100%;
 }
 
 .containerForm input{
-  width: 500px;
-  height: 100px;
-  color:red; 
+  width: 90%;
+  min-width: 200px;
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid black;
+  border-radius: 0px;
+}
+
+.containerForm input:focus{
+  border: none;
+  /* background-color: red; */
+}
+
+.containerForm button{
+  width: 10%;
 }
 
 .newsSection{
@@ -30,23 +43,11 @@
   .newsSection{
     margin: 10px 5%;
   }
-
-  .containerForm input{
-    width: 500px;
-    height: 100px;
-    color:red; 
-  }
 }
 
 @media only screen and (min-width: 1024px){
-  
-  .newsSection{
-    margin: 10px 5%;
-  }
 
   .containerForm input{
-    width: 300px;
-    height: 300px;
-    color:red; 
+    height: 50px;
   }
 }
