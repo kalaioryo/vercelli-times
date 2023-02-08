@@ -1,8 +1,11 @@
 import React from "react";
 import PropTypes from 'prop-types';
+
 import { useSelector } from "react-redux";
-import { useParams, Link, useNavigate } from "react-router-dom";
 import { setSingleArticle } from "../../redux/actions/articleAction";
+
+import { useNavigate } from "react-router-dom";
+
 import moment from "moment";
 
 import style from './articleSearchNews.module.css';
@@ -11,13 +14,19 @@ const ArticleSearchNews = () => {
 
   const articles = useSelector((state) => state.queryArticle.articles);
   const navigate = useNavigate();
-  console.log(articles);
 
-  const Image = ({multimedia}) => {
+  const Image = ({multimedia, alt}) => {
     const urlBase = 'https://www.nytimes.com/';
     const defaultImg = "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png";
+    const altDefault = "image of article";
     return (
-          <img className={style.image} src={`${multimedia?.[1]?.url ? urlBase + multimedia[1].url : defaultImg}`} width='100%' height='100%'/>
+          <img 
+            className={style.image}
+            alt={ alt ? alt : altDefault }
+            src={`${multimedia?.[1]?.url ? urlBase + multimedia[1].url : defaultImg}`}
+            width='100%' 
+            height='100%'
+          />
     )
   }
 
@@ -34,16 +43,18 @@ const ArticleSearchNews = () => {
     return(
       <section className={style.containerNews} key={_id}>
         <div className={style.container}>
-          <div className={style.date}><p>{date}</p></div>
-        <div className={style.textContainer} onClick={handleClick}>
+          <div className={style.date}>
+            <p>{date}</p>
+          </div>
+          <div className={style.textContainer} onClick={handleClick}>
             <p>{news_desk}</p>
             <h4>{headline.main}</h4>
             <p>{snippet}</p>
-        </div>
+          </div>
         </div>
         
         <figure className={style.imageContainer}>
-          <Image multimedia={multimedia}/>
+          <Image multimedia={multimedia} alt={headline.main}/>
         </figure>
       </section>
     )

@@ -1,5 +1,4 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import style from './abstract.module.css';
@@ -20,6 +19,7 @@ const Abstract = ({article}) =>{
 }
 
 Abstract.propTypes = {
+  // article: PropTypes.number,
   title: PropTypes.string.isRequired,
   abstract: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,

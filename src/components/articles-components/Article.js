@@ -1,101 +1,54 @@
 import React from "react";
-import style from './article.module.css';
 import PropTypes from 'prop-types';
-import { useSelector } from "react-redux";
+
 import ImgArticle from "./ImgArticle";
+
+import style from './article.module.css';
 
 const Article = ({article}) => {
 
-  const {title, abstract, url, multimedia, sizeImg, item_type} = article
+  const {title, abstract, url, multimedia, item_type} = article
   
   if(item_type !== "Article") {
     return null;
   } else{
     <section className={style.item}>
-         <a href={`${url}`}>
-           <div>
-             {sizeImg ? <ImgArticle multimedia={multimedia}/> : null}
-             {title ? <h3>{title}</h3> : null}
-             {abstract ? <p>{abstract}</p> : null}
-          </div>
-         </a>    
-       </section>
+      <a href={`${url}`}>
+        <div>
+          <ImgArticle multimedia={multimedia} alt={title}/>
+          {title ? <h3>{title}</h3> : null}
+          {abstract ? <p>{abstract}</p> : null}
+        </div>
+      </a>    
+    </section>
   }
 
   return (
     <section className={style.item}>
-         <a href={`${url}`}>
-           <div>
-             {title ? <h3>{title}</h3> : null}
-             {abstract ? <p>{abstract}</p> : null}
-          </div>
-         </a>
-         <div className={style.borderHorizontal}></div>
-   
-       </section>
+      <a href={`${url}`}>
+        <div>
+          {title ? <h3>{title}</h3> : null}
+          {abstract ? <p>{abstract}</p> : null}
+        </div>
+      </a>
+      <div className={style.borderHorizontal}></div>
+    </section>
   ) 
 }
 
-{/* <section className="item">
-         <a href={`${url}`}>
-           <div>
-             {title ? <h2>{title}</h2> : null}
-             {abstract ? <p>{abstract}</p> : null}
-          </div>
-         </a>    
-       </section> */}
-
 Article.propTypes = {
+  article: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   abstract: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  // kicker: PropTypes.string.isRequired,
-  // multimedia: PropTypes.array.isRequired
+  multimedia: PropTypes.array
 }
 
 Article.defaultProps = {
   title: "title not found",
   abstract: "abstract not found",
   url: "url not found",
-  //kicker: "kicker not found",
-  //multimedia: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png" 
 }
-
-
-
-
-
-// const Article = ({slot}) =>{
-//   const articles = useSelector((state) => state.allArticles.articles);
-//   // console.log(articles);
-//   const renderArticles = articles.map((article)=>{
-//     // console.log(articles);
-//     const {title, abstract, url} = article;
-//     const img = article.multimedia[2].url;
-//     // console.log(article);
-//     return (
-    
-//       <section className="item" key={title}>
-//         <a href={`${url}`}>
-//           <div>
-//             <h2>{title}</h2>
-//             <p>{abstract}</p>
-//          </div>
-//         </a>    
-//       </section>
-    
-      
-//     )
-//   })
-//   //console.log(articles[0].title);
-//   return (
-//     <>{slot === undefined ? renderArticles : renderArticles[slot]}</>
-
-//     // {renderArticles}
-//   )
-// }
-
-//"EmbeddedInteractive" && "Promo" 
 
 export default Article;
 
