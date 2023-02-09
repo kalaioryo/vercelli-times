@@ -6,7 +6,7 @@ const ImgArticle = ({multimedia, alt}) =>{
     <>
       {multimedia && 
         <img  
-          src={`${multimedia[1].url}`}
+          src={`${multimedia[1]?.url}`}
           alt={alt}
           width='100%'
           height='100%'

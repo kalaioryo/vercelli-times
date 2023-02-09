@@ -31,7 +31,7 @@ const CategoryNews = ({section, subSection, category}) => {
           <figure>
             <a href={arrayOfUrlArticle[0]}>
               <img 
-                alt={arrayOfTitle} 
+                alt={arrayOfTitle[0]} 
                 src={arrayOfUrlImage[0]}>
               </img>
             </a>

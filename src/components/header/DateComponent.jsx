@@ -1,4 +1,5 @@
 import React from 'react';
+
 import style from './dateComponent.module.css'
 
 function DateComponent() {
@@ -10,7 +11,6 @@ function DateComponent() {
   let day = days[date.getDay()];
   let numberDay = date.getDate();
   let year = date.getFullYear();
-
 
   return (
     <span className={style.date}>{day}, {month} {numberDay}, {year} </span>

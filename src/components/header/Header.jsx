@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
 
-import style from './header.module.css'
-
 import NavbarUp from './NavbarUp';
 import NavbarMid from './NavbarMid';
-import SectionBar from './SectionBar';
 import NavbarMobile from './HeaderMobile';
+import SectionBar from './SectionBar';
+
+import style from './header.module.css'
 
 function NavbarContainer() {
   const [size, setSize] = useState(window.innerWidth)
@@ -22,7 +22,7 @@ function NavbarContainer() {
     }
   })
 
-  const isMobile = window.innerWidth <= 900;
+  const isMobile = size <= 900;
 
   if (isMobile) {
     return (

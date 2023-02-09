@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import style from './sectionBar.module.css'
+import { Link } from 'react-router-dom';
 
 import { sectionbarData } from './sectionbarData';
 
+import style from './sectionBar.module.css'
+
 function SectionBar() {
-  
 
   const renderLinkSection = sectionbarData.map(sections=>{
     const {id, name, queryUrl} = sections;

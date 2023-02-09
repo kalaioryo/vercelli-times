@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
-
-import style from './darkModeButton.module.css'
-
-import { FaToggleOff, FaToggleOn, FaSun, FaMoon } from "react-icons/fa";
+import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { darkMode } from '../../redux/actions/themeAction';
 import { lightMode } from '../../redux/actions/themeAction';
-import { useEffect } from 'react';
 
+import { FaToggleOff, FaToggleOn, FaSun, FaMoon } from "react-icons/fa";
+
+import style from './darkModeButton.module.css'
 import "../../style/darkMode.css";
 
 function DarkModeButton() {
@@ -32,7 +30,6 @@ function DarkModeButton() {
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches;
   
-
   const defaultDark =
   storiedTheme === "dark" || (storiedTheme === null && prefersDark);
 
@@ -51,24 +48,22 @@ function DarkModeButton() {
     }
   }
 
-  
-
   return (
     <div className={style.darkModeContainer} >
       <button  onClick={toggleTheme}>
-        {
-          toggle ?  <FaToggleOn size="22px"/> :
-           <FaToggleOff size="22px"/>     
+        {toggle ?
+          <FaToggleOn size="22px"/> :
+          <FaToggleOff size="22px"/>     
         }
       </button>
       <div>
-        {
-          toggle ? <FaMoon size="16px" color='white'/> :
-           <FaSun size="16px" color='orange'/>
+        {toggle ?
+          <FaMoon size="16px" color='white'/> :
+          <FaSun size="16px" color='orange'/>
         }
       </div>
     </div>
-  );
+  )
 }
 
 export default DarkModeButton;

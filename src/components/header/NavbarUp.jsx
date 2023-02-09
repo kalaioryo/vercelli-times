@@ -1,9 +1,6 @@
 import React from 'react';
 import style from './navbarUp.module.css'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-
 import SearchButton from '../button/SearchButton';
 import ListRegion from './ListRegion';
 import DarkModeButton from '../button/DarkModeButton';
@@ -15,7 +12,6 @@ function NavbarUp() {
       <div className={style.leftSide}>
         <button className='btn-sidebar'>
           <Sidebar/>
-          {/* <FontAwesomeIcon icon={faBars} size="lg"/> */}
         </button>
         <SearchButton/>
       </div>
@@ -24,7 +20,7 @@ function NavbarUp() {
         <ListRegion/>
       </div>
 
-      <div className={style.rigthSide}>
+      <div className={style.rightSide}>
         <DarkModeButton/>
         <button>subscribe</button>
         <button>Login</button>

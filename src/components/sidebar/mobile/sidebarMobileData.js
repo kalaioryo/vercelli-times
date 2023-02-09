@@ -23,7 +23,7 @@ export const sidebarMobileData = [
     name: 'Opinion',
     subSection: [
       { name:'Today\'\s Opinion', path: '/section/opinion'},
-      { name:'Coloumnists', path: '/section/opinion/columnists'},
+      { name:'Columnists', path: '/section/opinion/columnists'},
       { name:'Editorials', path: '/section/opinion/editorials'},
       { name:'Guest Essay', path: '/section/opinion/contributors'},
       { name:'Letters', path: '/section/opinion/letters'},

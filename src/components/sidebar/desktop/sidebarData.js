@@ -1,9 +1,4 @@
-import React, { useState } from 'react'; 
-import { Link } from 'react-router-dom';
-import { FaBars } from "react-icons/fa";
-import { AiOutlineClose } from "react-icons/ai";
-
-
+  //style
   const subMenuContainer = {
     borderRadius: '3px',
     border: '1px solid rgb(204,204,204)',
@@ -28,7 +23,6 @@ import { AiOutlineClose } from "react-icons/ai";
     padding: '10px 18px'
   }
 
-
 export const SidebarData = [
   {
     id: 1,
@@ -37,7 +31,7 @@ export const SidebarData = [
     cName: subMenuContainer,
     subSection: [
       { name:'Africa', path: '/section/world/africa'},
-      { name:'Austarlia', path: '/section/world/austarlia'},
+      { name:'Australia', path: '/section/world/australia'},
       { name:'Americas', path: '/section/world/americas'},
       { name:'Asia Pacific', path: '/section/world/asia'},
       { name:'Canada', path: '/section/world/canada'},
@@ -173,7 +167,7 @@ export const SidebarData = [
     cName: subMenuContainer,
     subSection: [
       { name: 'Fashion', path: '/section/fashion'},
-      { name: 'Men\'s\ style', path: '/section/mens-style'},
+      { name: 'Men\'s style', path: '/section/mens-style'},
       { name: 'Love', path: '/section/fashion/wedding'},
       { name: 'Self-Care', path: '/section/style/self-care'},
     ]

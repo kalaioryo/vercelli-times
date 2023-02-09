@@ -4,8 +4,6 @@
   align-items: center;
 }
 
-
-
 .leftSide{
   display: flex;
   width: 20%;
@@ -21,13 +19,13 @@
   display: flex;
 }
 
-.rigthSide{
+.rightSide{
   display: flex;
   justify-content: space-evenly;
   width: 20%;
 }
 
-.rigthSide button{
+.rightSide button{
   min-width: 30px;
   padding: 2px;
   background-color: transparent;

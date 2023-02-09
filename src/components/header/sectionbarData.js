@@ -18,5 +18,4 @@ export const sectionbarData = [
   {id: 16, name: 'Magazine', queryUrl:'magazine'},
   {id: 17, name: 'T Magazine', queryUrl:'t-magazine'},
   {id: 18, name: 'Real Estate', queryUrl:'realestate'}
-
 ]

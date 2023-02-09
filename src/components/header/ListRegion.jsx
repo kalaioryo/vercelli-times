@@ -1,6 +1,6 @@
 import React from 'react';
-import style from './listRegion.module.css';
 
+import style from './listRegion.module.css';
 
 function ListRegion() {
   return (

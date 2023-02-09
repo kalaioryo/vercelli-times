@@ -5,7 +5,7 @@ import style from './abstract.module.css';
 
 const Abstract = ({article}) =>{
 
-  const {title, abstract, url, sizeImg} = article;
+  const {abstract, url} = article;
 
   return (
     <section className={style.item}>

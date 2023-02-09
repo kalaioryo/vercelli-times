@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import style from './navbarMid.module.css'
+import { Link } from 'react-router-dom';
 
 import DailyNewspaper from './DailyNewspaper';
 import DateComponent from './DateComponent';
+
+import style from './navbarMid.module.css'
 
 function NavbarMid() {
   return (

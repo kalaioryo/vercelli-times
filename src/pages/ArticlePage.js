@@ -10,7 +10,7 @@ const ArticlePage = () => {
   // const article = useSelector((state) => state.singleArticle.article)
   let article = JSON.parse(localStorage.singleArticle);
   console.log(article);
-  const {headline, multimedia, lead_paragraph, abstract, pub_date, section_name, snippet,web_url,_id} = article;
+  const {headline, multimedia, lead_paragraph, abstract, pub_date, section_name, snippet, web_url, _id} = article;
   
   let date = moment(pub_date).format('LLL');
 
@@ -19,7 +19,11 @@ const ArticlePage = () => {
     const defaultImg = "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png";
     return (
       <>
-        <img src={`${multimedia[0] ? urlBase + multimedia[0].url : defaultImg}`} width='90%' height='90%'></img>
+        <img src={`${multimedia[0] ? urlBase + multimedia[0].url : defaultImg}`}
+          alt={headline.main}
+          width='90%' 
+          height='90%'>
+        </img>
       </>
     )
   }

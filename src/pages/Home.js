@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import style from './home.module.css'
+import React from 'react';
 
 import useFetchArticle from '../service/fetchApiArticle';
 
@@ -7,6 +6,8 @@ import RenderArticles from '../components/articles-components/RenderArticles';
 import LoadingComponent from '../components/LoadingComponent';
 import ErrorComponent from '../components/ErrorComponent';
 import CategoryNews from '../components/articles-components/CategoryNews';
+
+import style from './home.module.css'
 
 const API_KEY = process.env.REACT_APP_API_KEY
 
@@ -19,20 +20,15 @@ function Home() {
 
   if (isLoading) return <LoadingComponent/>
 
-  // Const for select size of image
-  const large = 0; //'large';
-  const middle = 1; //'middle';    
-  const small = 2; //'small';
-
-
-  let slot = 0;
-  let image = null;
-  let sectionName = '';
-
   return (
 
     <div className={style.body}>
+
+      {/* ###### Top News ###### */}
+
       <div className={style.topNews} >
+
+        {/* ##### Main News Section ##### */}
         <div className={style.mainNews}>
           <section className={style.container}>
             <RenderArticles slot={0} typeArticle={'article'} />
@@ -56,28 +52,26 @@ function Home() {
             <RenderArticles slot={6} typeArticle={'abstract'}/>
             <div className={style.borderHorizontal}></div>
             <RenderArticles slot={7} typeArticle={'abstract'}/>
-
           </section>
 
           <section className={style.container}>
-          <RenderArticles slot={4} typeArticle={'figcaption'}/>
-
+            <RenderArticles slot={4} typeArticle={'figcaption'}/>
           </section>
 
           <section className={style.container}>
-          <RenderArticles slot={8} typeArticle={'article'}/>
+            <RenderArticles slot={8} typeArticle={'article'}/>
           </section>
 
           <section className={style.container}>
-          <RenderArticles slot={8} typeArticle={'figcaption'}/>
+            <RenderArticles slot={8} typeArticle={'figcaption'}/>
           </section>
 
           <section className={style.container}>
-          <RenderArticles slot={9} typeArticle={'article'}/>
+            <RenderArticles slot={9} typeArticle={'article'}/>
           </section>
 
           <section className={style.container}>
-          <RenderArticles slot={9} typeArticle={'figcaption'}/>
+            <RenderArticles slot={9} typeArticle={'figcaption'}/>
           </section>
           
 
@@ -104,31 +98,32 @@ function Home() {
 
       <div className={style.borderVertical} ></div>
 
+      {/* ##### Side News section #####*/}
+
       <div className={style.sideNews}>
         <RenderArticles slot={0} typeArticle={'figcaption'} section={'opinion'}/>
         <div className={style.borderHorizontal}></div>
         <h3>Opinion</h3>
         <RenderArticles typeArticle={'title'} section={'opinion'}/>
-        {/* <h3>Side More news</h3> */}
         <div className={style.borderHorizontal}></div>
         <RenderArticles typeArticle={'article'} restNews={'side-more-news'}/>
       </div>
-      </div>
+    </div>
 
-      <div className={style.moreNewsContainer}>
-        <h1>More news</h1>
-        <div className={style.mainMoreNews}>
-          <div>
-            <RenderArticles slot={12} typeArticle={'figcaption'}/>
-            <RenderArticles slot={12} typeArticle={'article'}/>
-          </div>
-          <div>
-            <RenderArticles typeArticle={'article'} restNews={'more-news-1'}/>
-          </div>
+    <div className={style.moreNewsContainer}>
+      <h1>More news</h1>
+      <div className={style.mainMoreNews}>
+        <div>
+          <RenderArticles slot={12} typeArticle={'figcaption'}/>
+          <RenderArticles slot={12} typeArticle={'article'}/>
+        </div>
+        <div>
+          <RenderArticles typeArticle={'article'} restNews={'more-news-1'}/>
         </div>
       </div>
-      <div className={style.borderHorizontal}></div>
+    </div>
 
+      <div className={style.borderHorizontal}></div>
 
       <div className={style.moreNewsContainer}>
         <h1>More news 2</h1>
