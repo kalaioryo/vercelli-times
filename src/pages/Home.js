@@ -31,44 +31,32 @@ function Home() {
     <div className={style.body}>
 
       {/* ###### Top News ###### */}
+      <div className={style.topNews} >        
+        <MainNews/>
+        <SideNews/>      
+      </div>
 
-      <div className={style.topNews} >
-
-        {/* ##### Main News Section ##### */}
-        
-        {/* <MainNews/> */}
-
-      {/* ##### Side News section #####*/}
-
-      {/* <SideNews/> */}
-      
-    </div>
-
-    <div className={style.moreNewsContainer}>
-      {/* <MoreNews1/> */}
-    </div>
+      <div className={style.moreNewsContainer}>
+        <MoreNews1/>
+      </div>
 
       <div className={style.borderHorizontal}></div>
 
       <div className={style.moreNewsContainer}>
-        {/* <MoreNews2/> */}
+        <MoreNews2/>
       </div>
+
       <div className={style.borderHorizontal}></div>
 
-    <h3>Well</h3>
-    <div className={style.wellCategory}>
-      <RenderArticles typeArticle={'article'} section={'well'}/>
-    </div>
+      <h3>Well</h3>
+      <div className={style.wellCategory}>
+        <RenderArticles typeArticle={'article'} section={'well'}/>
+      </div>
 
-    <div className={style.categoryNewsSection}>
-
+      <div className={style.categoryNewsSection}>
       <h3>News</h3>
-
-      {/* <CategorySection/> */}
-  
-      
-
-    </div>
+      <CategorySection/> 
+      </div>
 
     </div>
   );
