@@ -49,7 +49,7 @@ function Home() {
       <div className={style.borderHorizontal}></div>
 
       <h3>Well</h3>
-      <div className={style.wellCategory}>
+      <div className={`${style.wellCategory} ${style.scrollbarStyle}` }>
         <RenderArticles typeArticle={'article'} section={'well'}/>
       </div>
 

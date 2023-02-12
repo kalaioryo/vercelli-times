@@ -54,21 +54,41 @@
 .wellCategory{
   width: 100%;
   max-height: 120px;
-  /* border: 1px solid red; */
-  /* background-color: orange; */
-  /* color: red; */
   display:flex;
   justify-content: space-between;
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: hidden;
+  
 }
 
-.wellCategory::-webkit-scrollbar{
-  width: 0;
+/* #### scrollbar horizontal ### */
+
+.scrollbarStyle{
+  scrollbar-color: black white ;
+  scrollbar-width: thin;
 }
 
-.wellCategory::-moz-horizontal-scrollbar{
-  width: 0;
+/* #### webkit ####  */
+
+.scrollbarStyle::-webkit-scrollbar{
+  background-color:rgba(255, 255, 255, 0.087);
+  height: 7px;
+}
+
+.scrollbarStyle::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color: transparent;
+  height: 10px;
+}
+
+.scrollbarStyle::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: black;
+}
+
+.scrollbarStyle::-webkit-scrollbar-thumb:hover {
+  background: white;
+  border: 1px solid black
 }
 
 .wellCategory div{
