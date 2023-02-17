@@ -1,0 +1,60 @@
+.mainNews{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container{
+  width: 100%;
+}
+
+.borderHorizontal{
+  border-top: 1px solid;
+  width: 100%;
+  margin: 2% 0%;
+}
+
+/* .borderVertical{
+  border-left: 1px solid ;
+  width: 1%;
+  margin-left: 1%;
+} */
+
+
+.covidSection{
+  width: 100%;
+}
+
+
+@media only screen and (min-width: 900px){
+  
+  .mainNews{
+    width: 69%;
+  }
+
+  .container{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-flow: column;
+    width: 50%;
+    /* margin-right: 2%; */
+    margin: 10px 0px;
+    border-bottom: 1px solid;
+    /* justify-items: start; */
+    /* grid-column: span 9; */
+  }
+
+  .borderVertical{
+    border-left: 1px solid ;
+    width: 1%;
+    margin-left: 1%;
+  }
+
+  .borderHorizontal{
+    border-top: 1px solid;
+    width: 95%;
+    margin:  2% 2% 2% 0%;
+    /* margin-top: 1%; */
+  }
+}

@@ -1,0 +1,30 @@
+.category{
+  width: 100%;
+  max-height: 120px;
+  display:flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.category div{
+  width: 110px;
+  height: 110px;
+  /* line-height: 110px; */
+  /* text-align: center; */
+  /* vertical-align: bottom; */
+  background-color: rgba(211, 211, 211, 0.539);
+  margin: 2px 4px;
+}
+
+.category h3{
+  /* color:red; */
+  font-size: small;
+  vertical-align: bottom;
+
+}
+
+.category p {
+  display: none;
+}
+

@@ -2,13 +2,15 @@ import React from 'react'
 
 import RenderArticles from '../articles-components/RenderArticles';
 
-import style from '../../pages/home.module.css'
+// import style from '../../pages/home.module.css'
+import style from './moreNewsSection.module.css'
+
 
 function MoreNews2() {
   return (
     <>
       <h1>More news 2</h1>
-        <div className={style.mainMoreNews}>
+        <div className={style.moreNews}>
           <div>
             <RenderArticles slot={13} typeArticle={'figcaption'}/>
             <RenderArticles slot={13} typeArticle={'article'}/>

@@ -1,9 +1,6 @@
 import React from 'react'
 
-import RenderArticles from '../articles-components/RenderArticles';
 import CategoryNews from '../articles-components/CategoryNews';
-
-import style from '../../pages/home.module.css'
 
 function CategorySection() {
   return (

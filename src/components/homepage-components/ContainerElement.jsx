@@ -4,7 +4,9 @@ import { useSelector } from "react-redux";
 
 import RenderArticles from '../articles-components/RenderArticles';
 
-import style from '../../pages/home.module.css'
+// import style from '../../pages/home.module.css'
+import style from './containerElement.module.css'
+import scrollbar from '../../style/scrollbarCustom.module.css'
 
 function ContainerElement({section}) {
   const articles = useSelector((state) => state.allArticles.articles);
@@ -18,7 +20,7 @@ function ContainerElement({section}) {
         category &&
         <>
           <h3>{category}</h3>
-          <div className={`${style.wellCategory} ${style.scrollbarStyle}` }>
+          <div className={`${style.category} ${scrollbar.scrollbarStyle}` }>
           <RenderArticles typeArticle={'article'} section={category} image={true}/>
           </div>
         </>

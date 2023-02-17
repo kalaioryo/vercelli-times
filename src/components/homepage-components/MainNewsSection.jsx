@@ -2,7 +2,8 @@ import React from 'react'
 
 import RenderArticles from '../articles-components/RenderArticles';
 
-import style from '../../pages/home.module.css'
+import style from './mainNewsSection.module.css'
+// import style from '../../pages/home.module.css'
 
 function MainNews() {
 return (
