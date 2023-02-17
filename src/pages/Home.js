@@ -2,10 +2,10 @@ import React from 'react';
 
 import useFetchArticle from '../service/fetchApiArticle';
 
-import MainNews from '../components/homepage-components/MainNews';
-import SideNews from '../components/homepage-components/SideNews';
-import MoreNews1 from '../components/homepage-components/MoreNews1';
-import MoreNews2 from '../components/homepage-components/MoreNews2';
+import MainNews from '../components/homepage-components/MainNewsSection';
+import SideNews from '../components/homepage-components/SideNewsSection';
+import MoreNews1 from '../components/homepage-components/MoreNewsSection1';
+import MoreNews2 from '../components/homepage-components/MoreNewsSection2';
 import CategorySection from '../components/homepage-components/CategorySection';
 
 import RenderArticles from '../components/articles-components/RenderArticles';
