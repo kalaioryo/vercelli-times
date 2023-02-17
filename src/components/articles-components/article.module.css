@@ -8,14 +8,25 @@
   margin: 2% 0%;
 }
 
+.image{
+  width: 100%;
+  margin: 0px;
+}
+
+
 @media only screen and (min-width: 900px){
   .item{
     margin:  0% 5% 2% 0%;
   }
 
-  /* .borderHorizontal{
-    border-top: 1px solid red;
+  .borderHorizontal{
+    border-top: 1px solid;
     width: 95%;
     margin:  2% 2% 2% 0%;
-  }*/
+  }
+
+  
+  .figure{
+    margin-bottom: 20px;
+  }
 }

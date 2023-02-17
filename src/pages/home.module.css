@@ -16,6 +16,10 @@
   margin: 2% 0%;
 }
 
+.containerElement{
+  width: 100%;
+}
+
 /* #### Category News section ####*/
 
 .categoryNewsSection{

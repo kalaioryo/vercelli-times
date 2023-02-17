@@ -49,7 +49,9 @@ function Home() {
 
       <div className={style.borderHorizontal}></div>
 
-      <ContainerElement section={'us'}/>      
+      <div className={style.containerElement}>
+        <ContainerElement section={'us'}/>      
+      </div>
 
       <div className={style.categoryNewsSection}>
       <h3>News</h3>
@@ -57,7 +59,7 @@ function Home() {
       </div>
 
     </div>
-  );
+  )
 }
 
 export default Home;

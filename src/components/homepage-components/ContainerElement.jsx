@@ -24,7 +24,6 @@ function ContainerElement({section}) {
           <RenderArticles typeArticle={'article'} section={category} image={true}/>
           </div>
         </>
-        
       }
     </>
   )

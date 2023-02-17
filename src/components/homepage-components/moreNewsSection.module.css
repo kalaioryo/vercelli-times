@@ -9,4 +9,8 @@
   .moreNews section{
     width: 100%;
   }
+
+  .borderHorizontal{
+    width: 90%;
+  }
 }
