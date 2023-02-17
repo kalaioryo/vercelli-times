@@ -12,10 +12,8 @@ const Abstract = ({article}) =>{
       <a href={`${url}`}>
         <p>{abstract}</p>
       </a>
-    </section>
-        
+    </section>        
   )
-  
 }
 
 Abstract.propTypes = {

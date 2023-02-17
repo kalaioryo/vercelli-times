@@ -2,6 +2,7 @@ import React from 'react';
 
 import useFetchArticle from '../service/fetchApiArticle';
 
+import ContainerElement from '../components/homepage-components/ContainerElement';
 import MainNews from '../components/homepage-components/MainNewsSection';
 import SideNews from '../components/homepage-components/SideNewsSection';
 import MoreNews1 from '../components/homepage-components/MoreNewsSection1';
@@ -48,10 +49,7 @@ function Home() {
 
       <div className={style.borderHorizontal}></div>
 
-      <h3>Well</h3>
-      <div className={`${style.wellCategory} ${style.scrollbarStyle}` }>
-        <RenderArticles typeArticle={'article'} section={'well'}/>
-      </div>
+      <ContainerElement section={'us'}/>      
 
       <div className={style.categoryNewsSection}>
       <h3>News</h3>

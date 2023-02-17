@@ -5,7 +5,7 @@ import ImgArticle from "./ImgArticle";
 
 import style from './article.module.css';
 
-const Article = ({article}) => {
+const Article = ({article, image}) => {
 
   const {title, abstract, url, multimedia, item_type} = article
   

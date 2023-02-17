@@ -10,7 +10,7 @@ import Figcaption from "./Figcaption";
 import Title from "./Title";
 import ErrorComponent from "../ErrorComponent";
 
-const RenderArticles = ({slot, typeArticle, restNews, sizeImg, section, subSection}) =>{
+const RenderArticles = ({slot, typeArticle, restNews, image, section, subSection}) =>{
   const articles = useSelector((state) => state.allArticles.articles);
 
   const RenderArticle = articles
@@ -24,7 +24,7 @@ const RenderArticles = ({slot, typeArticle, restNews, sizeImg, section, subSecti
     const {title} = article    
 
     const MyComponent = {
-      "article": <Article key={`article:${index + title}`} article={article} />,
+      "article": <Article key={`article:${index + title}`} article={article} image={image}/>,
       "abstract": <Abstract key={`abstract:${index + title}`} article={article} />,
       "figcaption": <Figcaption key={`figcaption:${index + title}`} article={article} />,
       "title": <Title key={`title:${index + title}`} article={article} />,
