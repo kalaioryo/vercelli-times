@@ -12,6 +12,28 @@ const CategoriesNews = ({section, subSection, category}) => {
   let arrayOfUrlImage = []
   let arrayOfUrlArticle = []
 
+  const CategoryImage = ({slot}) => {
+    return(
+      <figure>
+        <a href={arrayOfUrlArticle[slot]}>
+          <img 
+            alt={arrayOfTitle[slot]} 
+            src={arrayOfUrlImage[slot]}>
+          </img>
+        </a>
+      </figure>
+    )
+  }
+
+  const CategoryElement = ({slot}) => {
+
+    return(
+      <a href={arrayOfUrlArticle[slot]}>
+        <h2>{arrayOfTitle[slot]}</h2>
+      </a>
+    )
+  }
+
   const RenderCategoryNews = articles
     .filter((article) => section ? article.section === section : true)
     .filter((article) => subSection ? article.subsection === subSection : true)
@@ -30,32 +52,12 @@ const CategoriesNews = ({section, subSection, category}) => {
       return(
         <div className={style.newsCategory}>
           <h4>{category}</h4>
-          <figure>
-            <a href={arrayOfUrlArticle[0]}>
-              <img 
-                alt={arrayOfTitle[0]} 
-                src={arrayOfUrlImage[0]}>
-              </img>
-            </a>
-          </figure>
+          <CategoryImage slot={0}/>
 
-          {arrayOfTitle[0] && (
-              <a href={arrayOfUrlArticle[0]}>
-                <h2>{arrayOfTitle[0]}</h2>
-              </a>
-          )}
+          {arrayOfTitle[0] && <CategoryElement slot={0} />}
+          {arrayOfTitle[1] && <CategoryElement slot={1} />}
+          {arrayOfTitle[2] && <CategoryElement slot={2} />} 
 
-          {arrayOfTitle[1] && (
-              <a href={arrayOfUrlArticle[1]}>
-                <h2>{arrayOfTitle[1]}</h2>
-              </a>
-          )}
-
-          {arrayOfTitle[2] && (
-              <a href={arrayOfUrlArticle[2]}>
-                <h2>{arrayOfTitle[2]}</h2>
-              </a>
-          )}          
         </div>
     )
   }
