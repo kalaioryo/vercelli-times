@@ -1,10 +1,11 @@
 import React from 'react';
 
+import PropTypes from 'prop-types'
+
 import { useSelector } from "react-redux";
 
 import RenderArticles from '../articles-components/RenderArticles';
 
-// import style from '../../pages/home.module.css'
 import style from './containerElement.module.css'
 import scrollbar from '../../style/scrollbarCustom.module.css'
 
@@ -12,7 +13,6 @@ function ContainerElement({section}) {
   const articles = useSelector((state) => state.allArticles.articles);
   const categories  = articles.filter((article) => section ? article.section === section : true)
   const category = categories[0]?.section
-  console.log(category);
 
   return (
     <>
@@ -27,6 +27,10 @@ function ContainerElement({section}) {
       }
     </>
   )
+}
+
+ContainerElement.propTypes = {
+  section: PropTypes.string
 }
 
 export default ContainerElement

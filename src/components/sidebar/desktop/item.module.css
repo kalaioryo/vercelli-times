@@ -16,7 +16,6 @@
   text-align: start;
   list-style: none;
   text-decoration: none;
-  /* color: black; */
   font-size: 12px;
 }
 .navText a{
@@ -29,13 +28,9 @@
 
 .navText :hover{
   z-index: 5;
-  /* background-color: lightgrey; */
-  /* height: 25px; */
-  /* color:white; */
 }
 
 .itemList{
-  /* background-color: transparent; */
   display: block;
   margin-left: 2px;
   padding: 5px;

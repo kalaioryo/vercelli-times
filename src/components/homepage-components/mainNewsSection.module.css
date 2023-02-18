@@ -14,13 +14,6 @@
   margin: 2% 0%;
 }
 
-/* .borderVertical{
-  border-left: 1px solid ;
-  width: 1%;
-  margin-left: 1%;
-} */
-
-
 .covidSection{
   width: 100%;
 }
@@ -38,11 +31,8 @@
     flex-wrap: wrap;
     flex-flow: column;
     width: 50%;
-    /* margin-right: 2%; */
     margin: 10px 0px;
     border-bottom: 1px solid;
-    /* justify-items: start; */
-    /* grid-column: span 9; */
   }
 
   .borderVertical{
@@ -55,6 +45,5 @@
     border-top: 1px solid;
     width: 95%;
     margin:  2% 2% 2% 0%;
-    /* margin-top: 1%; */
   }
 }

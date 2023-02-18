@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 
+import PropTypes from 'prop-types'
+
 import { Link } from 'react-router-dom';
 
 import Submenu from './Submenu';
@@ -12,7 +14,7 @@ const Item = ({item}) => {
   const handleMouseLeave = () => setIsShown(false)
 
   const {path, id, name, cName, subSection} = item;
-
+  
   return(
     <>
       <li 
@@ -29,6 +31,19 @@ const Item = ({item}) => {
       </li>
     </>
   )
+}
+
+Item.propTypes = {
+  item: PropTypes.shape({
+    path: PropTypes.string,
+    id: PropTypes.number,
+    name: PropTypes.string,
+    cName: PropTypes.object,
+    subSection: PropTypes.PropTypes.oneOfType([
+      PropTypes.array,
+      PropTypes.string
+    ])
+  })
 }
 
 export default Item

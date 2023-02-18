@@ -9,7 +9,6 @@ import Menu from './Menu';
 
 import style from './sidebar.module.css';
 
-
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
 
@@ -28,17 +27,12 @@ const Sidebar = () => {
         onMouseEnter={handleMouseEnter}
       >
         <ul className={style.ulContainer}>
-          <li className={style.navbarToogle}>
+          <li className={style.navbarToggle}>
             <Link to='#' className={style.menuBars}>
-              <AiOutlineClose size='20px' onClick={showSidebar}/> 
+              <AiOutlineClose className={style.closeButton}  onClick={showSidebar}/> 
             </Link>
           </li>
-          <li className={style.list}>
-            <Link to='/' className={style.navText}>
-              <span className={style.itemList}>Home Page</span>
-            </Link>
 
-          </li>
           <Menu/>
           
         </ul>

@@ -3,7 +3,6 @@ import React from 'react'
 import RenderArticles from '../articles-components/RenderArticles';
 
 import style from './mainNewsSection.module.css'
-// import style from '../../pages/home.module.css'
 
 function MainNews() {
 return (
@@ -50,10 +49,6 @@ return (
 
   <section className={style.container}>
     <RenderArticles slot={9} typeArticle={'figcaption'}/>
-  </section>
-  
-  <section className={style.covidSection}>
-    {/* <div>Covid Section</div> */}
   </section>
           
   <section className={style.container}>

@@ -2,7 +2,6 @@ import React from 'react'
 
 import RenderArticles from '../articles-components/RenderArticles';
 
-// import style from '../../pages/home.module.css'
 import style from './moreNewsSection.module.css'
 
 function MoreNews1() {

@@ -7,13 +7,18 @@
 }
 
 .menuBars{
-  /* margin-left: 2em; */
   font-size: 2em;
-  /* background-color: none; */
+}
+
+.closeButton{
+  margin-top: 10px;
+  size: 30px;
+  border: 1px solid;
+  border-radius: 100%;
+  padding: 3px;
 }
 
 .navMenu{
-  /* background-color: white; */
   width: 130px;
   height: 100vh;
   display:flex;
@@ -26,7 +31,6 @@
 }
 
 .navMenuActive{
-  /* background-color: white; */
   width: 130px;
   height: 100vh;
   display:flex;
@@ -39,16 +43,13 @@
 }
 
 .ulContainer{
+  text-decoration: none;
   z-index: 4;
 }
 
-.navbarToogle{
+.navbarToggle{
   list-style-type: none;
 }
-
-/* .sidebarContainer{
-  width: 200 px;
-} */
 
 .navText{
   position: relative;
@@ -57,23 +58,19 @@
   padding: 1px;
   width: 100%;
   text-align: start;
-  /* justify-content: start; */
   align-items: start;
-  /* padding: 8px 0px 8px 8px; */
   list-style: none;
-  /* height: 25px; */
   text-decoration: none;
-  /* color: black; */
   font-size: 14px;
 
 }
-.navText :hover{
-  /* background-color: lightgrey; */
-  /* color:white; */
-}
+/* .navText :hover{
+ 
+} */
 
 .itemList{
   width: 100%;
+  text-decoration: none;
 }
 
 /* .list :hover{

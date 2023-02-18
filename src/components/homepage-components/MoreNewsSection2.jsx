@@ -4,7 +4,6 @@ import RenderArticles from '../articles-components/RenderArticles';
 
 import style from './moreNewsSection.module.css'
 
-
 function MoreNews2() {
   return (
     <>

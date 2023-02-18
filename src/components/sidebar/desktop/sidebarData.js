@@ -25,6 +25,12 @@
 
 export const SidebarData = [
   {
+    id:0,
+    name: 'Home',
+    path: '/',
+    cName: subMenuContainer
+  },
+  {
     id: 1,
     name: 'World',
     path: '/section/world',

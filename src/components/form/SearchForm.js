@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
-import { Link } from 'react-router-dom';
+
 import { useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import style from './searchForm.module.css';
+
+import {useDispatch } from 'react-redux';
 import { closeSidebarMobile } from '../../redux/actions/sidebarMobileAction';
 
-const API_KEY = process.env.REACT_APP_API_KEY
+import style from './searchForm.module.css';
 
 const SearchForm = () => {
   const [query, setQuery] = useState('');
@@ -23,7 +23,6 @@ const SearchForm = () => {
 
   const onChange = (e) =>{
     setQuery(e.target.value);
-    console.log(query);
   }
 
   return (
@@ -42,4 +41,3 @@ const SearchForm = () => {
 }
 
 export default SearchForm
-

@@ -7,7 +7,6 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
-  /* background-color: orange; */
 }
 
 .headerMobile button{
@@ -35,7 +34,5 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
-  /* margin: 0 5px 0 5px; */
-  /* background-color: orange; */
 }
 

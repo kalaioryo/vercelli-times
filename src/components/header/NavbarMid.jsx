@@ -20,8 +20,8 @@ function NavbarMid() {
       </Link>
 
       <div className={style.rightSide}>
-        <p>Meteo</p>
-        <p>finanza</p>
+        <p>weather forecast</p>
+        <p>finance</p>
       </div>
     </div>
   );

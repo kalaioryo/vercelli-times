@@ -17,15 +17,14 @@ function HeaderMobile() {
       <div className={style.headerMobile}>
         <div className={style.headerLeftSection}>
           <div className='btn-sidebar'>
-          <SidebarMobile/>
-          {/* <FontAwesomeIcon icon={faBars} size="lg"/> */}
+            <SidebarMobile/>
           </div>
         </div>
         <Link to={'/'}><h1 className={style.titleMobile}>The Vercelli Times</h1></Link>
 
         <div className={style.headerRightSection}>
           <DarkModeButton/>
-            <button><FontAwesomeIcon icon={faUser} size="lg"/></button>
+          <button><FontAwesomeIcon icon={faUser} size="lg"/></button>
         </div>
       </div>
 

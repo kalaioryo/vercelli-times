@@ -1,5 +1,4 @@
 .header{
-  /* background-color: lightgreen; */ /*debug*/
   display: flex;
   justify-content: center;
   flex-direction: column;
