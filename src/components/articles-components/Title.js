@@ -1,5 +1,7 @@
 import React from "react";
 
+import PropTypes from 'prop-types';
+
 import style from "./title.module.css";
 
 const Title = ({article}) =>{
@@ -14,6 +16,15 @@ const Title = ({article}) =>{
     </section>
   )
 }
+
+Title.propTypes = {
+  article: PropTypes.shape({
+    title: PropTypes.string,
+    url: PropTypes.string
+  })
+}
+
+
 
 export default Title;
 

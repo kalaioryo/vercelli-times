@@ -9,6 +9,7 @@
 
 .searchForm button{
   border: 1px solid;
+  cursor: pointer;
 }
 
 .searchForm input{

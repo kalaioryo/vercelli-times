@@ -107,6 +107,7 @@ button {
 a{
   display:block;
   text-decoration: none;
+  cursor: pointer;
   /* color:black; */
 }
 

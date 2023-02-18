@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
+
 import { darkMode } from '../../redux/actions/themeAction';
 import { lightMode } from '../../redux/actions/themeAction';
 
@@ -50,7 +51,7 @@ function DarkModeButton() {
 
   return (
     <div className={style.darkModeContainer} >
-      <button  onClick={toggleTheme}>
+      <button className={style.toggle} onClick={toggleTheme}>
         {toggle ?
           <FaToggleOn size="22px"/> :
           <FaToggleOff size="22px"/>     

@@ -32,57 +32,17 @@ const RenderArticles = ({slot, typeArticle, restNews, image, section, subSection
     }
     return MyComponent[typeArticle] || MyComponent["default"];
   })
-  //.console.log([...articlsizeImges]);
-  // .filter( filter ?  === filter : true))
+  
   return(<>{slot === undefined ? RenderArticle : RenderArticle[slot]}</>)
 }
 
 RenderArticles.propTypes = {
-  articles: PropTypes.func,
-  RenderArticle: PropTypes.func,
-  // article: PropTypes.string.isRequired
-  // title: PropTypes.string.isRequired,
-  // abstract: PropTypes.string.isRequired,
-  // url: PropTypes.string.isRequired,
-  // kicker: PropTypes.string.isRequired,
-  // multimedia: PropTypes.array.isRequired
+  slot: PropTypes.number,
+  typeArticle: PropTypes.string,
+  restNews: PropTypes.string,
+  image: PropTypes.bool,
+  section: PropTypes.string,
+  subSection: PropTypes.string,
 }
-// RenderArticles.defaultProps = {
-//   RenderArticle: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       title: "title not found",
-//       abstract: "abstract not found",
-//       url: "url not found",
-//       kicker: "kicker not found",
-//       multimedia: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png" 
-//     })
-//   )
-// }
-
 
 export default RenderArticles;
-
- //url: sostitutivo url for img: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png";
-
-   // const imgLarge = article.multimedia[0].url;
-    // const imgMiddle = article.multimedia[1].url;
-    // const imgSmall = article.multimedia[2].url;
-
-    // const renderImg = ()=>{
-    //   let img = '';
-    //   switch(imageSize){
-    //     case'large':
-    //       img = imgLarge;
-    //       break;
-    //     case'middle':
-    //       img = imgMiddle;
-    //       break;
-    //     case'small':
-    //       img = imgSmall;
-    //       break;
-    //     default:
-    //       img = '';
-    //   }
-    // }
-    // let img = renderImg();
-    

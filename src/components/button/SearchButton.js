@@ -14,12 +14,10 @@ function SearchButton() {
 
   return (
     <>
-      <button 
-        type='search'
-        onClick={toggleClick}
-      >
+      <button className={style.btn} type='search' onClick={toggleClick}>
         <FaSearch size="22px"/>
       </button>
+
       {toggle &&
         <div className={style.containerForm}>
           <SearchForm/>
