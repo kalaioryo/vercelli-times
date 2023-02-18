@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 import { useSelector } from "react-redux";
-import { setSingleArticle } from "../../redux/actions/articleAction";
 
 import { useNavigate } from "react-router-dom";
 

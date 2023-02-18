@@ -8,21 +8,17 @@ import { closeSidebarMobile } from '../../redux/actions/sidebarMobileAction';
 const API_KEY = process.env.REACT_APP_API_KEY
 
 const SearchForm = () => {
-  // const [search, setSearch] = useState('');
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-
   const handleSubmit = (e) =>{
-    // closeSidebar()
     e.preventDefault();
     if (!query) return alert("Insert a word");
     navigate(`../search/${query}`, {state: query});
-    // setQuery('');
+    setQuery('');
     dispatch(closeSidebarMobile());
     document.body.style.overflow = 'visible';
-
   }
 
   const onChange = (e) =>{
@@ -30,29 +26,16 @@ const SearchForm = () => {
     console.log(query);
   }
 
-  const handleClick = () =>{
-    // console.log(query);
-    navigate(`../search/${query}`, {state: query});
-    // setQuery('');
-  }
-
   return (
     <>
       <form className={style.searchForm} action="submit" onSubmit={handleSubmit} >
-        {/* <div className={style.containerInput}> */}
-          <input
-            type="text" 
-            placeholder='search'
-            value={query}
-            onChange={onChange} />
-        {/* </div>         */}
-        <button 
-          className={style.btn} 
-          // onClick={handleClick}
-          type='submit'
-        >GO
-          {/* <Link to={'/search'} props={query}>Go</Link> */}
-        </button>
+        <input
+          type="text" 
+          placeholder='search'
+          value={query}
+          onChange={onChange}
+        />
+        <button type='submit'>GO</button>
       </form>
     </>
   )

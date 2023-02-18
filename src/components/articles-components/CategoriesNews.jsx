@@ -1,10 +1,12 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
+
 import { useSelector } from "react-redux";
 
-import style from './categoryNews.module.css'
+import style from './categoriesNews.module.css'
 
-const CategoryNews = ({section, subSection, category}) => {
+const CategoriesNews = ({section, subSection, category}) => {
   const articles = useSelector((state) => state.allArticles.articles);
   let arrayOfTitle = []
   let arrayOfUrlImage = []
@@ -57,7 +59,14 @@ const CategoryNews = ({section, subSection, category}) => {
         </div>
     )
   }
+
+  CategoriesNews.propTypes = {
+    section: PropTypes.string,
+    subSection: PropTypes.string,
+    category: PropTypes.string,
+  }
+
   return RenderCategoryNews
 }
 
-export default CategoryNews
+export default CategoriesNews

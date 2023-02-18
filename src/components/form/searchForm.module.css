@@ -7,6 +7,10 @@
   display: inline-flex;
 }
 
+.searchForm button{
+  border: 1px solid;
+}
+
 .searchForm input{
   width: auto;
   border-radius: 3px;

@@ -19,7 +19,7 @@ function ContainerElement({section}) {
       { 
         category &&
         <>
-          <h3>{category}</h3>
+          <h3 className={style.nameCategory} >{category}</h3>
           <div className={`${style.category} ${scrollbar.scrollbarStyle}` }>
           <RenderArticles typeArticle={'article'} section={category} image={true}/>
           </div>

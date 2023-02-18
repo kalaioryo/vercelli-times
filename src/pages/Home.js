@@ -7,12 +7,10 @@ import MainNews from '../components/homepage-components/MainNewsSection';
 import SideNews from '../components/homepage-components/SideNewsSection';
 import MoreNews1 from '../components/homepage-components/MoreNewsSection1';
 import MoreNews2 from '../components/homepage-components/MoreNewsSection2';
-import CategorySection from '../components/homepage-components/CategorySection';
+import CategoriesSection from '../components/homepage-components/CategoriesSection';
 
-import RenderArticles from '../components/articles-components/RenderArticles';
 import LoadingComponent from '../components/LoadingComponent';
 import ErrorComponent from '../components/ErrorComponent';
-import CategoryNews from '../components/articles-components/CategoryNews';
 
 import style from './home.module.css'
 
@@ -43,6 +41,10 @@ function Home() {
 
       <div className={style.borderHorizontal}></div>
 
+      <div className={style.containerElement}>
+        <ContainerElement section={'well'}/>      
+      </div>
+
       <div className={style.moreNewsContainer}>
         <MoreNews2/>
       </div>
@@ -54,10 +56,9 @@ function Home() {
       </div>
 
       <div className={style.categoryNewsSection}>
-      <h3>News</h3>
-      <CategorySection/> 
+        <h3>News</h3>
+        <CategoriesSection/> 
       </div>
-
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import {React, useEffect} from 'react';
-import { useSelector } from 'react-redux';
+
 import moment from 'moment';
 
 import style from './articlePage.module.css';
@@ -7,7 +7,6 @@ import style from './articlePage.module.css';
 const ArticlePage = () => {
 
   //10:30 video
-  // const article = useSelector((state) => state.singleArticle.article)
   let article = JSON.parse(localStorage.singleArticle);
   console.log(article);
   const {headline, multimedia, lead_paragraph, abstract, pub_date, section_name, snippet, web_url, _id} = article;
@@ -40,7 +39,7 @@ const ArticlePage = () => {
       <p className={style.lead} >{lead_paragraph}</p>
       <p className={style.abstract}>{abstract}</p>
       <button className={style.btn}>
-        <a href={`${web_url}`} target='_blank'>Read Full Article</a>
+        <a href={`${web_url}`} target='blank'>Read Full Article</a>
       </button>
     </article>
   )

@@ -10,7 +10,7 @@ const useFetchApiQuery = (url) => {
 
   const dispatch = useDispatch();
 
-  const fecthArticle = async () =>{
+  const fetchArticle = async () =>{
     setIsLoading(true);
     setHasError(false);
     setErrorMessage('');
@@ -36,7 +36,7 @@ const useFetchApiQuery = (url) => {
   }
 
   useEffect(()=>{
-    fecthArticle()
+    fetchArticle()
   },[url])
 
   return {isLoading, hasError, errorMessage}

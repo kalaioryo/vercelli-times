@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+# Vercelli-Times
+S2I React project
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -69,7 +71,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
 # vercelli-times
 S2I React project
->>>>>>> fe173e6cf6737bc29304293d419b3d9281e9c4ea

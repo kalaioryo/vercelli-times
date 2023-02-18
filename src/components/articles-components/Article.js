@@ -1,15 +1,11 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-import Figcaption from "./Figcaption";
-
 import style from './article.module.css';
 
 const Article = ({article, image}) => {
-  // console.log(image);
   const {title, abstract, url, multimedia, item_type} = article
   const defaultImg = "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png";
-
   const Image = ({multimedia}) => {
     return(
       <figure>
@@ -22,12 +18,11 @@ const Article = ({article, image}) => {
       ></img>
       </figure>
     )
-
   }
   
   if(item_type !== "Article") {
     return null;
-  } else{
+  } else {
     return(
       <section className={style.item}>
         <a href={`${url}`}>
@@ -41,19 +36,18 @@ const Article = ({article, image}) => {
       </section>
   )}}
 
-// Article.propTypes = {
-//   article: PropTypes.object.isRequired,
-//   title: PropTypes.string.isRequired,
-//   abstract: PropTypes.string.isRequired,
-//   url: PropTypes.string.isRequired,
-//   multimedia: PropTypes.array
-// }
+  Article.propTypes = {
+    article: PropTypes.object.isRequired,
+    image: PropTypes.bool,
+    title: PropTypes.string,
+    abstract: PropTypes.string,
+    url: PropTypes.string,
+    item_type: PropTypes.string
+  }
 
-// Article.defaultProps = {
-//   title: "title not found",
-//   abstract: "abstract not found",
-//   url: "url not found",
-// }
+  Article.defaultProps = {
+    url: "/url-not-found",
+  }
 
 export default Article;
 
