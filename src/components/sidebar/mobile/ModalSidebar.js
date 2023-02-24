@@ -9,6 +9,9 @@ import SearchForm from '../../form/SearchForm';
 
 import style from './modalSidebar.module.css';
 
+//drill of components all based from data of sidebarMobileData.js
+//SidebarMobile => ModalSidebar => ItemMobile => SubItem
+
 const ModalSidebar = ({showSidebar,closeSidebar}) =>{
 
   return (

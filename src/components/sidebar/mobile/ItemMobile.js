@@ -6,6 +6,9 @@ import SubItem from './SubItem';
 
 import style from './itemMobile.module.css';
 
+//drill of components all based from data of sidebarMobileData.js
+//SidebarMobile => ModalSidebar => ItemMobile => SubItem
+
 const ItemMobile = ({showSidebar}) => {
   return(
     <>

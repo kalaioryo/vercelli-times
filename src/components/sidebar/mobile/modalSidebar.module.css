@@ -8,7 +8,6 @@
 }
 
 .modalContainer{
-  /* background-color: black; */
   position: fixed;
   z-index: 3;
   width: 100%;
@@ -16,15 +15,10 @@
   top: 0;
   left: 0;
   overflow-y: scroll;
-  /* overflow-y: auto; */
-  /* max-height: calc(100% - 50px); */
-  /* margin:auto */
 }
 
 .menuBars{
-  /* margin-left: 2em; */
   font-size: 2em;
-  /* background-color: none; */
 }
 
 .containerForm{

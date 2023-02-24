@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 
 import style from './subItem.module.css';
 
+//drill of components all based from data of sidebarMobileData.js
+//SidebarMobile => ModalSidebar => ItemMobile => SubItem
+
 const SubItem = ({subSection, showSidebar}) =>{
   return(
     <>

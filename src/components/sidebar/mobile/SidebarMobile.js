@@ -9,6 +9,9 @@ import { FaBars } from "react-icons/fa";
 
 import ModalSidebar from './ModalSidebar';
 
+//drill of components all based from data of sidebarMobileData.js
+//SidebarMobile => ModalSidebar => ItemMobile => SubItem
+
 const SidebarMobile = () => {
   const sidebarMobile = useSelector(state => state.sidebarMobile);
   const dispatch = useDispatch();
