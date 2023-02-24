@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 
 import style from './submenu.module.css';
 
+//drill of components all based from data sidebarData
+//Menu => Item => Submenu
+
 const Submenu = ({subSection, cName}) =>{
 
   return(

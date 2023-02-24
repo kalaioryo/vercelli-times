@@ -8,6 +8,9 @@ import Submenu from './Submenu';
 
 import style from './item.module.css';
 
+//drill of components all based from data sidebarData
+//Menu => Item => Submenu
+
 const Item = ({item}) => {
   const [isShown, setIsShown] = useState(false);
   const handleMouseEnter = () => setIsShown(true)

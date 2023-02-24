@@ -1,14 +1,16 @@
 import React from 'react';
 
-import { SidebarData } from './sidebarData';
+import { sidebarData } from './sidebarData';
 
 import Item from './Item';
 
+//drill of components all based from data sidebarData
+//Menu => Item => Submenu
+
 const Menu = () => {
-  
   return (
     <>
-      {SidebarData.map((item) =>{
+      {sidebarData.map((item) =>{
         const {id} = item;
         return(
           <Item key={`item Sidebar ${id}`} item={item}/>

@@ -23,7 +23,7 @@
     padding: '10px 18px'
   }
 
-export const SidebarData = [
+export const sidebarData = [
   {
     id:0,
     name: 'Home',
@@ -255,7 +255,7 @@ export const SidebarData = [
       { name: 'Reader Center', path: '/section/reader-center'},
       { name: 'Parenting', path: '/section/parenting'},
       { name: 'The Learning Network', path: '/section/learning'},
-      { name: 'Today\'\s Paper', path: '/section/todayspaper'},
+      { name: 'Today\'s Paper', path: '/section/todayspaper'},
       { name: 'Jobs', path: '/section/jobs'},
       { name: 'Corrections', path: '/section/corrections'},
     ]

@@ -26,16 +26,16 @@ const Sidebar = () => {
         onMouseLeave={handleMouseLeave} 
         onMouseEnter={handleMouseEnter}
       >
+
         <ul className={style.ulContainer}>
           <li className={style.navbarToggle}>
             <Link to='#' className={style.menuBars}>
               <AiOutlineClose className={style.closeButton}  onClick={showSidebar}/> 
             </Link>
           </li>
-
-          <Menu/>
-          
+          <Menu/>         
         </ul>
+        
       </nav>
     </>
   )
