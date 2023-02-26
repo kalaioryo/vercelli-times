@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from 'prop-types';
 
 import { useSelector } from "react-redux";
 
@@ -19,13 +18,13 @@ const ArticleSearchNews = () => {
     const defaultImg = "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png";
     const altDefault = "image of article";
     return (
-          <img 
-            className={style.image}
-            alt={ alt ? alt : altDefault }
-            src={`${multimedia?.[1]?.url ? urlBase + multimedia[1].url : defaultImg}`}
-            width='100%' 
-            height='100%'
-          />
+      <img 
+        className={style.image}
+        alt={ alt ? alt : altDefault }
+        src={`${multimedia?.[1]?.url ? urlBase + multimedia[1].url : defaultImg}`}
+        width='100%' 
+        height='100%'
+      />
     )
   }
 
@@ -52,7 +51,7 @@ const ArticleSearchNews = () => {
           </div>
         </div>
         
-        <figure className={style.imageContainer}>
+        <figure className={style.imageContainer} onClick={handleClick}>
           <Image multimedia={multimedia} alt={headline.main}/>
         </figure>
       </section>
@@ -60,21 +59,6 @@ const ArticleSearchNews = () => {
   })
 
   return RenderArticle
-
 }
-
-// ArticleSearchNews.prototype = {
-//   _id: PropTypes.number.isRequired,
-//   multimedia: PropTypes.array.isRequired,
-//   headline: PropTypes.string.isRequired
-// }
-
-// ArticleSearchNews.defaultProps ={
-//   abstract: "abstract not found",
-//   _id: "id not found",
-//   web_url: "https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png",
-//   multimedia: [{url:"https://www.pngkey.com/png/detail/79-790806_new-york-times-logo-new-york-times-png.png" }],
-//   headline: "headline not found"
-// }
 
 export default ArticleSearchNews

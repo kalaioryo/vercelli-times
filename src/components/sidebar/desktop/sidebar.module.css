@@ -1,6 +1,6 @@
 .navBar{
   display: flex;
-  justify-content: start;
+  /* justify-content: start; */
 }
 
 .menuBars{
@@ -19,7 +19,7 @@
   width: 130px;
   height: 100vh;
   display:flex;
-  justify-content: start;
+  /* justify-content: start; */
   position: fixed;
   top:0;
   left: -100%;
@@ -31,7 +31,7 @@
   width: 130px;
   height: 100vh;
   display:flex;
-  justify-content: start;
+  /* justify-content: start; */
   position: fixed;
   top:0;
   left: -1%;
@@ -55,7 +55,7 @@
   padding: 1px;
   width: 100%;
   text-align: start;
-  align-items: start;
+  /* align-items: start; */
   list-style: none;
   text-decoration: none;
   font-size: 14px;

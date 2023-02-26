@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import useFetchApiQuery from '../service/fetchApiQuery';
-import { Link, useNavigate, useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import style from './searchPage.module.css'
 
@@ -13,10 +13,8 @@ const Search = () => {
 
   const { query } = useParams();
  
-  const location = useLocation();
   const API_KEY = process.env.REACT_APP_API_KEY
   const url =`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query}&api-key=${API_KEY}`;
-  console.log(url);
   
   const {isLoading, hasError, errorMessage} = useFetchApiQuery(url)
 

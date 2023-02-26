@@ -1,12 +1,14 @@
-import React, {useEffect, useState} from "react";
-import useFetchArticle from "../service/fetchApiArticle";
-import { useParams } from "react-router-dom";
+import React from "react";
 
-import style from './sectionPage.module.css';
+import useFetchArticle from "../service/fetchApiArticle";
+
+import { useParams } from "react-router-dom";
 
 import SectionPageContainer from "../components/SectionPageContainer";
 import LoadingComponent from "../components/LoadingComponent";
 import ErrorComponent from "../components/ErrorComponent";
+
+import style from './sectionPage.module.css';
 
 const API_KEY = process.env.REACT_APP_API_KEY
 
@@ -17,7 +19,6 @@ const SectionPage = () =>{
   const url = `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${API_KEY}`;
 
   const {isLoading, hasError, errorMessage} = useFetchArticle(url);
-  console.log(url);
 
   if(hasError) return <ErrorComponent message={errorMessage} />
 

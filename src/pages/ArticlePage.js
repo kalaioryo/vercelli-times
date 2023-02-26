@@ -1,4 +1,4 @@
-import {React, useEffect} from 'react';
+import {React} from 'react';
 
 import moment from 'moment';
 
@@ -6,11 +6,9 @@ import style from './articlePage.module.css';
 
 const ArticlePage = () => {
 
-  //10:30 video
   let article = JSON.parse(localStorage.singleArticle);
-  console.log(article);
-  const {headline, multimedia, lead_paragraph, abstract, pub_date, section_name, snippet, web_url, _id} = article;
-  
+  const {headline, multimedia, lead_paragraph, abstract, pub_date, section_name, web_url} = article;
+
   let date = moment(pub_date).format('LLL');
 
   const Image = ({multimedia}) =>{
