@@ -1,17 +1,12 @@
-
-.lead{
-  margin: 10px 5%;
-}
-
-.abstract{
-  margin: 10px 5%;
-}
-
 .article{
   display: flex;
   flex-direction: column;
   align-items:center;
   margin: 5% 0%;
+}
+
+.headline{
+  margin: 5%;
 }
 
 .metaData{
@@ -21,13 +16,17 @@
   margin: 10px 5% ;
 }
 
+.lead{
+  margin: 10px 5%;
+}
+
+.abstract{
+  margin: 10px 5%;
+}
+
 .btn{
-  /* background-color: aqua; */
   border: 1px solid;
   margin: 5% 5%;
   width: 150px;
   padding: 15px;
 }
-
-
-

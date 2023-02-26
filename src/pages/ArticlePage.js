@@ -27,8 +27,7 @@ const ArticlePage = () => {
 
   return (
     <article className={style.article}>
-      <div>Article Page</div>
-      <h1>{headline.main}</h1>
+      <h1 className={style.headline}>{headline.main}</h1>
       <section className={style.metaData}>
         <span>{section_name}</span>
         <span>{date}</span>
