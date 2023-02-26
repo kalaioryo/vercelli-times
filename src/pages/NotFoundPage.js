@@ -8,7 +8,9 @@ const NotFoundPage = () => {
   return (
     <div className={style.container}>
       <p className={style.text}>Not Found Page</p>
-      <Link to={'/'}>click here for go to homepage</Link>      
+      <button className={style.btn}>
+        <Link to={'/'}>click here for go to homepage</Link>      
+      </button>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 
-export const sectionbarData = [
+export const sectionBarData = [
   {id: 1, name: 'World', queryUrl:'world'},
   {id: 2, name: 'U.S.', queryUrl:'us'},
   {id: 3, name: 'Politics', queryUrl:'politics'},
