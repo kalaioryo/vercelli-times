@@ -17,16 +17,17 @@
 
 .headerLeftSection{
   display: flex;
+  padding: 10px;
   width: 20%;
 }
 
 .titleMobile{
   font-size: small;
+  padding: 10px;
 }
 
 .headerRightSection{
   display: flex;
-  /* justify-content: end; */
   width: 20%;
 }
 

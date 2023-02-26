@@ -1,8 +1,5 @@
 *{
-  /* border: red 1px solid; */
-  /* padding: 2px; */
   margin: 0;
-  /* padding: 0; */
   box-sizing: border-box;
 }
 
@@ -12,11 +9,9 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
 html,body{
   height: 100%;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
 }
 
 a,span{
@@ -27,20 +22,6 @@ img{
   display: block;
 }
 
-
-
-
-/* body{
-  color: #333;
-  color: #5A5A5A
-} */
-/* h1{
-  color: black;
-}
-p{
-  color: #333;
-} */
-
 h2{
   font-size: 1.3em;
 }
@@ -50,27 +31,13 @@ p{
   
 }
 
-/* button{
-  min-width: 30px;
-  padding: 2px;
-  background-color: transparent;
-} */
-
-/* input{
-  width: auto;
-} */
-
 .header{
-  /* background-color: lightgreen; */ /*debug*/
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
 .content{
-  /* min-height: 100%; */
-  /* margin-top: 0px; */
-  /* height: fit-content; */
   padding: 0 0 100px 0;
   margin: 0 auto;
 }
@@ -81,54 +48,23 @@ p{
   height: auto !important;
   height: 100%;
   min-height: 100%;
-
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: flex-start; */
 }
 
 button {
   border: none;
-  /* padding: 20px; */
   margin: 5px;
 }
-
-/* ul {
-  text-decoration: red !important;
-}  */
-
-
-
-
-/* body{
-  margin: 10px;
-} */
-
-/* .App {
-  text-align: center;
-} */
 
 a{
   display:block;
   text-decoration: none;
   cursor: pointer;
-  /* color:black; */
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
-/* .sun{
-  background-color: white;
-  color: black;
-}
-
-.nigth{
-  background-color: black;
-  color: white;
-} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

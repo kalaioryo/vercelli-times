@@ -16,7 +16,7 @@ function HeaderMobile() {
     <div className={style.containerHeader}>
       <div className={style.headerMobile}>
         <div className={style.headerLeftSection}>
-          <div className='btn-sidebar'>
+          <div>
             <SidebarMobile/>
           </div>
         </div>
