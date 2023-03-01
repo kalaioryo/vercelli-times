@@ -28,7 +28,7 @@ const Article = ({article, image}) => {
         <a href={`${url}`}>
           <div>
             {image && <Image title={title} multimedia={multimedia}/>}
-            {title && <h3>{title}</h3>}
+            {title && <h3 className={style.title}>{title}</h3>}
             {abstract && <p>{abstract}</p>}
           </div>
         </a>
