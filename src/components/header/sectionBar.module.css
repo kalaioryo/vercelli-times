@@ -19,6 +19,8 @@
 
 .tag li{
   display: inline-block;
+  justify-content: space-around;
+  flex-wrap: nowrap;
 }
 
 .tag a {

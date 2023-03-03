@@ -19,7 +19,7 @@ const ModalSidebar = ({showSidebar,closeSidebar}) =>{
       <div className={style.modalContainer}>
         <div>
           <Link to='#' className={style.menuBars}>
-            <AiOutlineClose color='red' size='20px' onClick={showSidebar}/> 
+            <AiOutlineClose color='red' size='30px' onClick={showSidebar}/> 
           </Link>
       </div>
         <div className={style.containerForm}><SearchForm closeSidebar={closeSidebar}/></div>
