@@ -15,7 +15,7 @@ usato:
 - Redux
 - React Router
 - axios
-- css module
+- css modules
 - localStorage
 - Netlify
 # funzionalità extra
@@ -32,5 +32,7 @@ Distribuito con licenza MIT
 ## Contatti
 
 Link progetto: [The Vercelli Times](https://thevercellitimes.netlify.app/)
+
+Info progetto: [Info/Presentazione](https://www.canva.com/design/DAFcumnYIOo/0V_lj6UwODl82JLjM03jjQ/view?utm_content=DAFcumnYIOo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) 
 
 Portfolio: [antonio-iorio.netlify.app](https://antonio-iorio.netlify.app/)
