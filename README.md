@@ -16,7 +16,7 @@ usato:
 - React Router
 - axios
 - css module
-- local storage
+- localStorage
 - Netlify
 # funzionalità extra
 
