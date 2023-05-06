@@ -23,7 +23,7 @@ usato:
 - dark mode
 - first mobile
 
-<img src="https://github.com/kalaioryo/vercelli-times/blob/main/src/img/TVT%20mobile%20screenshoot.jpeg" width="50" />
+<img src="https://github.com/kalaioryo/vercelli-times/blob/main/src/img/TVT%20mobile%20screenshoot.jpeg" width="200" />
 
 ## Licenza
 
