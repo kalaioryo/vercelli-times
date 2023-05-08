@@ -8,9 +8,9 @@ Realizzare un sito clone del New York Times
 
 ## Screenshot
 
-![Screenshoot](https://github.com/kalaioryo/vercelli-times/blob/main/src/img/the-vercelli-times.png)
+![Screenshot](https://github.com/kalaioryo/vercelli-times/blob/main/src/img/the-vercelli-times.png)
 
-usato:
+utilizzato:
 
 - Redux
 - React Router
