@@ -17,13 +17,15 @@ const useFetchArticle = (url) => {
 
     try{
       const response = await axios.get(url)
+      if (response.status === 429) {
+        throw new Error("this api is free, too many request, thank you for visiting my website. (code 429)");
+      }
       if (!response.status === 200) {
         throw new Error("Something went wrong!");
       }
       if (response.data.results === null) {
         throw new Error("Results not found");
       }
-      console.log(response.data.results);
       dispatch(setArticles(response.data.results));
       
     } catch (error) {
